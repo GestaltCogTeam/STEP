@@ -76,6 +76,6 @@ Then train the downstream STGNN (Graph WaveNet) like in section 2.
 
 ## 4. Performance
 <!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
-<img src="figure/MainResults.png" alt="TheTable" style="zoom:80%;" />
+<img src="figure/MainResults.png" alt="TheTable" style="zoom:42%;" />
 
-<img src="figure/Inspecting.png" alt="Visualization" style="zoom:50%;" />
+<img src="figure/Inspecting.png" alt="Visualization" style="zoom:33%;" />
