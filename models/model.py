@@ -209,7 +209,7 @@ class STGNN(nn.Module):
         his_ave = H.reshape(B, N, -1)
         his_ave = F.relu(self.fc_mean(his_ave))
         x = x.unsqueeze(0).expand(B, N, -1)
-        # x = x + his_ave
+        x = x + his_ave
 
         receivers = torch.matmul(self.rel_rec.to(x.device), x)
         senders = torch.matmul(self.rel_send.to(x.device), x)
