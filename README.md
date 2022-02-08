@@ -1,3 +1,6 @@
+# Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting
+Code for our paper Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting.
+
 ## 1. Data Preparation
 ### 1.1 Download Data
 Download data from anonymous link [Google Drive](https://drive.google.com/drive/folders/1F7fEdXpnEQ75sxQval52jN4r3ZKoufGV?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1pRRbAi4DpjMVLMYvOsCZtA?pwd=w1wJ) to the code root directory.
@@ -57,7 +60,7 @@ python train_PEMSBAY_TSFormer.py --gpu='0, 1, 2, 3, 4, 5, 6, 7'
 
 Edit the `BATCH_SIZE` and `GPU_NUM` in config file and `--gpu` in the command line to run on your own hardware.
 
-### 2.3 Forecasting Stage
+### 3.2 Forecasting Stage
 Move your pretrained model checkpoints to `TSFormer_CKPT/`.
 For example:
 ```bash
@@ -70,3 +73,9 @@ cp checkpoints/TSFormer_200/fac3814778135a6d46063e3cab20257c/TSFormer_147.pt TSF
 cp checkpoints/TSFormer_200/3de38a467aef981dd6f24127b6fb5f50/TSFormer_030.pt TSFormer_CKPT/TSFormer_metr.pt
 ```
 Then train the downstream STGNN (Graph WaveNet) like in section 2.
+
+## 4. Performance
+<!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
+<img src="figure/MainResults.png" alt="TheTable" style="zoom:80%;" />
+
+<img src="figure/Inspecting.png" alt="Visualization" style="zoom:50%;" />
