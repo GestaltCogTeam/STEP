@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 
 from easytorch import launch_training
 import setproctitle
-setproctitle.setproctitle("Test@wyh")
+setproctitle.setproctitle("STEP")
 
 def parse_args():
     parser = ArgumentParser(description='Welcome to EasyTorch!')
