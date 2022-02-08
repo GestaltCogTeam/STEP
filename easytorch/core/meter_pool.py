@@ -133,8 +133,6 @@ class MeterPool:
 
 
 class MeterPoolDDP(MeterPool):
-    # TODO(Yuhao Wang): not support
-
     def to_tensor(self):
         tensor = torch.empty((len(self._pool.keys()), 2))
         for i in range(len(self._pool.keys())):

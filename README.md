@@ -1,6 +1,6 @@
 ## 1. Data Preparation
 ### 1.1 Download Data
-Download data from anonymous link [Google Drive]() or [BaiduYun]() to the code root directory.
+Download data from anonymous link [Google Drive](https://drive.google.com/drive/folders/1F7fEdXpnEQ75sxQval52jN4r3ZKoufGV?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1pRRbAi4DpjMVLMYvOsCZtA?pwd=w1wJ) to the code root directory.
 
 Then, unzip data by:
 
