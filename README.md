@@ -14,7 +14,9 @@ unzip raw_data.zip -d datasets
 unzip sensor_graph.zip -d datasets 
 rm *.zip
 ```
-`TSFormer_CKPT/` contains the pretrained model for each dataset and the training log of the pretraining stage and forecasting stage.
+`TSFormer_CKPT/` contains the pretrained model for each dataset.
+
+You can also find all the training logs of the pretraining stage and forecasting stage in `training_logs/`.
 
 ### 1.2 Data Process
 ```bash
@@ -40,7 +42,7 @@ We use 2 GPU as default, edit `GPU_NUM` property in the config file and `--gpu` 
 
 Note that different GPU numbers lead to different real batch sizes, affecting the learning rate setting and the forecasting accuracy.
 
-Our training logs are shown in `TSFormer_CKPT/Backend_metr.log`, `TSFormer_CKPT/Backend_pems04.log`, and `TSFormer_CKPT/Backend_pemsbay.log`.
+Our training logs are shown in `train_logs/Backend_metr.log`, `train_logs/Backend_pems04.log`, and `train_logs/Backend_pemsbay.log`.
 
 ## 3. Training from Scratch
 

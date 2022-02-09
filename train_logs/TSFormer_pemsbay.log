@@ -1,0 +1,1411 @@
+2022-02-04 21:17:57,337 - easytorch-env - INFO - Enable TF32 mode
+2022-02-04 21:17:57,338 - easytorch - INFO - ckpt save dir: 'checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196'
+2022-02-04 21:18:09,976 - easytorch-training - INFO - set optim: AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: [0.9, 0.95]
+    eps: 1e-08
+    lr: 0.002
+    weight_decay: 0
+)
+2022-02-04 21:18:09,978 - easytorch-training - INFO - set lr_scheduler: <torch.optim.lr_scheduler.MultiStepLR object at 0x7fe4b1acbe50>
+2022-02-04 21:18:10,441 - easytorch-training - INFO - epoch 1 / 200
+100%|██████████| 539/539 [02:41<00:00,  3.34it/s]
+2022-02-04 21:20:52,001 - easytorch-training - INFO - train:: [train_time: 161.56 (s), lr: 2.00e-03, train_loss: 4.0836, train_MAPE: -172.7855, train_RMSE: 8.8746]
+2022-02-04 21:21:44,525 - easytorch-training - INFO - val:: [val_time: 52.52 (s), val_loss: 3.0170, val_MAPE: -2036.0657, val_RMSE: 6.9547]
+2022-02-04 21:23:27,711 - easytorch-training - INFO - test:: [test_time: -103.18 (s), test_loss: 2.9212, test_MAPE: -1105.0559, test_RMSE: 6.6884]
+2022-02-04 21:23:27,753 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_001.pt saved
+2022-02-04 21:23:27,753 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:55:53
+2022-02-04 21:23:27,754 - easytorch-training - INFO - epoch 2 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.35it/s]
+2022-02-04 21:26:08,719 - easytorch-training - INFO - train:: [train_time: 160.96 (s), lr: 2.00e-03, train_loss: 2.8357, train_MAPE: -185.9738, train_RMSE: 6.2806]
+2022-02-04 21:27:01,114 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 2.3917, val_MAPE: -1971.4465, val_RMSE: 5.5209]
+2022-02-04 21:28:43,698 - easytorch-training - INFO - test:: [test_time: -102.57 (s), test_loss: 2.3781, test_MAPE: -1129.9824, test_RMSE: 5.4663]
+2022-02-04 21:28:43,759 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_002.pt saved
+2022-02-04 21:28:43,760 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:53:42
+2022-02-04 21:28:43,760 - easytorch-training - INFO - epoch 3 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 21:31:23,693 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 2.00e-03, train_loss: 2.4883, train_MAPE: -166.8130, train_RMSE: 5.5598]
+2022-02-04 21:32:16,192 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 2.2455, val_MAPE: -1985.5735, val_RMSE: 5.2118]
+2022-02-04 21:33:58,225 - easytorch-training - INFO - test:: [test_time: -102.03 (s), test_loss: 2.2586, test_MAPE: -1181.9701, test_RMSE: 5.2429]
+2022-02-04 21:33:58,290 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_003.pt saved
+2022-02-04 21:33:58,291 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:51:20
+2022-02-04 21:33:58,291 - easytorch-training - INFO - epoch 4 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 21:36:38,588 - easytorch-training - INFO - train:: [train_time: 160.30 (s), lr: 2.00e-03, train_loss: 2.3666, train_MAPE: -182.2449, train_RMSE: 5.2993]
+2022-02-04 21:37:30,900 - easytorch-training - INFO - val:: [val_time: 52.30 (s), val_loss: 2.1508, val_MAPE: -1922.1766, val_RMSE: 4.9973]
+2022-02-04 21:39:13,420 - easytorch-training - INFO - test:: [test_time: -102.51 (s), test_loss: 2.1703, test_MAPE: -1129.3776, test_RMSE: 5.0495]
+2022-02-04 21:39:13,490 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_004.pt saved
+2022-02-04 21:39:13,490 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:50:42
+2022-02-04 21:39:13,490 - easytorch-training - INFO - epoch 5 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 21:41:53,740 - easytorch-training - INFO - train:: [train_time: 160.25 (s), lr: 2.00e-03, train_loss: 2.2748, train_MAPE: -170.2439, train_RMSE: 5.1031]
+2022-02-04 21:42:46,496 - easytorch-training - INFO - val:: [val_time: 52.75 (s), val_loss: 2.0528, val_MAPE: -1939.6682, val_RMSE: 4.8105]
+2022-02-04 21:44:28,886 - easytorch-training - INFO - test:: [test_time: -102.38 (s), test_loss: 2.0904, test_MAPE: -1152.1101, test_RMSE: 4.9218]
+2022-02-04 21:44:28,952 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_005.pt saved
+2022-02-04 21:44:28,952 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:50:30
+2022-02-04 21:44:28,952 - easytorch-training - INFO - epoch 6 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 21:47:08,676 - easytorch-training - INFO - train:: [train_time: 159.72 (s), lr: 2.00e-03, train_loss: 2.2092, train_MAPE: -169.7601, train_RMSE: 4.9562]
+2022-02-04 21:48:01,216 - easytorch-training - INFO - val:: [val_time: 52.54 (s), val_loss: 1.9984, val_MAPE: -1913.3466, val_RMSE: 4.7031]
+2022-02-04 21:49:43,522 - easytorch-training - INFO - test:: [test_time: -102.30 (s), test_loss: 2.0473, test_MAPE: -1145.7621, test_RMSE: 4.8423]
+2022-02-04 21:49:43,564 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_006.pt saved
+2022-02-04 21:49:43,564 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:54
+2022-02-04 21:49:43,565 - easytorch-training - INFO - epoch 7 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 21:52:23,965 - easytorch-training - INFO - train:: [train_time: 160.40 (s), lr: 2.00e-03, train_loss: 2.1699, train_MAPE: -174.8344, train_RMSE: 4.8792]
+2022-02-04 21:53:16,366 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 2.0071, val_MAPE: -1952.9354, val_RMSE: 4.7061]
+2022-02-04 21:54:58,886 - easytorch-training - INFO - test:: [test_time: -102.51 (s), test_loss: 2.0426, test_MAPE: -1088.0616, test_RMSE: 4.8109]
+2022-02-04 21:54:58,953 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_007.pt saved
+2022-02-04 21:54:58,954 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:50
+2022-02-04 21:54:58,954 - easytorch-training - INFO - epoch 8 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-04 21:57:38,591 - easytorch-training - INFO - train:: [train_time: 159.64 (s), lr: 2.00e-03, train_loss: 2.1370, train_MAPE: -182.1672, train_RMSE: 4.8147]
+2022-02-04 21:58:31,065 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.9940, val_MAPE: -1947.7535, val_RMSE: 4.7059]
+2022-02-04 22:00:14,048 - easytorch-training - INFO - test:: [test_time: -102.98 (s), test_loss: 2.0262, test_MAPE: -1174.3998, test_RMSE: 4.8053]
+2022-02-04 22:00:14,113 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_008.pt saved
+2022-02-04 22:00:14,114 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:42
+2022-02-04 22:00:14,114 - easytorch-training - INFO - epoch 9 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 22:02:54,009 - easytorch-training - INFO - train:: [train_time: 159.89 (s), lr: 2.00e-03, train_loss: 2.1149, train_MAPE: -181.6230, train_RMSE: 4.7664]
+2022-02-04 22:03:46,374 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.9262, val_MAPE: -1996.4023, val_RMSE: 4.5726]
+2022-02-04 22:05:28,730 - easytorch-training - INFO - test:: [test_time: -102.35 (s), test_loss: 1.9772, test_MAPE: -1173.5990, test_RMSE: 4.7146]
+2022-02-04 22:05:28,790 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_009.pt saved
+2022-02-04 22:05:28,791 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-04 22:05:28,791 - easytorch-training - INFO - epoch 10 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:08:08,828 - easytorch-training - INFO - train:: [train_time: 160.04 (s), lr: 2.00e-03, train_loss: 2.1022, train_MAPE: -164.4529, train_RMSE: 4.7425]
+2022-02-04 22:09:01,183 - easytorch-training - INFO - val:: [val_time: 52.35 (s), val_loss: 1.9510, val_MAPE: -1954.5543, val_RMSE: 4.5826]
+2022-02-04 22:10:43,855 - easytorch-training - INFO - test:: [test_time: -102.67 (s), test_loss: 2.0142, test_MAPE: -1082.4049, test_RMSE: 4.7572]
+2022-02-04 22:10:43,918 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_010.pt saved
+2022-02-04 22:10:43,922 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:20
+2022-02-04 22:10:43,922 - easytorch-training - INFO - epoch 11 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:13:24,007 - easytorch-training - INFO - train:: [train_time: 160.08 (s), lr: 2.00e-03, train_loss: 2.0831, train_MAPE: -176.3689, train_RMSE: 4.7024]
+2022-02-04 22:14:17,231 - easytorch-training - INFO - val:: [val_time: 53.22 (s), val_loss: 1.9317, val_MAPE: -2023.3219, val_RMSE: 4.5966]
+2022-02-04 22:15:59,861 - easytorch-training - INFO - test:: [test_time: -102.63 (s), test_loss: 1.9795, test_MAPE: -1122.7614, test_RMSE: 4.7396]
+2022-02-04 22:15:59,927 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_011.pt saved
+2022-02-04 22:15:59,928 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-04 22:15:59,928 - easytorch-training - INFO - epoch 12 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:18:40,011 - easytorch-training - INFO - train:: [train_time: 160.08 (s), lr: 2.00e-03, train_loss: 2.0772, train_MAPE: -169.1089, train_RMSE: 4.6954]
+2022-02-04 22:19:32,665 - easytorch-training - INFO - val:: [val_time: 52.64 (s), val_loss: 1.9296, val_MAPE: -1924.9824, val_RMSE: 4.5711]
+2022-02-04 22:21:15,031 - easytorch-training - INFO - test:: [test_time: -102.36 (s), test_loss: 1.9922, test_MAPE: -1099.1380, test_RMSE: 4.7555]
+2022-02-04 22:21:15,095 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_012.pt saved
+2022-02-04 22:21:15,096 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-04 22:21:15,096 - easytorch-training - INFO - epoch 13 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:23:55,231 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 2.00e-03, train_loss: 2.0593, train_MAPE: -148.7015, train_RMSE: 4.6603]
+2022-02-04 22:24:47,817 - easytorch-training - INFO - val:: [val_time: 52.58 (s), val_loss: 1.9007, val_MAPE: -1975.6503, val_RMSE: 4.5063]
+2022-02-04 22:26:30,016 - easytorch-training - INFO - test:: [test_time: -102.19 (s), test_loss: 1.9482, test_MAPE: -1152.7524, test_RMSE: 4.6402]
+2022-02-04 22:26:30,059 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_013.pt saved
+2022-02-04 22:26:30,059 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-04 22:26:30,059 - easytorch-training - INFO - epoch 14 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:29:10,093 - easytorch-training - INFO - train:: [train_time: 160.03 (s), lr: 2.00e-03, train_loss: 2.0574, train_MAPE: -161.2426, train_RMSE: 4.6485]
+2022-02-04 22:30:02,323 - easytorch-training - INFO - val:: [val_time: 52.23 (s), val_loss: 1.8782, val_MAPE: -2007.8971, val_RMSE: 4.4812]
+2022-02-04 22:31:45,336 - easytorch-training - INFO - test:: [test_time: -103.01 (s), test_loss: 1.9502, test_MAPE: -1061.5345, test_RMSE: 4.6850]
+2022-02-04 22:31:45,398 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_014.pt saved
+2022-02-04 22:31:45,398 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-04 22:31:45,399 - easytorch-training - INFO - epoch 15 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 22:34:25,793 - easytorch-training - INFO - train:: [train_time: 160.39 (s), lr: 2.00e-03, train_loss: 2.0402, train_MAPE: -186.9920, train_RMSE: 4.6249]
+2022-02-04 22:35:19,118 - easytorch-training - INFO - val:: [val_time: 53.32 (s), val_loss: 1.8815, val_MAPE: -1969.6660, val_RMSE: 4.4943]
+2022-02-04 22:37:02,033 - easytorch-training - INFO - test:: [test_time: -102.90 (s), test_loss: 1.9327, test_MAPE: -1149.6249, test_RMSE: 4.6354]
+2022-02-04 22:37:02,100 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_015.pt saved
+2022-02-04 22:37:02,101 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:39
+2022-02-04 22:37:02,101 - easytorch-training - INFO - epoch 16 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 22:39:41,939 - easytorch-training - INFO - train:: [train_time: 159.84 (s), lr: 2.00e-03, train_loss: 2.0350, train_MAPE: -170.1965, train_RMSE: 4.6172]
+2022-02-04 22:40:34,214 - easytorch-training - INFO - val:: [val_time: 52.27 (s), val_loss: 1.8622, val_MAPE: -2052.4868, val_RMSE: 4.4004]
+2022-02-04 22:42:16,715 - easytorch-training - INFO - test:: [test_time: -102.49 (s), test_loss: 1.9310, test_MAPE: -1150.7864, test_RMSE: 4.5960]
+2022-02-04 22:42:16,775 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_016.pt saved
+2022-02-04 22:42:16,775 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:29
+2022-02-04 22:42:16,776 - easytorch-training - INFO - epoch 17 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 22:44:57,102 - easytorch-training - INFO - train:: [train_time: 160.33 (s), lr: 2.00e-03, train_loss: 2.0149, train_MAPE: -178.6232, train_RMSE: 4.5664]
+2022-02-04 22:45:49,514 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.8616, val_MAPE: -1888.7427, val_RMSE: 4.4280]
+2022-02-04 22:47:33,229 - easytorch-training - INFO - test:: [test_time: -103.71 (s), test_loss: 1.9331, test_MAPE: -1152.8472, test_RMSE: 4.6412]
+2022-02-04 22:47:33,271 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_017.pt saved
+2022-02-04 22:47:33,272 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:42
+2022-02-04 22:47:33,272 - easytorch-training - INFO - epoch 18 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:50:13,282 - easytorch-training - INFO - train:: [train_time: 160.01 (s), lr: 2.00e-03, train_loss: 2.0091, train_MAPE: -155.8006, train_RMSE: 4.5595]
+2022-02-04 22:51:05,686 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.8669, val_MAPE: -1995.8045, val_RMSE: 4.4456]
+2022-02-04 22:52:48,461 - easytorch-training - INFO - test:: [test_time: -102.77 (s), test_loss: 1.9220, test_MAPE: -1111.1048, test_RMSE: 4.5988]
+2022-02-04 22:52:48,528 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_018.pt saved
+2022-02-04 22:52:48,529 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:40
+2022-02-04 22:52:48,529 - easytorch-training - INFO - epoch 19 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 22:55:28,672 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 2.00e-03, train_loss: 2.0076, train_MAPE: -162.0624, train_RMSE: 4.5572]
+2022-02-04 22:56:21,280 - easytorch-training - INFO - val:: [val_time: 52.60 (s), val_loss: 1.8554, val_MAPE: -1983.5143, val_RMSE: 4.4455]
+2022-02-04 22:58:04,850 - easytorch-training - INFO - test:: [test_time: -103.57 (s), test_loss: 1.9192, test_MAPE: -1172.8645, test_RMSE: 4.6241]
+2022-02-04 22:58:04,912 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_019.pt saved
+2022-02-04 22:58:04,913 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:50
+2022-02-04 22:58:04,913 - easytorch-training - INFO - epoch 20 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 23:00:45,080 - easytorch-training - INFO - train:: [train_time: 160.17 (s), lr: 2.00e-03, train_loss: 2.0035, train_MAPE: -179.0554, train_RMSE: 4.5511]
+2022-02-04 23:01:37,525 - easytorch-training - INFO - val:: [val_time: 52.44 (s), val_loss: 1.8492, val_MAPE: -2015.2816, val_RMSE: 4.4132]
+2022-02-04 23:03:20,718 - easytorch-training - INFO - test:: [test_time: -103.19 (s), test_loss: 1.9309, test_MAPE: -1121.0624, test_RMSE: 4.6432]
+2022-02-04 23:03:20,782 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_020.pt saved
+2022-02-04 23:03:20,786 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:53
+2022-02-04 23:03:20,786 - easytorch-training - INFO - epoch 21 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.35it/s]
+2022-02-04 23:06:01,446 - easytorch-training - INFO - train:: [train_time: 160.66 (s), lr: 2.00e-03, train_loss: 1.9918, train_MAPE: -172.3374, train_RMSE: 4.5261]
+2022-02-04 23:06:53,775 - easytorch-training - INFO - val:: [val_time: 52.32 (s), val_loss: 1.8629, val_MAPE: -1971.0701, val_RMSE: 4.4339]
+2022-02-04 23:08:36,399 - easytorch-training - INFO - test:: [test_time: -102.62 (s), test_loss: 1.9460, test_MAPE: -1116.8440, test_RMSE: 4.6748]
+2022-02-04 23:08:36,459 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_021.pt saved
+2022-02-04 23:08:36,459 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:55
+2022-02-04 23:08:36,459 - easytorch-training - INFO - epoch 22 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.39it/s]
+2022-02-04 23:11:15,631 - easytorch-training - INFO - train:: [train_time: 159.17 (s), lr: 2.00e-03, train_loss: 1.9893, train_MAPE: -179.8988, train_RMSE: 4.5155]
+2022-02-04 23:12:08,666 - easytorch-training - INFO - val:: [val_time: 53.03 (s), val_loss: 1.8402, val_MAPE: -1988.6885, val_RMSE: 4.3925]
+2022-02-04 23:13:51,667 - easytorch-training - INFO - test:: [test_time: -103.00 (s), test_loss: 1.9178, test_MAPE: -1105.5988, test_RMSE: 4.6206]
+2022-02-04 23:13:51,725 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_022.pt saved
+2022-02-04 23:13:51,726 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:53
+2022-02-04 23:13:51,726 - easytorch-training - INFO - epoch 23 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-04 23:16:31,268 - easytorch-training - INFO - train:: [train_time: 159.54 (s), lr: 2.00e-03, train_loss: 1.9803, train_MAPE: -182.2361, train_RMSE: 4.4984]
+2022-02-04 23:17:23,573 - easytorch-training - INFO - val:: [val_time: 52.30 (s), val_loss: 1.8607, val_MAPE: -1957.9315, val_RMSE: 4.4295]
+2022-02-04 23:19:06,106 - easytorch-training - INFO - test:: [test_time: -102.53 (s), test_loss: 1.9372, test_MAPE: -1078.5459, test_RMSE: 4.6531]
+2022-02-04 23:19:06,141 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_023.pt saved
+2022-02-04 23:19:06,141 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:43
+2022-02-04 23:19:06,141 - easytorch-training - INFO - epoch 24 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 23:21:46,144 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 2.00e-03, train_loss: 1.9748, train_MAPE: -176.1339, train_RMSE: 4.4855]
+2022-02-04 23:22:38,642 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.8201, val_MAPE: -1943.1976, val_RMSE: 4.3331]
+2022-02-04 23:24:21,327 - easytorch-training - INFO - test:: [test_time: -102.68 (s), test_loss: 1.8866, test_MAPE: -1128.1744, test_RMSE: 4.5162]
+2022-02-04 23:24:21,387 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_024.pt saved
+2022-02-04 23:24:21,387 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:41
+2022-02-04 23:24:21,387 - easytorch-training - INFO - epoch 25 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-04 23:27:01,665 - easytorch-training - INFO - train:: [train_time: 160.28 (s), lr: 2.00e-03, train_loss: 1.9768, train_MAPE: -184.2469, train_RMSE: 4.4890]
+2022-02-04 23:27:54,226 - easytorch-training - INFO - val:: [val_time: 52.56 (s), val_loss: 1.8629, val_MAPE: -1866.1216, val_RMSE: 4.4043]
+2022-02-04 23:29:37,560 - easytorch-training - INFO - test:: [test_time: -103.32 (s), test_loss: 1.9517, test_MAPE: -1157.0570, test_RMSE: 4.6656]
+2022-02-04 23:29:37,625 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_025.pt saved
+2022-02-04 23:29:37,626 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-04 23:29:37,626 - easytorch-training - INFO - epoch 26 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 23:32:17,486 - easytorch-training - INFO - train:: [train_time: 159.86 (s), lr: 2.00e-03, train_loss: 1.9652, train_MAPE: -173.5507, train_RMSE: 4.4611]
+2022-02-04 23:33:09,942 - easytorch-training - INFO - val:: [val_time: 52.45 (s), val_loss: 1.8385, val_MAPE: -1890.3923, val_RMSE: 4.3662]
+2022-02-04 23:34:52,692 - easytorch-training - INFO - test:: [test_time: -102.74 (s), test_loss: 1.9309, test_MAPE: -1133.0558, test_RMSE: 4.6338]
+2022-02-04 23:34:52,727 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_026.pt saved
+2022-02-04 23:34:52,728 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-04 23:34:52,728 - easytorch-training - INFO - epoch 27 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.35it/s]
+2022-02-04 23:37:33,396 - easytorch-training - INFO - train:: [train_time: 160.67 (s), lr: 2.00e-03, train_loss: 1.9644, train_MAPE: -183.0319, train_RMSE: 4.4568]
+2022-02-04 23:38:26,164 - easytorch-training - INFO - val:: [val_time: 52.76 (s), val_loss: 1.8038, val_MAPE: -1995.4580, val_RMSE: 4.3056]
+2022-02-04 23:40:09,197 - easytorch-training - INFO - test:: [test_time: -103.03 (s), test_loss: 1.8872, test_MAPE: -1109.1215, test_RMSE: 4.5369]
+2022-02-04 23:40:09,258 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_027.pt saved
+2022-02-04 23:40:09,258 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-04 23:40:09,258 - easytorch-training - INFO - epoch 28 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-04 23:42:48,589 - easytorch-training - INFO - train:: [train_time: 159.33 (s), lr: 2.00e-03, train_loss: 1.9575, train_MAPE: -179.1168, train_RMSE: 4.4422]
+2022-02-04 23:43:41,570 - easytorch-training - INFO - val:: [val_time: 52.98 (s), val_loss: 1.8102, val_MAPE: -1989.7661, val_RMSE: 4.3259]
+2022-02-04 23:45:23,976 - easytorch-training - INFO - test:: [test_time: -102.40 (s), test_loss: 1.8838, test_MAPE: -1108.2213, test_RMSE: 4.5301]
+2022-02-04 23:45:24,033 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_028.pt saved
+2022-02-04 23:45:24,034 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-04 23:45:24,034 - easytorch-training - INFO - epoch 29 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-04 23:48:03,932 - easytorch-training - INFO - train:: [train_time: 159.90 (s), lr: 2.00e-03, train_loss: 1.9586, train_MAPE: -175.4370, train_RMSE: 4.4510]
+2022-02-04 23:48:56,335 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.8221, val_MAPE: -1916.5866, val_RMSE: 4.3575]
+2022-02-04 23:50:38,997 - easytorch-training - INFO - test:: [test_time: -102.66 (s), test_loss: 1.9085, test_MAPE: -1070.1739, test_RMSE: 4.6049]
+2022-02-04 23:50:39,055 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_029.pt saved
+2022-02-04 23:50:39,056 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-04 23:50:39,056 - easytorch-training - INFO - epoch 30 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 23:53:19,186 - easytorch-training - INFO - train:: [train_time: 160.13 (s), lr: 2.00e-03, train_loss: 1.9544, train_MAPE: -176.4230, train_RMSE: 4.4359]
+2022-02-04 23:54:11,736 - easytorch-training - INFO - val:: [val_time: 52.54 (s), val_loss: 1.8117, val_MAPE: -1955.3254, val_RMSE: 4.3332]
+2022-02-04 23:55:54,262 - easytorch-training - INFO - test:: [test_time: -102.52 (s), test_loss: 1.8921, test_MAPE: -1111.4977, test_RMSE: 4.5625]
+2022-02-04 23:55:54,303 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_030.pt saved
+2022-02-04 23:55:54,306 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:42
+2022-02-04 23:55:54,306 - easytorch-training - INFO - epoch 31 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-04 23:58:34,437 - easytorch-training - INFO - train:: [train_time: 160.13 (s), lr: 2.00e-03, train_loss: 1.9533, train_MAPE: -172.3852, train_RMSE: 4.4331]
+2022-02-04 23:59:26,724 - easytorch-training - INFO - val:: [val_time: 52.28 (s), val_loss: 1.8044, val_MAPE: -1860.7205, val_RMSE: 4.3129]
+2022-02-05 00:01:09,480 - easytorch-training - INFO - test:: [test_time: -102.75 (s), test_loss: 1.8852, test_MAPE: -1117.5367, test_RMSE: 4.5454]
+2022-02-05 00:01:09,540 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_031.pt saved
+2022-02-05 00:01:09,541 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:41
+2022-02-05 00:01:09,541 - easytorch-training - INFO - epoch 32 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 00:03:49,535 - easytorch-training - INFO - train:: [train_time: 159.99 (s), lr: 2.00e-03, train_loss: 1.9482, train_MAPE: -176.7316, train_RMSE: 4.4184]
+2022-02-05 00:04:42,083 - easytorch-training - INFO - val:: [val_time: 52.54 (s), val_loss: 1.8181, val_MAPE: -1944.0443, val_RMSE: 4.3400]
+2022-02-05 00:06:25,307 - easytorch-training - INFO - test:: [test_time: -103.22 (s), test_loss: 1.8934, test_MAPE: -1090.0796, test_RMSE: 4.5538]
+2022-02-05 00:06:25,368 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_032.pt saved
+2022-02-05 00:06:25,368 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:43
+2022-02-05 00:06:25,368 - easytorch-training - INFO - epoch 33 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 00:09:05,318 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 2.00e-03, train_loss: 1.9485, train_MAPE: -174.9626, train_RMSE: 4.4222]
+2022-02-05 00:09:58,201 - easytorch-training - INFO - val:: [val_time: 52.88 (s), val_loss: 1.8192, val_MAPE: -2072.4527, val_RMSE: 4.3211]
+2022-02-05 00:11:40,849 - easytorch-training - INFO - test:: [test_time: -102.64 (s), test_loss: 1.9245, test_MAPE: -1109.3237, test_RMSE: 4.6174]
+2022-02-05 00:11:40,910 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_033.pt saved
+2022-02-05 00:11:40,910 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-05 00:11:40,910 - easytorch-training - INFO - epoch 34 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 00:14:21,290 - easytorch-training - INFO - train:: [train_time: 160.38 (s), lr: 2.00e-03, train_loss: 1.9434, train_MAPE: -193.7160, train_RMSE: 4.4149]
+2022-02-05 00:15:13,740 - easytorch-training - INFO - val:: [val_time: 52.44 (s), val_loss: 1.8399, val_MAPE: -1938.2437, val_RMSE: 4.3911]
+2022-02-05 00:16:57,479 - easytorch-training - INFO - test:: [test_time: -103.73 (s), test_loss: 1.9300, test_MAPE: -1105.2706, test_RMSE: 4.6624]
+2022-02-05 00:16:57,548 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_034.pt saved
+2022-02-05 00:16:57,548 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:51
+2022-02-05 00:16:57,549 - easytorch-training - INFO - epoch 35 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 00:19:37,395 - easytorch-training - INFO - train:: [train_time: 159.85 (s), lr: 2.00e-03, train_loss: 1.9395, train_MAPE: -177.9268, train_RMSE: 4.3983]
+2022-02-05 00:20:29,724 - easytorch-training - INFO - val:: [val_time: 52.32 (s), val_loss: 1.8103, val_MAPE: -1952.1815, val_RMSE: 4.3190]
+2022-02-05 00:22:12,461 - easytorch-training - INFO - test:: [test_time: -102.73 (s), test_loss: 1.9004, test_MAPE: -1087.0947, test_RMSE: 4.5766]
+2022-02-05 00:22:12,526 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_035.pt saved
+2022-02-05 00:22:12,527 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:48
+2022-02-05 00:22:12,527 - easytorch-training - INFO - epoch 36 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 00:24:52,833 - easytorch-training - INFO - train:: [train_time: 160.31 (s), lr: 2.00e-03, train_loss: 1.9460, train_MAPE: -149.5190, train_RMSE: 4.4193]
+2022-02-05 00:25:45,252 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.8112, val_MAPE: -1866.5386, val_RMSE: 4.3025]
+2022-02-05 00:27:28,529 - easytorch-training - INFO - test:: [test_time: -103.27 (s), test_loss: 1.8865, test_MAPE: -1107.7150, test_RMSE: 4.5230]
+2022-02-05 00:27:28,588 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_036.pt saved
+2022-02-05 00:27:28,588 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:51
+2022-02-05 00:27:28,588 - easytorch-training - INFO - epoch 37 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 00:30:08,590 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 2.00e-03, train_loss: 1.9377, train_MAPE: -187.0026, train_RMSE: 4.3938]
+2022-02-05 00:31:00,904 - easytorch-training - INFO - val:: [val_time: 52.31 (s), val_loss: 1.8251, val_MAPE: -1863.5959, val_RMSE: 4.3564]
+2022-02-05 00:32:43,458 - easytorch-training - INFO - test:: [test_time: -102.55 (s), test_loss: 1.9119, test_MAPE: -1119.3372, test_RMSE: 4.6106]
+2022-02-05 00:32:43,511 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_037.pt saved
+2022-02-05 00:32:43,511 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:48
+2022-02-05 00:32:43,512 - easytorch-training - INFO - epoch 38 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 00:35:23,189 - easytorch-training - INFO - train:: [train_time: 159.68 (s), lr: 2.00e-03, train_loss: 1.9325, train_MAPE: -177.5933, train_RMSE: 4.3855]
+2022-02-05 00:36:15,513 - easytorch-training - INFO - val:: [val_time: 52.32 (s), val_loss: 1.8195, val_MAPE: -1955.1603, val_RMSE: 4.3329]
+2022-02-05 00:37:58,320 - easytorch-training - INFO - test:: [test_time: -102.80 (s), test_loss: 1.9038, test_MAPE: -1095.2782, test_RMSE: 4.5781]
+2022-02-05 00:37:58,380 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_038.pt saved
+2022-02-05 00:37:58,381 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-05 00:37:58,381 - easytorch-training - INFO - epoch 39 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 00:40:38,644 - easytorch-training - INFO - train:: [train_time: 160.26 (s), lr: 2.00e-03, train_loss: 1.9322, train_MAPE: -164.4062, train_RMSE: 4.3864]
+2022-02-05 00:41:31,864 - easytorch-training - INFO - val:: [val_time: 53.22 (s), val_loss: 1.7919, val_MAPE: -1968.2086, val_RMSE: 4.3048]
+2022-02-05 00:43:14,746 - easytorch-training - INFO - test:: [test_time: -102.87 (s), test_loss: 1.8769, test_MAPE: -1080.2502, test_RMSE: 4.5486]
+2022-02-05 00:43:14,807 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_039.pt saved
+2022-02-05 00:43:14,808 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 00:43:14,808 - easytorch-training - INFO - epoch 40 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 00:45:54,840 - easytorch-training - INFO - train:: [train_time: 160.03 (s), lr: 2.00e-03, train_loss: 1.9291, train_MAPE: -162.7300, train_RMSE: 4.3756]
+2022-02-05 00:46:47,317 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.8120, val_MAPE: -1887.2999, val_RMSE: 4.2851]
+2022-02-05 00:48:29,805 - easytorch-training - INFO - test:: [test_time: -102.48 (s), test_loss: 1.8925, test_MAPE: -1124.1400, test_RMSE: 4.5274]
+2022-02-05 00:48:29,845 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_040.pt saved
+2022-02-05 00:48:29,848 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-05 00:48:29,848 - easytorch-training - INFO - epoch 41 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 00:51:10,468 - easytorch-training - INFO - train:: [train_time: 160.62 (s), lr: 2.00e-03, train_loss: 1.9263, train_MAPE: -173.7215, train_RMSE: 4.3693]
+2022-02-05 00:52:02,940 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7979, val_MAPE: -1864.4843, val_RMSE: 4.2662]
+2022-02-05 00:53:46,047 - easytorch-training - INFO - test:: [test_time: -103.10 (s), test_loss: 1.8962, test_MAPE: -1078.4138, test_RMSE: 4.5424]
+2022-02-05 00:53:46,107 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_041.pt saved
+2022-02-05 00:53:46,107 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:51
+2022-02-05 00:53:46,107 - easytorch-training - INFO - epoch 42 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 00:56:25,862 - easytorch-training - INFO - train:: [train_time: 159.75 (s), lr: 2.00e-03, train_loss: 1.9278, train_MAPE: -173.3493, train_RMSE: 4.3762]
+2022-02-05 00:57:18,278 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.8234, val_MAPE: -1966.9485, val_RMSE: 4.3302]
+2022-02-05 00:59:00,684 - easytorch-training - INFO - test:: [test_time: -102.40 (s), test_loss: 1.9092, test_MAPE: -1068.1823, test_RMSE: 4.5828]
+2022-02-05 00:59:00,733 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_042.pt saved
+2022-02-05 00:59:00,734 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-05 00:59:00,734 - easytorch-training - INFO - epoch 43 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 01:01:40,491 - easytorch-training - INFO - train:: [train_time: 159.76 (s), lr: 2.00e-03, train_loss: 1.9310, train_MAPE: -185.1038, train_RMSE: 4.3864]
+2022-02-05 01:02:33,017 - easytorch-training - INFO - val:: [val_time: 52.52 (s), val_loss: 1.8177, val_MAPE: -1986.4611, val_RMSE: 4.3278]
+2022-02-05 01:04:15,578 - easytorch-training - INFO - test:: [test_time: -102.56 (s), test_loss: 1.9134, test_MAPE: -1156.1311, test_RMSE: 4.6254]
+2022-02-05 01:04:15,633 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_043.pt saved
+2022-02-05 01:04:15,633 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-05 01:04:15,633 - easytorch-training - INFO - epoch 44 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 01:06:55,625 - easytorch-training - INFO - train:: [train_time: 159.99 (s), lr: 2.00e-03, train_loss: 1.9189, train_MAPE: -189.1369, train_RMSE: 4.3534]
+2022-02-05 01:07:48,470 - easytorch-training - INFO - val:: [val_time: 52.84 (s), val_loss: 1.8113, val_MAPE: -1917.9640, val_RMSE: 4.2960]
+2022-02-05 01:09:30,757 - easytorch-training - INFO - test:: [test_time: -102.28 (s), test_loss: 1.9118, test_MAPE: -1103.4024, test_RMSE: 4.5946]
+2022-02-05 01:09:30,798 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_044.pt saved
+2022-02-05 01:09:30,798 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:42
+2022-02-05 01:09:30,799 - easytorch-training - INFO - epoch 45 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 01:12:10,674 - easytorch-training - INFO - train:: [train_time: 159.87 (s), lr: 2.00e-03, train_loss: 1.9228, train_MAPE: -190.7484, train_RMSE: 4.3664]
+2022-02-05 01:13:02,942 - easytorch-training - INFO - val:: [val_time: 52.26 (s), val_loss: 1.8034, val_MAPE: -1935.9716, val_RMSE: 4.3122]
+2022-02-05 01:14:45,706 - easytorch-training - INFO - test:: [test_time: -102.75 (s), test_loss: 1.8899, test_MAPE: -1145.5725, test_RMSE: 4.5475]
+2022-02-05 01:14:45,767 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_045.pt saved
+2022-02-05 01:14:45,767 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:40
+2022-02-05 01:14:45,767 - easytorch-training - INFO - epoch 46 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 01:17:25,296 - easytorch-training - INFO - train:: [train_time: 159.53 (s), lr: 2.00e-03, train_loss: 1.9163, train_MAPE: -184.8628, train_RMSE: 4.3478]
+2022-02-05 01:18:18,030 - easytorch-training - INFO - val:: [val_time: 52.73 (s), val_loss: 1.8053, val_MAPE: -2023.4123, val_RMSE: 4.3166]
+2022-02-05 01:20:02,482 - easytorch-training - INFO - test:: [test_time: -104.45 (s), test_loss: 1.8968, test_MAPE: -1113.8839, test_RMSE: 4.5784]
+2022-02-05 01:20:02,544 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_046.pt saved
+2022-02-05 01:20:02,544 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:46
+2022-02-05 01:20:02,544 - easytorch-training - INFO - epoch 47 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 01:22:42,051 - easytorch-training - INFO - train:: [train_time: 159.51 (s), lr: 2.00e-03, train_loss: 1.9142, train_MAPE: -172.6202, train_RMSE: 4.3403]
+2022-02-05 01:23:34,391 - easytorch-training - INFO - val:: [val_time: 52.33 (s), val_loss: 1.8092, val_MAPE: -1894.6442, val_RMSE: 4.3186]
+2022-02-05 01:25:18,543 - easytorch-training - INFO - test:: [test_time: -104.15 (s), test_loss: 1.8889, test_MAPE: -1141.0918, test_RMSE: 4.5493]
+2022-02-05 01:25:18,607 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_047.pt saved
+2022-02-05 01:25:18,607 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 01:25:18,607 - easytorch-training - INFO - epoch 48 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 01:27:58,801 - easytorch-training - INFO - train:: [train_time: 160.19 (s), lr: 2.00e-03, train_loss: 1.9093, train_MAPE: -160.6746, train_RMSE: 4.3287]
+2022-02-05 01:28:51,300 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.7882, val_MAPE: -1845.9101, val_RMSE: 4.2762]
+2022-02-05 01:30:34,179 - easytorch-training - INFO - test:: [test_time: -102.87 (s), test_loss: 1.8895, test_MAPE: -1149.2306, test_RMSE: 4.5732]
+2022-02-05 01:30:34,239 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_048.pt saved
+2022-02-05 01:30:34,239 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 01:30:34,239 - easytorch-training - INFO - epoch 49 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 01:33:14,399 - easytorch-training - INFO - train:: [train_time: 160.16 (s), lr: 2.00e-03, train_loss: 1.9112, train_MAPE: -179.8531, train_RMSE: 4.3291]
+2022-02-05 01:34:06,781 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.8030, val_MAPE: -1931.4430, val_RMSE: 4.3127]
+2022-02-05 01:35:50,289 - easytorch-training - INFO - test:: [test_time: -103.50 (s), test_loss: 1.9073, test_MAPE: -1145.2729, test_RMSE: 4.6144]
+2022-02-05 01:35:50,353 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_049.pt saved
+2022-02-05 01:35:50,354 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-05 01:35:50,354 - easytorch-training - INFO - epoch 50 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 01:38:30,215 - easytorch-training - INFO - train:: [train_time: 159.86 (s), lr: 2.00e-03, train_loss: 1.9075, train_MAPE: -192.4070, train_RMSE: 4.3310]
+2022-02-05 01:39:22,643 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7881, val_MAPE: -2062.0095, val_RMSE: 4.3181]
+2022-02-05 01:41:05,109 - easytorch-training - INFO - test:: [test_time: -102.45 (s), test_loss: 1.8799, test_MAPE: -1085.8471, test_RMSE: 4.5757]
+2022-02-05 01:41:05,152 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_050.pt saved
+2022-02-05 01:41:05,155 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 01:41:05,155 - easytorch-training - INFO - epoch 51 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.35it/s]
+2022-02-05 01:43:45,820 - easytorch-training - INFO - train:: [train_time: 160.66 (s), lr: 1.00e-03, train_loss: 1.8953, train_MAPE: -159.5399, train_RMSE: 4.2995]
+2022-02-05 01:44:38,109 - easytorch-training - INFO - val:: [val_time: 52.28 (s), val_loss: 1.7738, val_MAPE: -1988.0187, val_RMSE: 4.2480]
+2022-02-05 01:46:21,449 - easytorch-training - INFO - test:: [test_time: -103.33 (s), test_loss: 1.8751, test_MAPE: -1127.7382, test_RMSE: 4.5364]
+2022-02-05 01:46:21,507 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_051.pt saved
+2022-02-05 01:46:21,507 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-05 01:46:21,507 - easytorch-training - INFO - epoch 52 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 01:49:01,591 - easytorch-training - INFO - train:: [train_time: 160.08 (s), lr: 1.00e-03, train_loss: 1.8954, train_MAPE: -161.8258, train_RMSE: 4.2975]
+2022-02-05 01:49:54,005 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.7878, val_MAPE: -1928.1143, val_RMSE: 4.2795]
+2022-02-05 01:51:36,972 - easytorch-training - INFO - test:: [test_time: -102.96 (s), test_loss: 1.8975, test_MAPE: -1103.8418, test_RMSE: 4.5951]
+2022-02-05 01:51:37,040 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_052.pt saved
+2022-02-05 01:51:37,040 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-05 01:51:37,040 - easytorch-training - INFO - epoch 53 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 01:54:17,473 - easytorch-training - INFO - train:: [train_time: 160.43 (s), lr: 1.00e-03, train_loss: 1.8842, train_MAPE: -194.1450, train_RMSE: 4.2698]
+2022-02-05 01:55:09,928 - easytorch-training - INFO - val:: [val_time: 52.45 (s), val_loss: 1.7773, val_MAPE: -1933.1567, val_RMSE: 4.2608]
+2022-02-05 01:56:52,390 - easytorch-training - INFO - test:: [test_time: -102.46 (s), test_loss: 1.8829, test_MAPE: -1145.6221, test_RMSE: 4.5584]
+2022-02-05 01:56:52,451 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_053.pt saved
+2022-02-05 01:56:52,452 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-05 01:56:52,452 - easytorch-training - INFO - epoch 54 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 01:59:32,393 - easytorch-training - INFO - train:: [train_time: 159.94 (s), lr: 1.00e-03, train_loss: 1.8892, train_MAPE: -171.3288, train_RMSE: 4.2890]
+2022-02-05 02:00:25,122 - easytorch-training - INFO - val:: [val_time: 52.72 (s), val_loss: 1.7820, val_MAPE: -1890.6214, val_RMSE: 4.2595]
+2022-02-05 02:02:08,696 - easytorch-training - INFO - test:: [test_time: -103.57 (s), test_loss: 1.8783, test_MAPE: -1044.4933, test_RMSE: 4.5364]
+2022-02-05 02:02:08,761 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_054.pt saved
+2022-02-05 02:02:08,762 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:55
+2022-02-05 02:02:08,762 - easytorch-training - INFO - epoch 55 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 02:04:48,728 - easytorch-training - INFO - train:: [train_time: 159.97 (s), lr: 1.00e-03, train_loss: 1.8903, train_MAPE: -171.4746, train_RMSE: 4.2880]
+2022-02-05 02:05:41,274 - easytorch-training - INFO - val:: [val_time: 52.54 (s), val_loss: 1.7921, val_MAPE: -1953.6828, val_RMSE: 4.2917]
+2022-02-05 02:07:25,538 - easytorch-training - INFO - test:: [test_time: -104.26 (s), test_loss: 1.8891, test_MAPE: -1057.6607, test_RMSE: 4.5754]
+2022-02-05 02:07:25,598 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_055.pt saved
+2022-02-05 02:07:25,598 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:50:00
+2022-02-05 02:07:25,598 - easytorch-training - INFO - epoch 56 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 02:10:05,294 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8841, train_MAPE: -161.1963, train_RMSE: 4.2763]
+2022-02-05 02:10:57,573 - easytorch-training - INFO - val:: [val_time: 52.27 (s), val_loss: 1.7881, val_MAPE: -1859.4566, val_RMSE: 4.2789]
+2022-02-05 02:12:40,001 - easytorch-training - INFO - test:: [test_time: -102.42 (s), test_loss: 1.8908, test_MAPE: -1073.8927, test_RMSE: 4.5792]
+2022-02-05 02:12:40,062 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_056.pt saved
+2022-02-05 02:12:40,062 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:56
+2022-02-05 02:12:40,062 - easytorch-training - INFO - epoch 57 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 02:15:20,001 - easytorch-training - INFO - train:: [train_time: 159.94 (s), lr: 1.00e-03, train_loss: 1.8838, train_MAPE: -184.9191, train_RMSE: 4.2770]
+2022-02-05 02:16:12,438 - easytorch-training - INFO - val:: [val_time: 52.43 (s), val_loss: 1.7853, val_MAPE: -2016.3092, val_RMSE: 4.2706]
+2022-02-05 02:17:55,054 - easytorch-training - INFO - test:: [test_time: -102.61 (s), test_loss: 1.8885, test_MAPE: -1142.6837, test_RMSE: 4.5673]
+2022-02-05 02:17:55,112 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_057.pt saved
+2022-02-05 02:17:55,112 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:54
+2022-02-05 02:17:55,112 - easytorch-training - INFO - epoch 58 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 02:20:34,766 - easytorch-training - INFO - train:: [train_time: 159.65 (s), lr: 1.00e-03, train_loss: 1.8848, train_MAPE: -186.8955, train_RMSE: 4.2774]
+2022-02-05 02:21:27,974 - easytorch-training - INFO - val:: [val_time: 53.20 (s), val_loss: 1.7867, val_MAPE: -1964.6389, val_RMSE: 4.2737]
+2022-02-05 02:23:10,642 - easytorch-training - INFO - test:: [test_time: -102.66 (s), test_loss: 1.9001, test_MAPE: -1158.8105, test_RMSE: 4.6030]
+2022-02-05 02:23:10,698 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_058.pt saved
+2022-02-05 02:23:10,699 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:54
+2022-02-05 02:23:10,699 - easytorch-training - INFO - epoch 59 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 02:25:50,420 - easytorch-training - INFO - train:: [train_time: 159.72 (s), lr: 1.00e-03, train_loss: 1.8839, train_MAPE: -177.6217, train_RMSE: 4.2740]
+2022-02-05 02:26:42,934 - easytorch-training - INFO - val:: [val_time: 52.51 (s), val_loss: 1.7807, val_MAPE: -1940.1255, val_RMSE: 4.2787]
+2022-02-05 02:28:25,402 - easytorch-training - INFO - test:: [test_time: -102.46 (s), test_loss: 1.8696, test_MAPE: -1069.2587, test_RMSE: 4.5336]
+2022-02-05 02:28:25,467 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_059.pt saved
+2022-02-05 02:28:25,467 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:52
+2022-02-05 02:28:25,467 - easytorch-training - INFO - epoch 60 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 02:31:05,729 - easytorch-training - INFO - train:: [train_time: 160.26 (s), lr: 1.00e-03, train_loss: 1.8879, train_MAPE: -157.9289, train_RMSE: 4.2867]
+2022-02-05 02:31:58,129 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7771, val_MAPE: -1950.5794, val_RMSE: 4.2547]
+2022-02-05 02:33:40,760 - easytorch-training - INFO - test:: [test_time: -102.62 (s), test_loss: 1.8704, test_MAPE: -1106.1091, test_RMSE: 4.5295]
+2022-02-05 02:33:40,817 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_060.pt saved
+2022-02-05 02:33:40,821 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:51
+2022-02-05 02:33:40,821 - easytorch-training - INFO - epoch 61 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 02:36:20,816 - easytorch-training - INFO - train:: [train_time: 159.99 (s), lr: 1.00e-03, train_loss: 1.8806, train_MAPE: -166.2913, train_RMSE: 4.2659]
+2022-02-05 02:37:14,045 - easytorch-training - INFO - val:: [val_time: 53.22 (s), val_loss: 1.7816, val_MAPE: -1960.9194, val_RMSE: 4.2606]
+2022-02-05 02:38:56,771 - easytorch-training - INFO - test:: [test_time: -102.72 (s), test_loss: 1.8750, test_MAPE: -1144.5133, test_RMSE: 4.5226]
+2022-02-05 02:38:56,808 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_061.pt saved
+2022-02-05 02:38:56,808 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:53
+2022-02-05 02:38:56,808 - easytorch-training - INFO - epoch 62 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 02:41:36,985 - easytorch-training - INFO - train:: [train_time: 160.18 (s), lr: 1.00e-03, train_loss: 1.8788, train_MAPE: -172.6013, train_RMSE: 4.2684]
+2022-02-05 02:42:29,297 - easytorch-training - INFO - val:: [val_time: 52.31 (s), val_loss: 1.7826, val_MAPE: -1895.9042, val_RMSE: 4.2778]
+2022-02-05 02:44:12,227 - easytorch-training - INFO - test:: [test_time: -102.92 (s), test_loss: 1.8754, test_MAPE: -1097.9341, test_RMSE: 4.5472]
+2022-02-05 02:44:12,268 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_062.pt saved
+2022-02-05 02:44:12,268 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:53
+2022-02-05 02:44:12,268 - easytorch-training - INFO - epoch 63 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 02:46:51,919 - easytorch-training - INFO - train:: [train_time: 159.65 (s), lr: 1.00e-03, train_loss: 1.8789, train_MAPE: -187.8067, train_RMSE: 4.2609]
+2022-02-05 02:47:44,560 - easytorch-training - INFO - val:: [val_time: 52.63 (s), val_loss: 1.7747, val_MAPE: -1976.7937, val_RMSE: 4.2520]
+2022-02-05 02:49:27,110 - easytorch-training - INFO - test:: [test_time: -102.55 (s), test_loss: 1.8880, test_MAPE: -1083.8575, test_RMSE: 4.5778]
+2022-02-05 02:49:27,170 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_063.pt saved
+2022-02-05 02:49:27,171 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:51
+2022-02-05 02:49:27,171 - easytorch-training - INFO - epoch 64 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 02:52:07,195 - easytorch-training - INFO - train:: [train_time: 160.02 (s), lr: 1.00e-03, train_loss: 1.8756, train_MAPE: -186.5097, train_RMSE: 4.2535]
+2022-02-05 02:52:59,584 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.7761, val_MAPE: -1956.7242, val_RMSE: 4.2576]
+2022-02-05 02:54:42,049 - easytorch-training - INFO - test:: [test_time: -102.46 (s), test_loss: 1.8849, test_MAPE: -1186.8837, test_RMSE: 4.5728]
+2022-02-05 02:54:42,103 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_064.pt saved
+2022-02-05 02:54:42,103 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 02:54:42,103 - easytorch-training - INFO - epoch 65 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 02:57:21,854 - easytorch-training - INFO - train:: [train_time: 159.75 (s), lr: 1.00e-03, train_loss: 1.8734, train_MAPE: -200.4682, train_RMSE: 4.2511]
+2022-02-05 02:58:15,080 - easytorch-training - INFO - val:: [val_time: 53.22 (s), val_loss: 1.7676, val_MAPE: -1902.5321, val_RMSE: 4.2334]
+2022-02-05 02:59:57,519 - easytorch-training - INFO - test:: [test_time: -102.43 (s), test_loss: 1.8789, test_MAPE: -1073.9773, test_RMSE: 4.5555]
+2022-02-05 02:59:57,579 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_065.pt saved
+2022-02-05 02:59:57,579 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 02:59:57,580 - easytorch-training - INFO - epoch 66 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 03:02:37,249 - easytorch-training - INFO - train:: [train_time: 159.67 (s), lr: 1.00e-03, train_loss: 1.8720, train_MAPE: -174.5698, train_RMSE: 4.2425]
+2022-02-05 03:03:29,610 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7855, val_MAPE: -1949.2660, val_RMSE: 4.2732]
+2022-02-05 03:05:12,994 - easytorch-training - INFO - test:: [test_time: -103.38 (s), test_loss: 1.9038, test_MAPE: -1100.7223, test_RMSE: 4.6170]
+2022-02-05 03:05:13,055 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_066.pt saved
+2022-02-05 03:05:13,055 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:49
+2022-02-05 03:05:13,055 - easytorch-training - INFO - epoch 67 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 03:07:53,160 - easytorch-training - INFO - train:: [train_time: 160.10 (s), lr: 1.00e-03, train_loss: 1.8711, train_MAPE: -160.6261, train_RMSE: 4.2413]
+2022-02-05 03:08:45,456 - easytorch-training - INFO - val:: [val_time: 52.29 (s), val_loss: 1.7754, val_MAPE: -2022.5310, val_RMSE: 4.2675]
+2022-02-05 03:10:27,872 - easytorch-training - INFO - test:: [test_time: -102.41 (s), test_loss: 1.8869, test_MAPE: -1115.8400, test_RMSE: 4.5925]
+2022-02-05 03:10:27,932 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_067.pt saved
+2022-02-05 03:10:27,932 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-05 03:10:27,932 - easytorch-training - INFO - epoch 68 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 03:13:07,766 - easytorch-training - INFO - train:: [train_time: 159.83 (s), lr: 1.00e-03, train_loss: 1.8769, train_MAPE: -180.6287, train_RMSE: 4.2577]
+2022-02-05 03:14:00,282 - easytorch-training - INFO - val:: [val_time: 52.51 (s), val_loss: 1.7898, val_MAPE: -1955.1814, val_RMSE: 4.2845]
+2022-02-05 03:15:43,276 - easytorch-training - INFO - test:: [test_time: -102.99 (s), test_loss: 1.8874, test_MAPE: -1095.0525, test_RMSE: 4.5737]
+2022-02-05 03:15:43,337 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_068.pt saved
+2022-02-05 03:15:43,337 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:47
+2022-02-05 03:15:43,337 - easytorch-training - INFO - epoch 69 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 03:18:23,139 - easytorch-training - INFO - train:: [train_time: 159.80 (s), lr: 1.00e-03, train_loss: 1.8784, train_MAPE: -158.2373, train_RMSE: 4.2614]
+2022-02-05 03:19:15,760 - easytorch-training - INFO - val:: [val_time: 52.62 (s), val_loss: 1.8112, val_MAPE: -1930.4748, val_RMSE: 4.3329]
+2022-02-05 03:20:58,114 - easytorch-training - INFO - test:: [test_time: -102.35 (s), test_loss: 1.9120, test_MAPE: -1149.3823, test_RMSE: 4.6367]
+2022-02-05 03:20:58,169 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_069.pt saved
+2022-02-05 03:20:58,169 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:45
+2022-02-05 03:20:58,169 - easytorch-training - INFO - epoch 70 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 03:23:38,222 - easytorch-training - INFO - train:: [train_time: 160.05 (s), lr: 1.00e-03, train_loss: 1.8719, train_MAPE: -173.0616, train_RMSE: 4.2429]
+2022-02-05 03:24:30,482 - easytorch-training - INFO - val:: [val_time: 52.25 (s), val_loss: 1.7716, val_MAPE: -1991.7415, val_RMSE: 4.2531]
+2022-02-05 03:26:13,519 - easytorch-training - INFO - test:: [test_time: -103.03 (s), test_loss: 1.8639, test_MAPE: -1102.4900, test_RMSE: 4.5126]
+2022-02-05 03:26:13,561 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_070.pt saved
+2022-02-05 03:26:13,565 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:45
+2022-02-05 03:26:13,565 - easytorch-training - INFO - epoch 71 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 03:28:53,268 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8790, train_MAPE: -158.7325, train_RMSE: 4.2655]
+2022-02-05 03:29:45,562 - easytorch-training - INFO - val:: [val_time: 52.29 (s), val_loss: 1.7936, val_MAPE: -1885.1889, val_RMSE: 4.2768]
+2022-02-05 03:31:28,367 - easytorch-training - INFO - test:: [test_time: -102.80 (s), test_loss: 1.9073, test_MAPE: -1155.1075, test_RMSE: 4.6089]
+2022-02-05 03:31:28,427 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_071.pt saved
+2022-02-05 03:31:28,428 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:43
+2022-02-05 03:31:28,428 - easytorch-training - INFO - epoch 72 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 03:34:08,607 - easytorch-training - INFO - train:: [train_time: 160.18 (s), lr: 1.00e-03, train_loss: 1.8736, train_MAPE: -177.3460, train_RMSE: 4.2486]
+2022-02-05 03:35:00,979 - easytorch-training - INFO - val:: [val_time: 52.37 (s), val_loss: 1.7884, val_MAPE: -1882.2647, val_RMSE: 4.2904]
+2022-02-05 03:36:44,080 - easytorch-training - INFO - test:: [test_time: -103.10 (s), test_loss: 1.8812, test_MAPE: -1134.3113, test_RMSE: 4.5645]
+2022-02-05 03:36:44,129 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_072.pt saved
+2022-02-05 03:36:44,130 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:44
+2022-02-05 03:36:44,130 - easytorch-training - INFO - epoch 73 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 03:39:23,726 - easytorch-training - INFO - train:: [train_time: 159.60 (s), lr: 1.00e-03, train_loss: 1.8756, train_MAPE: -169.2798, train_RMSE: 4.2539]
+2022-02-05 03:40:16,111 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.7785, val_MAPE: -1888.2055, val_RMSE: 4.2599]
+2022-02-05 03:41:58,828 - easytorch-training - INFO - test:: [test_time: -102.71 (s), test_loss: 1.8827, test_MAPE: -1175.9322, test_RMSE: 4.5646]
+2022-02-05 03:41:58,888 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_073.pt saved
+2022-02-05 03:41:58,888 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:42
+2022-02-05 03:41:58,889 - easytorch-training - INFO - epoch 74 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 03:44:38,474 - easytorch-training - INFO - train:: [train_time: 159.58 (s), lr: 1.00e-03, train_loss: 1.8727, train_MAPE: -150.4076, train_RMSE: 4.2488]
+2022-02-05 03:45:30,821 - easytorch-training - INFO - val:: [val_time: 52.34 (s), val_loss: 1.7864, val_MAPE: -1973.7954, val_RMSE: 4.2856]
+2022-02-05 03:47:13,484 - easytorch-training - INFO - test:: [test_time: -102.66 (s), test_loss: 1.8814, test_MAPE: -1099.6210, test_RMSE: 4.5583]
+2022-02-05 03:47:13,544 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_074.pt saved
+2022-02-05 03:47:13,544 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:39
+2022-02-05 03:47:13,545 - easytorch-training - INFO - epoch 75 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 03:49:52,918 - easytorch-training - INFO - train:: [train_time: 159.37 (s), lr: 1.00e-03, train_loss: 1.8690, train_MAPE: -183.8338, train_RMSE: 4.2418]
+2022-02-05 03:50:45,250 - easytorch-training - INFO - val:: [val_time: 52.33 (s), val_loss: 1.7710, val_MAPE: -1944.4940, val_RMSE: 4.2623]
+2022-02-05 03:52:28,051 - easytorch-training - INFO - test:: [test_time: -102.79 (s), test_loss: 1.8855, test_MAPE: -1123.1376, test_RMSE: 4.5864]
+2022-02-05 03:52:28,089 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_075.pt saved
+2022-02-05 03:52:28,089 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:37
+2022-02-05 03:52:28,089 - easytorch-training - INFO - epoch 76 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 03:55:08,227 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 1.00e-03, train_loss: 1.8714, train_MAPE: -164.9870, train_RMSE: 4.2467]
+2022-02-05 03:56:00,736 - easytorch-training - INFO - val:: [val_time: 52.50 (s), val_loss: 1.7689, val_MAPE: -1818.6104, val_RMSE: 4.2596]
+2022-02-05 03:57:43,176 - easytorch-training - INFO - test:: [test_time: -102.44 (s), test_loss: 1.8746, test_MAPE: -1092.7278, test_RMSE: 4.5630]
+2022-02-05 03:57:43,237 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_076.pt saved
+2022-02-05 03:57:43,238 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:36
+2022-02-05 03:57:43,238 - easytorch-training - INFO - epoch 77 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 04:00:22,871 - easytorch-training - INFO - train:: [train_time: 159.63 (s), lr: 1.00e-03, train_loss: 1.8692, train_MAPE: -193.3160, train_RMSE: 4.2392]
+2022-02-05 04:01:15,637 - easytorch-training - INFO - val:: [val_time: 52.76 (s), val_loss: 1.7733, val_MAPE: -1939.5191, val_RMSE: 4.2549]
+2022-02-05 04:02:58,392 - easytorch-training - INFO - test:: [test_time: -102.75 (s), test_loss: 1.8706, test_MAPE: -1122.6352, test_RMSE: 4.5312]
+2022-02-05 04:02:58,445 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_077.pt saved
+2022-02-05 04:02:58,445 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:36
+2022-02-05 04:02:58,445 - easytorch-training - INFO - epoch 78 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:05:38,342 - easytorch-training - INFO - train:: [train_time: 159.90 (s), lr: 1.00e-03, train_loss: 1.8688, train_MAPE: -174.4260, train_RMSE: 4.2363]
+2022-02-05 04:06:30,865 - easytorch-training - INFO - val:: [val_time: 52.52 (s), val_loss: 1.7798, val_MAPE: -1905.5030, val_RMSE: 4.2785]
+2022-02-05 04:08:13,337 - easytorch-training - INFO - test:: [test_time: -102.47 (s), test_loss: 1.8710, test_MAPE: -1114.7736, test_RMSE: 4.5486]
+2022-02-05 04:08:13,397 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_078.pt saved
+2022-02-05 04:08:13,397 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 04:08:13,397 - easytorch-training - INFO - epoch 79 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:10:53,160 - easytorch-training - INFO - train:: [train_time: 159.76 (s), lr: 1.00e-03, train_loss: 1.8694, train_MAPE: -147.3460, train_RMSE: 4.2413]
+2022-02-05 04:11:45,608 - easytorch-training - INFO - val:: [val_time: 52.44 (s), val_loss: 1.7788, val_MAPE: -1884.2012, val_RMSE: 4.2606]
+2022-02-05 04:13:28,050 - easytorch-training - INFO - test:: [test_time: -102.44 (s), test_loss: 1.8874, test_MAPE: -1110.8004, test_RMSE: 4.5744]
+2022-02-05 04:13:28,090 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_079.pt saved
+2022-02-05 04:13:28,090 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:33
+2022-02-05 04:13:28,090 - easytorch-training - INFO - epoch 80 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:16:07,947 - easytorch-training - INFO - train:: [train_time: 159.86 (s), lr: 1.00e-03, train_loss: 1.8686, train_MAPE: -171.4349, train_RMSE: 4.2372]
+2022-02-05 04:17:00,876 - easytorch-training - INFO - val:: [val_time: 52.92 (s), val_loss: 1.7637, val_MAPE: -1949.4246, val_RMSE: 4.2414]
+2022-02-05 04:18:43,616 - easytorch-training - INFO - test:: [test_time: -102.73 (s), test_loss: 1.8748, test_MAPE: -1120.9112, test_RMSE: 4.5532]
+2022-02-05 04:18:43,663 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_080.pt saved
+2022-02-05 04:18:43,666 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:33
+2022-02-05 04:18:43,666 - easytorch-training - INFO - epoch 81 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 04:21:23,339 - easytorch-training - INFO - train:: [train_time: 159.67 (s), lr: 1.00e-03, train_loss: 1.8672, train_MAPE: -167.0997, train_RMSE: 4.2383]
+2022-02-05 04:22:15,904 - easytorch-training - INFO - val:: [val_time: 52.56 (s), val_loss: 1.7726, val_MAPE: -1997.5125, val_RMSE: 4.2581]
+2022-02-05 04:23:58,457 - easytorch-training - INFO - test:: [test_time: -102.55 (s), test_loss: 1.8837, test_MAPE: -1116.0142, test_RMSE: 4.5741]
+2022-02-05 04:23:58,518 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_081.pt saved
+2022-02-05 04:23:58,518 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 04:23:58,518 - easytorch-training - INFO - epoch 82 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 04:26:38,646 - easytorch-training - INFO - train:: [train_time: 160.13 (s), lr: 1.00e-03, train_loss: 1.8646, train_MAPE: -156.0467, train_RMSE: 4.2325]
+2022-02-05 04:27:31,118 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7847, val_MAPE: -1994.4063, val_RMSE: 4.2629]
+2022-02-05 04:29:14,651 - easytorch-training - INFO - test:: [test_time: -103.53 (s), test_loss: 1.9034, test_MAPE: -1082.5358, test_RMSE: 4.5973]
+2022-02-05 04:29:14,712 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_082.pt saved
+2022-02-05 04:29:14,712 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 04:29:14,712 - easytorch-training - INFO - epoch 83 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 04:31:54,417 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8669, train_MAPE: -167.9618, train_RMSE: 4.2349]
+2022-02-05 04:32:46,845 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7664, val_MAPE: -1935.6695, val_RMSE: 4.2431]
+2022-02-05 04:34:29,640 - easytorch-training - INFO - test:: [test_time: -102.79 (s), test_loss: 1.8638, test_MAPE: -1117.1586, test_RMSE: 4.5214]
+2022-02-05 04:34:29,700 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_083.pt saved
+2022-02-05 04:34:29,701 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 04:34:29,701 - easytorch-training - INFO - epoch 84 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:37:09,651 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 1.00e-03, train_loss: 1.8593, train_MAPE: -186.9857, train_RMSE: 4.2159]
+2022-02-05 04:38:02,011 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7884, val_MAPE: -2002.1558, val_RMSE: 4.3033]
+2022-02-05 04:39:45,014 - easytorch-training - INFO - test:: [test_time: -103.00 (s), test_loss: 1.8804, test_MAPE: -1125.9635, test_RMSE: 4.5695]
+2022-02-05 04:39:45,075 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_084.pt saved
+2022-02-05 04:39:45,076 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 04:39:45,076 - easytorch-training - INFO - epoch 85 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 04:42:25,264 - easytorch-training - INFO - train:: [train_time: 160.19 (s), lr: 1.00e-03, train_loss: 1.8615, train_MAPE: -173.9726, train_RMSE: 4.2256]
+2022-02-05 04:43:17,681 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.7625, val_MAPE: -1959.7451, val_RMSE: 4.2392]
+2022-02-05 04:45:00,644 - easytorch-training - INFO - test:: [test_time: -102.96 (s), test_loss: 1.8696, test_MAPE: -1091.5592, test_RMSE: 4.5417]
+2022-02-05 04:45:00,704 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_085.pt saved
+2022-02-05 04:45:00,704 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:33
+2022-02-05 04:45:00,704 - easytorch-training - INFO - epoch 86 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:47:40,671 - easytorch-training - INFO - train:: [train_time: 159.97 (s), lr: 1.00e-03, train_loss: 1.8666, train_MAPE: -170.2310, train_RMSE: 4.2349]
+2022-02-05 04:48:33,150 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7775, val_MAPE: -1895.4809, val_RMSE: 4.2667]
+2022-02-05 04:50:15,507 - easytorch-training - INFO - test:: [test_time: -102.35 (s), test_loss: 1.8786, test_MAPE: -1155.3914, test_RMSE: 4.5641]
+2022-02-05 04:50:15,553 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_086.pt saved
+2022-02-05 04:50:15,554 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 04:50:15,554 - easytorch-training - INFO - epoch 87 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 04:52:55,480 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 1.00e-03, train_loss: 1.8685, train_MAPE: -191.1183, train_RMSE: 4.2431]
+2022-02-05 04:53:47,663 - easytorch-training - INFO - val:: [val_time: 52.18 (s), val_loss: 1.7724, val_MAPE: -1895.4374, val_RMSE: 4.2556]
+2022-02-05 04:55:30,382 - easytorch-training - INFO - test:: [test_time: -102.71 (s), test_loss: 1.8806, test_MAPE: -1056.3105, test_RMSE: 4.5677]
+2022-02-05 04:55:30,440 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_087.pt saved
+2022-02-05 04:55:30,440 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:30
+2022-02-05 04:55:30,440 - easytorch-training - INFO - epoch 88 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 04:58:10,579 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 1.00e-03, train_loss: 1.8605, train_MAPE: -159.4032, train_RMSE: 4.2151]
+2022-02-05 04:59:02,916 - easytorch-training - INFO - val:: [val_time: 52.33 (s), val_loss: 1.7728, val_MAPE: -1927.7321, val_RMSE: 4.2501]
+2022-02-05 05:00:45,809 - easytorch-training - INFO - test:: [test_time: -102.89 (s), test_loss: 1.8825, test_MAPE: -1061.3270, test_RMSE: 4.5696]
+2022-02-05 05:00:45,869 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_088.pt saved
+2022-02-05 05:00:45,870 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:30
+2022-02-05 05:00:45,870 - easytorch-training - INFO - epoch 89 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 05:03:26,247 - easytorch-training - INFO - train:: [train_time: 160.38 (s), lr: 1.00e-03, train_loss: 1.8592, train_MAPE: -166.7126, train_RMSE: 4.2166]
+2022-02-05 05:04:18,568 - easytorch-training - INFO - val:: [val_time: 52.32 (s), val_loss: 1.7771, val_MAPE: -1930.0182, val_RMSE: 4.2692]
+2022-02-05 05:06:01,066 - easytorch-training - INFO - test:: [test_time: -102.49 (s), test_loss: 1.8729, test_MAPE: -1111.7473, test_RMSE: 4.5467]
+2022-02-05 05:06:01,108 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_089.pt saved
+2022-02-05 05:06:01,108 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:30
+2022-02-05 05:06:01,108 - easytorch-training - INFO - epoch 90 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 05:08:41,142 - easytorch-training - INFO - train:: [train_time: 160.03 (s), lr: 1.00e-03, train_loss: 1.8654, train_MAPE: -170.4112, train_RMSE: 4.2266]
+2022-02-05 05:09:33,563 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7603, val_MAPE: -2012.3928, val_RMSE: 4.2344]
+2022-02-05 05:11:16,134 - easytorch-training - INFO - test:: [test_time: -102.57 (s), test_loss: 1.8679, test_MAPE: -1208.2087, test_RMSE: 4.5430]
+2022-02-05 05:11:16,192 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_090.pt saved
+2022-02-05 05:11:16,195 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:29
+2022-02-05 05:11:16,195 - easytorch-training - INFO - epoch 91 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 05:13:56,422 - easytorch-training - INFO - train:: [train_time: 160.23 (s), lr: 1.00e-03, train_loss: 1.8657, train_MAPE: -165.0746, train_RMSE: 4.2300]
+2022-02-05 05:14:48,904 - easytorch-training - INFO - val:: [val_time: 52.48 (s), val_loss: 1.7815, val_MAPE: -1904.3108, val_RMSE: 4.2889]
+2022-02-05 05:16:31,783 - easytorch-training - INFO - test:: [test_time: -102.87 (s), test_loss: 1.8906, test_MAPE: -1073.3980, test_RMSE: 4.5968]
+2022-02-05 05:16:31,844 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_091.pt saved
+2022-02-05 05:16:31,845 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:30
+2022-02-05 05:16:31,845 - easytorch-training - INFO - epoch 92 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 05:19:12,188 - easytorch-training - INFO - train:: [train_time: 160.34 (s), lr: 1.00e-03, train_loss: 1.8610, train_MAPE: -188.9592, train_RMSE: 4.2226]
+2022-02-05 05:20:05,050 - easytorch-training - INFO - val:: [val_time: 52.86 (s), val_loss: 1.7828, val_MAPE: -1963.6133, val_RMSE: 4.2667]
+2022-02-05 05:21:48,200 - easytorch-training - INFO - test:: [test_time: -103.15 (s), test_loss: 1.8854, test_MAPE: -1111.6151, test_RMSE: 4.5642]
+2022-02-05 05:21:48,258 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_092.pt saved
+2022-02-05 05:21:48,259 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 05:21:48,259 - easytorch-training - INFO - epoch 93 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 05:24:28,148 - easytorch-training - INFO - train:: [train_time: 159.89 (s), lr: 1.00e-03, train_loss: 1.8602, train_MAPE: -177.5679, train_RMSE: 4.2162]
+2022-02-05 05:25:21,118 - easytorch-training - INFO - val:: [val_time: 52.96 (s), val_loss: 1.7831, val_MAPE: -1909.3242, val_RMSE: 4.2673]
+2022-02-05 05:27:04,870 - easytorch-training - INFO - test:: [test_time: -103.75 (s), test_loss: 1.8873, test_MAPE: -1115.0143, test_RMSE: 4.5698]
+2022-02-05 05:27:04,928 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_093.pt saved
+2022-02-05 05:27:04,928 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:27:04,928 - easytorch-training - INFO - epoch 94 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 05:29:44,718 - easytorch-training - INFO - train:: [train_time: 159.79 (s), lr: 1.00e-03, train_loss: 1.8586, train_MAPE: -153.5404, train_RMSE: 4.2115]
+2022-02-05 05:30:37,183 - easytorch-training - INFO - val:: [val_time: 52.46 (s), val_loss: 1.7704, val_MAPE: -2043.6652, val_RMSE: 4.2826]
+2022-02-05 05:32:19,726 - easytorch-training - INFO - test:: [test_time: -102.54 (s), test_loss: 1.8742, test_MAPE: -1075.0882, test_RMSE: 4.5710]
+2022-02-05 05:32:19,785 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_094.pt saved
+2022-02-05 05:32:19,786 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 05:32:19,786 - easytorch-training - INFO - epoch 95 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 05:34:59,208 - easytorch-training - INFO - train:: [train_time: 159.42 (s), lr: 1.00e-03, train_loss: 1.8589, train_MAPE: -175.2523, train_RMSE: 4.2188]
+2022-02-05 05:35:52,272 - easytorch-training - INFO - val:: [val_time: 53.06 (s), val_loss: 1.7684, val_MAPE: -1883.7142, val_RMSE: 4.2423]
+2022-02-05 05:37:35,711 - easytorch-training - INFO - test:: [test_time: -103.44 (s), test_loss: 1.8861, test_MAPE: -1128.8495, test_RMSE: 4.5850]
+2022-02-05 05:37:35,749 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_095.pt saved
+2022-02-05 05:37:35,749 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:37:35,749 - easytorch-training - INFO - epoch 96 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.35it/s]
+2022-02-05 05:40:16,548 - easytorch-training - INFO - train:: [train_time: 160.80 (s), lr: 1.00e-03, train_loss: 1.8539, train_MAPE: -181.2149, train_RMSE: 4.2071]
+2022-02-05 05:41:08,821 - easytorch-training - INFO - val:: [val_time: 52.27 (s), val_loss: 1.7777, val_MAPE: -1907.1127, val_RMSE: 4.2839]
+2022-02-05 05:42:51,210 - easytorch-training - INFO - test:: [test_time: -102.38 (s), test_loss: 1.8919, test_MAPE: -1105.2764, test_RMSE: 4.6141]
+2022-02-05 05:42:51,270 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_096.pt saved
+2022-02-05 05:42:51,270 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:42:51,270 - easytorch-training - INFO - epoch 97 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 05:45:30,949 - easytorch-training - INFO - train:: [train_time: 159.68 (s), lr: 1.00e-03, train_loss: 1.8615, train_MAPE: -177.5853, train_RMSE: 4.2199]
+2022-02-05 05:46:24,142 - easytorch-training - INFO - val:: [val_time: 53.19 (s), val_loss: 1.7754, val_MAPE: -1935.1375, val_RMSE: 4.2794]
+2022-02-05 05:48:06,841 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8770, test_MAPE: -1088.8739, test_RMSE: 4.5631]
+2022-02-05 05:48:06,907 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_097.pt saved
+2022-02-05 05:48:06,907 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:48:06,907 - easytorch-training - INFO - epoch 98 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 05:50:46,848 - easytorch-training - INFO - train:: [train_time: 159.94 (s), lr: 1.00e-03, train_loss: 1.8631, train_MAPE: -172.9455, train_RMSE: 4.2250]
+2022-02-05 05:51:39,351 - easytorch-training - INFO - val:: [val_time: 52.50 (s), val_loss: 1.7557, val_MAPE: -2027.3519, val_RMSE: 4.2411]
+2022-02-05 05:53:22,049 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8620, test_MAPE: -1092.1742, test_RMSE: 4.5301]
+2022-02-05 05:53:22,095 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_098.pt saved
+2022-02-05 05:53:22,095 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:53:22,096 - easytorch-training - INFO - epoch 99 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 05:56:02,208 - easytorch-training - INFO - train:: [train_time: 160.11 (s), lr: 1.00e-03, train_loss: 1.8624, train_MAPE: -158.3117, train_RMSE: 4.2230]
+2022-02-05 05:56:54,853 - easytorch-training - INFO - val:: [val_time: 52.64 (s), val_loss: 1.7705, val_MAPE: -1905.4571, val_RMSE: 4.2632]
+2022-02-05 05:58:37,418 - easytorch-training - INFO - test:: [test_time: -102.56 (s), test_loss: 1.8904, test_MAPE: -1152.9512, test_RMSE: 4.6082]
+2022-02-05 05:58:37,476 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_099.pt saved
+2022-02-05 05:58:37,477 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 05:58:37,477 - easytorch-training - INFO - epoch 100 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.39it/s]
+2022-02-05 06:01:16,698 - easytorch-training - INFO - train:: [train_time: 159.22 (s), lr: 1.00e-03, train_loss: 1.8583, train_MAPE: -168.5234, train_RMSE: 4.2069]
+2022-02-05 06:02:09,109 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.7582, val_MAPE: -1987.4024, val_RMSE: 4.2233]
+2022-02-05 06:03:52,271 - easytorch-training - INFO - test:: [test_time: -103.16 (s), test_loss: 1.8622, test_MAPE: -1060.5035, test_RMSE: 4.5169]
+2022-02-05 06:03:52,332 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_100.pt saved
+2022-02-05 06:03:52,336 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 06:03:52,336 - easytorch-training - INFO - epoch 101 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 06:06:31,894 - easytorch-training - INFO - train:: [train_time: 159.56 (s), lr: 1.00e-03, train_loss: 1.8595, train_MAPE: -179.7955, train_RMSE: 4.2156]
+2022-02-05 06:07:25,368 - easytorch-training - INFO - val:: [val_time: 53.47 (s), val_loss: 1.7675, val_MAPE: -1958.3927, val_RMSE: 4.2616]
+2022-02-05 06:09:08,254 - easytorch-training - INFO - test:: [test_time: -102.88 (s), test_loss: 1.8624, test_MAPE: -1131.3191, test_RMSE: 4.5279]
+2022-02-05 06:09:08,289 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_101.pt saved
+2022-02-05 06:09:08,289 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:35
+2022-02-05 06:09:08,290 - easytorch-training - INFO - epoch 102 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 06:11:47,615 - easytorch-training - INFO - train:: [train_time: 159.33 (s), lr: 1.00e-03, train_loss: 1.8588, train_MAPE: -163.0081, train_RMSE: 4.2121]
+2022-02-05 06:12:39,825 - easytorch-training - INFO - val:: [val_time: 52.20 (s), val_loss: 1.7639, val_MAPE: -1978.5118, val_RMSE: 4.2519]
+2022-02-05 06:14:22,467 - easytorch-training - INFO - test:: [test_time: -102.64 (s), test_loss: 1.8743, test_MAPE: -1088.8568, test_RMSE: 4.5649]
+2022-02-05 06:14:22,512 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_102.pt saved
+2022-02-05 06:14:22,512 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 06:14:22,513 - easytorch-training - INFO - epoch 103 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:17:02,463 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 1.00e-03, train_loss: 1.8465, train_MAPE: -157.2388, train_RMSE: 4.1887]
+2022-02-05 06:17:55,263 - easytorch-training - INFO - val:: [val_time: 52.80 (s), val_loss: 1.7638, val_MAPE: -2007.1671, val_RMSE: 4.2553]
+2022-02-05 06:19:37,851 - easytorch-training - INFO - test:: [test_time: -102.58 (s), test_loss: 1.8675, test_MAPE: -1071.9412, test_RMSE: 4.5464]
+2022-02-05 06:19:37,911 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_103.pt saved
+2022-02-05 06:19:37,912 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 06:19:37,912 - easytorch-training - INFO - epoch 104 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:22:17,840 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 1.00e-03, train_loss: 1.8528, train_MAPE: -175.5944, train_RMSE: 4.2030]
+2022-02-05 06:23:10,216 - easytorch-training - INFO - val:: [val_time: 52.37 (s), val_loss: 1.7739, val_MAPE: -1896.2891, val_RMSE: 4.2461]
+2022-02-05 06:24:54,263 - easytorch-training - INFO - test:: [test_time: -104.04 (s), test_loss: 1.8930, test_MAPE: -1062.5768, test_RMSE: 4.5870]
+2022-02-05 06:24:54,322 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_104.pt saved
+2022-02-05 06:24:54,322 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 06:24:54,323 - easytorch-training - INFO - epoch 105 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:27:34,271 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 1.00e-03, train_loss: 1.8558, train_MAPE: -164.7201, train_RMSE: 4.2057]
+2022-02-05 06:28:26,926 - easytorch-training - INFO - val:: [val_time: 52.65 (s), val_loss: 1.7604, val_MAPE: -2008.8224, val_RMSE: 4.2505]
+2022-02-05 06:30:09,787 - easytorch-training - INFO - test:: [test_time: -102.86 (s), test_loss: 1.8783, test_MAPE: -1154.7954, test_RMSE: 4.5822]
+2022-02-05 06:30:09,827 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_105.pt saved
+2022-02-05 06:30:09,827 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 06:30:09,827 - easytorch-training - INFO - epoch 106 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 06:32:50,015 - easytorch-training - INFO - train:: [train_time: 160.19 (s), lr: 1.00e-03, train_loss: 1.8589, train_MAPE: -190.9873, train_RMSE: 4.2143]
+2022-02-05 06:33:42,463 - easytorch-training - INFO - val:: [val_time: 52.44 (s), val_loss: 1.7697, val_MAPE: -1895.1132, val_RMSE: 4.2667]
+2022-02-05 06:35:24,948 - easytorch-training - INFO - test:: [test_time: -102.48 (s), test_loss: 1.8788, test_MAPE: -1111.6017, test_RMSE: 4.5826]
+2022-02-05 06:35:25,007 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_106.pt saved
+2022-02-05 06:35:25,008 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 06:35:25,008 - easytorch-training - INFO - epoch 107 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:38:04,891 - easytorch-training - INFO - train:: [train_time: 159.88 (s), lr: 1.00e-03, train_loss: 1.8549, train_MAPE: -162.8945, train_RMSE: 4.2076]
+2022-02-05 06:38:57,254 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7749, val_MAPE: -1882.8598, val_RMSE: 4.2590]
+2022-02-05 06:40:40,101 - easytorch-training - INFO - test:: [test_time: -102.84 (s), test_loss: 1.8829, test_MAPE: -1095.6978, test_RMSE: 4.5714]
+2022-02-05 06:40:40,158 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_107.pt saved
+2022-02-05 06:40:40,159 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:34
+2022-02-05 06:40:40,159 - easytorch-training - INFO - epoch 108 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 06:43:20,284 - easytorch-training - INFO - train:: [train_time: 160.12 (s), lr: 1.00e-03, train_loss: 1.8521, train_MAPE: -197.1058, train_RMSE: 4.2029]
+2022-02-05 06:44:12,670 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.7671, val_MAPE: -1884.5360, val_RMSE: 4.2543]
+2022-02-05 06:45:55,119 - easytorch-training - INFO - test:: [test_time: -102.44 (s), test_loss: 1.8769, test_MAPE: -1138.5943, test_RMSE: 4.5717]
+2022-02-05 06:45:55,179 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_108.pt saved
+2022-02-05 06:45:55,179 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:33
+2022-02-05 06:45:55,179 - easytorch-training - INFO - epoch 109 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:48:35,047 - easytorch-training - INFO - train:: [train_time: 159.87 (s), lr: 1.00e-03, train_loss: 1.8519, train_MAPE: -180.8027, train_RMSE: 4.1983]
+2022-02-05 06:49:27,528 - easytorch-training - INFO - val:: [val_time: 52.48 (s), val_loss: 1.7658, val_MAPE: -1916.9333, val_RMSE: 4.2610]
+2022-02-05 06:51:10,072 - easytorch-training - INFO - test:: [test_time: -102.54 (s), test_loss: 1.8658, test_MAPE: -1148.8800, test_RMSE: 4.5502]
+2022-02-05 06:51:10,107 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_109.pt saved
+2022-02-05 06:51:10,107 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 06:51:10,107 - easytorch-training - INFO - epoch 110 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 06:53:49,885 - easytorch-training - INFO - train:: [train_time: 159.78 (s), lr: 1.00e-03, train_loss: 1.8515, train_MAPE: -160.6662, train_RMSE: 4.1997]
+2022-02-05 06:54:42,157 - easytorch-training - INFO - val:: [val_time: 52.27 (s), val_loss: 1.7743, val_MAPE: -1921.9631, val_RMSE: 4.2785]
+2022-02-05 06:56:24,853 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8846, test_MAPE: -1109.5846, test_RMSE: 4.5932]
+2022-02-05 06:56:24,913 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_110.pt saved
+2022-02-05 06:56:24,917 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:31
+2022-02-05 06:56:24,917 - easytorch-training - INFO - epoch 111 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 06:59:05,265 - easytorch-training - INFO - train:: [train_time: 160.35 (s), lr: 1.00e-03, train_loss: 1.8428, train_MAPE: -182.0670, train_RMSE: 4.1761]
+2022-02-05 06:59:57,740 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7687, val_MAPE: -1946.3053, val_RMSE: 4.2684]
+2022-02-05 07:01:40,361 - easytorch-training - INFO - test:: [test_time: -102.61 (s), test_loss: 1.8702, test_MAPE: -1120.9372, test_RMSE: 4.5524]
+2022-02-05 07:01:40,421 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_111.pt saved
+2022-02-05 07:01:40,422 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:31
+2022-02-05 07:01:40,422 - easytorch-training - INFO - epoch 112 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 07:04:20,995 - easytorch-training - INFO - train:: [train_time: 160.57 (s), lr: 1.00e-03, train_loss: 1.8493, train_MAPE: -167.6450, train_RMSE: 4.1881]
+2022-02-05 07:05:13,462 - easytorch-training - INFO - val:: [val_time: 52.46 (s), val_loss: 1.7654, val_MAPE: -1907.3707, val_RMSE: 4.2432]
+2022-02-05 07:06:56,340 - easytorch-training - INFO - test:: [test_time: -102.87 (s), test_loss: 1.8720, test_MAPE: -1085.3513, test_RMSE: 4.5487]
+2022-02-05 07:06:56,400 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_112.pt saved
+2022-02-05 07:06:56,400 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:32
+2022-02-05 07:06:56,400 - easytorch-training - INFO - epoch 113 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 07:09:36,277 - easytorch-training - INFO - train:: [train_time: 159.88 (s), lr: 1.00e-03, train_loss: 1.8488, train_MAPE: -181.3240, train_RMSE: 4.1947]
+2022-02-05 07:10:28,777 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.7660, val_MAPE: -1994.5898, val_RMSE: 4.2442]
+2022-02-05 07:12:10,985 - easytorch-training - INFO - test:: [test_time: -102.20 (s), test_loss: 1.8695, test_MAPE: -1106.4478, test_RMSE: 4.5410]
+2022-02-05 07:12:11,046 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_113.pt saved
+2022-02-05 07:12:11,046 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:31
+2022-02-05 07:12:11,046 - easytorch-training - INFO - epoch 114 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 07:14:50,498 - easytorch-training - INFO - train:: [train_time: 159.45 (s), lr: 1.00e-03, train_loss: 1.8540, train_MAPE: -148.9829, train_RMSE: 4.2001]
+2022-02-05 07:15:42,873 - easytorch-training - INFO - val:: [val_time: 52.37 (s), val_loss: 1.7618, val_MAPE: -1926.1937, val_RMSE: 4.2595]
+2022-02-05 07:17:26,467 - easytorch-training - INFO - test:: [test_time: -103.59 (s), test_loss: 1.8691, test_MAPE: -1051.5812, test_RMSE: 4.5590]
+2022-02-05 07:17:26,527 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_114.pt saved
+2022-02-05 07:17:26,528 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:31
+2022-02-05 07:17:26,528 - easytorch-training - INFO - epoch 115 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 07:20:06,095 - easytorch-training - INFO - train:: [train_time: 159.57 (s), lr: 1.00e-03, train_loss: 1.8485, train_MAPE: -173.9081, train_RMSE: 4.1914]
+2022-02-05 07:20:58,503 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7664, val_MAPE: -1932.2764, val_RMSE: 4.2469]
+2022-02-05 07:22:41,075 - easytorch-training - INFO - test:: [test_time: -102.57 (s), test_loss: 1.8819, test_MAPE: -1077.7861, test_RMSE: 4.5796]
+2022-02-05 07:22:41,111 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_115.pt saved
+2022-02-05 07:22:41,111 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:29
+2022-02-05 07:22:41,111 - easytorch-training - INFO - epoch 116 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 07:25:20,895 - easytorch-training - INFO - train:: [train_time: 159.78 (s), lr: 1.00e-03, train_loss: 1.8445, train_MAPE: -178.6973, train_RMSE: 4.1836]
+2022-02-05 07:26:13,324 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7553, val_MAPE: -1922.2877, val_RMSE: 4.2281]
+2022-02-05 07:27:56,695 - easytorch-training - INFO - test:: [test_time: -103.37 (s), test_loss: 1.8613, test_MAPE: -1095.2588, test_RMSE: 4.5254]
+2022-02-05 07:27:56,750 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_116.pt saved
+2022-02-05 07:27:56,751 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:30
+2022-02-05 07:27:56,751 - easytorch-training - INFO - epoch 117 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 07:30:36,404 - easytorch-training - INFO - train:: [train_time: 159.65 (s), lr: 1.00e-03, train_loss: 1.8485, train_MAPE: -167.0641, train_RMSE: 4.1882]
+2022-02-05 07:31:28,660 - easytorch-training - INFO - val:: [val_time: 52.25 (s), val_loss: 1.7803, val_MAPE: -2022.1026, val_RMSE: 4.2816]
+2022-02-05 07:33:11,252 - easytorch-training - INFO - test:: [test_time: -102.59 (s), test_loss: 1.8873, test_MAPE: -1073.4333, test_RMSE: 4.5898]
+2022-02-05 07:33:11,306 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_117.pt saved
+2022-02-05 07:33:11,307 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 07:33:11,307 - easytorch-training - INFO - epoch 118 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 07:35:51,222 - easytorch-training - INFO - train:: [train_time: 159.91 (s), lr: 1.00e-03, train_loss: 1.8487, train_MAPE: -160.1047, train_RMSE: 4.1877]
+2022-02-05 07:36:43,620 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7757, val_MAPE: -1878.5104, val_RMSE: 4.2644]
+2022-02-05 07:38:26,700 - easytorch-training - INFO - test:: [test_time: -103.07 (s), test_loss: 1.8862, test_MAPE: -1103.4074, test_RMSE: 4.5874]
+2022-02-05 07:38:26,760 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_118.pt saved
+2022-02-05 07:38:26,760 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 07:38:26,760 - easytorch-training - INFO - epoch 119 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 07:41:06,718 - easytorch-training - INFO - train:: [train_time: 159.96 (s), lr: 1.00e-03, train_loss: 1.8485, train_MAPE: -174.1078, train_RMSE: 4.1916]
+2022-02-05 07:41:59,459 - easytorch-training - INFO - val:: [val_time: 52.74 (s), val_loss: 1.7640, val_MAPE: -1882.0220, val_RMSE: 4.2527]
+2022-02-05 07:43:41,850 - easytorch-training - INFO - test:: [test_time: -102.38 (s), test_loss: 1.8709, test_MAPE: -1136.5880, test_RMSE: 4.5529]
+2022-02-05 07:43:41,910 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_119.pt saved
+2022-02-05 07:43:41,910 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 07:43:41,910 - easytorch-training - INFO - epoch 120 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 07:46:21,658 - easytorch-training - INFO - train:: [train_time: 159.75 (s), lr: 1.00e-03, train_loss: 1.8507, train_MAPE: -173.1129, train_RMSE: 4.1975]
+2022-02-05 07:47:14,028 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7591, val_MAPE: -1945.3203, val_RMSE: 4.2506]
+2022-02-05 07:48:56,600 - easytorch-training - INFO - test:: [test_time: -102.57 (s), test_loss: 1.8677, test_MAPE: -1095.1479, test_RMSE: 4.5584]
+2022-02-05 07:48:56,663 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_120.pt saved
+2022-02-05 07:48:56,667 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 07:48:56,667 - easytorch-training - INFO - epoch 121 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 07:51:36,326 - easytorch-training - INFO - train:: [train_time: 159.66 (s), lr: 1.00e-03, train_loss: 1.8485, train_MAPE: -167.0818, train_RMSE: 4.1896]
+2022-02-05 07:52:28,730 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7646, val_MAPE: -1854.3351, val_RMSE: 4.2724]
+2022-02-05 07:54:12,157 - easytorch-training - INFO - test:: [test_time: -103.42 (s), test_loss: 1.8720, test_MAPE: -1133.8070, test_RMSE: 4.5818]
+2022-02-05 07:54:12,216 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_121.pt saved
+2022-02-05 07:54:12,216 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 07:54:12,216 - easytorch-training - INFO - epoch 122 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 07:56:52,690 - easytorch-training - INFO - train:: [train_time: 160.47 (s), lr: 1.00e-03, train_loss: 1.8474, train_MAPE: -158.0402, train_RMSE: 4.1889]
+2022-02-05 07:57:45,078 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.7656, val_MAPE: -1968.8231, val_RMSE: 4.2533]
+2022-02-05 07:59:27,610 - easytorch-training - INFO - test:: [test_time: -102.53 (s), test_loss: 1.8782, test_MAPE: -1112.1334, test_RMSE: 4.5740]
+2022-02-05 07:59:27,671 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_122.pt saved
+2022-02-05 07:59:27,671 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 07:59:27,671 - easytorch-training - INFO - epoch 123 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:02:07,667 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 1.00e-03, train_loss: 1.8462, train_MAPE: -185.4738, train_RMSE: 4.1867]
+2022-02-05 08:03:00,072 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7694, val_MAPE: -1936.7027, val_RMSE: 4.2532]
+2022-02-05 08:04:42,663 - easytorch-training - INFO - test:: [test_time: -102.59 (s), test_loss: 1.8779, test_MAPE: -1129.8999, test_RMSE: 4.5663]
+2022-02-05 08:04:42,723 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_123.pt saved
+2022-02-05 08:04:42,723 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:04:42,724 - easytorch-training - INFO - epoch 124 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 08:07:22,777 - easytorch-training - INFO - train:: [train_time: 160.05 (s), lr: 1.00e-03, train_loss: 1.8513, train_MAPE: -173.7623, train_RMSE: 4.1966]
+2022-02-05 08:08:15,314 - easytorch-training - INFO - val:: [val_time: 52.53 (s), val_loss: 1.7639, val_MAPE: -1995.0685, val_RMSE: 4.2551]
+2022-02-05 08:09:58,108 - easytorch-training - INFO - test:: [test_time: -102.79 (s), test_loss: 1.8729, test_MAPE: -1123.3837, test_RMSE: 4.5582]
+2022-02-05 08:09:58,174 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_124.pt saved
+2022-02-05 08:09:58,175 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:09:58,175 - easytorch-training - INFO - epoch 125 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:12:38,076 - easytorch-training - INFO - train:: [train_time: 159.90 (s), lr: 1.00e-03, train_loss: 1.8415, train_MAPE: -174.8817, train_RMSE: 4.1725]
+2022-02-05 08:13:30,696 - easytorch-training - INFO - val:: [val_time: 52.61 (s), val_loss: 1.7757, val_MAPE: -1914.4496, val_RMSE: 4.2802]
+2022-02-05 08:15:13,337 - easytorch-training - INFO - test:: [test_time: -102.64 (s), test_loss: 1.8737, test_MAPE: -1135.0141, test_RMSE: 4.5538]
+2022-02-05 08:15:13,398 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_125.pt saved
+2022-02-05 08:15:13,398 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:15:13,398 - easytorch-training - INFO - epoch 126 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 08:17:53,103 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8457, train_MAPE: -182.0348, train_RMSE: 4.1851]
+2022-02-05 08:18:45,592 - easytorch-training - INFO - val:: [val_time: 52.48 (s), val_loss: 1.7668, val_MAPE: -1947.3348, val_RMSE: 4.2648]
+2022-02-05 08:20:28,128 - easytorch-training - INFO - test:: [test_time: -102.53 (s), test_loss: 1.8736, test_MAPE: -1028.1414, test_RMSE: 4.5642]
+2022-02-05 08:20:28,165 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_126.pt saved
+2022-02-05 08:20:28,166 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 08:20:28,166 - easytorch-training - INFO - epoch 127 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:23:08,100 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 1.00e-03, train_loss: 1.8472, train_MAPE: -163.3622, train_RMSE: 4.1863]
+2022-02-05 08:24:00,508 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7580, val_MAPE: -1826.7767, val_RMSE: 4.2324]
+2022-02-05 08:25:44,314 - easytorch-training - INFO - test:: [test_time: -103.80 (s), test_loss: 1.8788, test_MAPE: -1120.7942, test_RMSE: 4.5744]
+2022-02-05 08:25:44,373 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_127.pt saved
+2022-02-05 08:25:44,373 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:25:44,373 - easytorch-training - INFO - epoch 128 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:28:24,370 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 1.00e-03, train_loss: 1.8397, train_MAPE: -163.5137, train_RMSE: 4.1730]
+2022-02-05 08:29:16,832 - easytorch-training - INFO - val:: [val_time: 52.46 (s), val_loss: 1.7556, val_MAPE: -1952.7043, val_RMSE: 4.2346]
+2022-02-05 08:31:00,701 - easytorch-training - INFO - test:: [test_time: -103.86 (s), test_loss: 1.8623, test_MAPE: -1084.4863, test_RMSE: 4.5358]
+2022-02-05 08:31:00,740 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_128.pt saved
+2022-02-05 08:31:00,740 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:29
+2022-02-05 08:31:00,740 - easytorch-training - INFO - epoch 129 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 08:33:40,992 - easytorch-training - INFO - train:: [train_time: 160.25 (s), lr: 1.00e-03, train_loss: 1.8452, train_MAPE: -181.9232, train_RMSE: 4.1854]
+2022-02-05 08:34:33,630 - easytorch-training - INFO - val:: [val_time: 52.63 (s), val_loss: 1.7722, val_MAPE: -1928.7942, val_RMSE: 4.2531]
+2022-02-05 08:36:16,042 - easytorch-training - INFO - test:: [test_time: -102.41 (s), test_loss: 1.8944, test_MAPE: -1091.1889, test_RMSE: 4.6070]
+2022-02-05 08:36:16,103 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_129.pt saved
+2022-02-05 08:36:16,103 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 08:36:16,103 - easytorch-training - INFO - epoch 130 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:38:56,103 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 1.00e-03, train_loss: 1.8500, train_MAPE: -173.0441, train_RMSE: 4.1929]
+2022-02-05 08:39:48,251 - easytorch-training - INFO - val:: [val_time: 52.14 (s), val_loss: 1.7812, val_MAPE: -1883.8179, val_RMSE: 4.2905]
+2022-02-05 08:41:30,902 - easytorch-training - INFO - test:: [test_time: -102.65 (s), test_loss: 1.8781, test_MAPE: -1172.1625, test_RMSE: 4.5710]
+2022-02-05 08:41:30,962 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_130.pt saved
+2022-02-05 08:41:30,966 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 08:41:30,966 - easytorch-training - INFO - epoch 131 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:44:10,966 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 1.00e-03, train_loss: 1.8423, train_MAPE: -168.3676, train_RMSE: 4.1740]
+2022-02-05 08:45:03,389 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7585, val_MAPE: -1923.2442, val_RMSE: 4.2366]
+2022-02-05 08:46:46,067 - easytorch-training - INFO - test:: [test_time: -102.67 (s), test_loss: 1.8874, test_MAPE: -1119.0314, test_RMSE: 4.6074]
+2022-02-05 08:46:46,106 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_131.pt saved
+2022-02-05 08:46:46,107 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:46:46,107 - easytorch-training - INFO - epoch 132 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 08:49:26,246 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 1.00e-03, train_loss: 1.8419, train_MAPE: -177.9938, train_RMSE: 4.1767]
+2022-02-05 08:50:18,630 - easytorch-training - INFO - val:: [val_time: 52.38 (s), val_loss: 1.7736, val_MAPE: -1921.5497, val_RMSE: 4.2571]
+2022-02-05 08:52:01,643 - easytorch-training - INFO - test:: [test_time: -103.00 (s), test_loss: 1.8981, test_MAPE: -1190.9559, test_RMSE: 4.6195]
+2022-02-05 08:52:01,705 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_132.pt saved
+2022-02-05 08:52:01,706 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 08:52:01,706 - easytorch-training - INFO - epoch 133 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 08:54:41,687 - easytorch-training - INFO - train:: [train_time: 159.98 (s), lr: 1.00e-03, train_loss: 1.8399, train_MAPE: -175.6590, train_RMSE: 4.1698]
+2022-02-05 08:55:34,015 - easytorch-training - INFO - val:: [val_time: 52.32 (s), val_loss: 1.7613, val_MAPE: -1843.4515, val_RMSE: 4.2446]
+2022-02-05 08:57:16,556 - easytorch-training - INFO - test:: [test_time: -102.53 (s), test_loss: 1.8717, test_MAPE: -1151.1187, test_RMSE: 4.5586]
+2022-02-05 08:57:16,617 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_133.pt saved
+2022-02-05 08:57:16,617 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 08:57:16,617 - easytorch-training - INFO - epoch 134 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 08:59:56,924 - easytorch-training - INFO - train:: [train_time: 160.31 (s), lr: 1.00e-03, train_loss: 1.8476, train_MAPE: -192.9989, train_RMSE: 4.1906]
+2022-02-05 09:00:49,624 - easytorch-training - INFO - val:: [val_time: 52.69 (s), val_loss: 1.7585, val_MAPE: -1929.7124, val_RMSE: 4.2445]
+2022-02-05 09:02:32,405 - easytorch-training - INFO - test:: [test_time: -102.78 (s), test_loss: 1.8669, test_MAPE: -1122.0850, test_RMSE: 4.5488]
+2022-02-05 09:02:32,466 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_134.pt saved
+2022-02-05 09:02:32,466 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:28
+2022-02-05 09:02:32,466 - easytorch-training - INFO - epoch 135 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 09:05:12,571 - easytorch-training - INFO - train:: [train_time: 160.10 (s), lr: 1.00e-03, train_loss: 1.8405, train_MAPE: -183.9842, train_RMSE: 4.1726]
+2022-02-05 09:06:04,963 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7640, val_MAPE: -1976.6087, val_RMSE: 4.2441]
+2022-02-05 09:07:47,447 - easytorch-training - INFO - test:: [test_time: -102.48 (s), test_loss: 1.8808, test_MAPE: -1144.5731, test_RMSE: 4.5759]
+2022-02-05 09:07:47,504 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_135.pt saved
+2022-02-05 09:07:47,504 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 09:07:47,504 - easytorch-training - INFO - epoch 136 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 09:10:27,535 - easytorch-training - INFO - train:: [train_time: 160.03 (s), lr: 1.00e-03, train_loss: 1.8430, train_MAPE: -175.8796, train_RMSE: 4.1758]
+2022-02-05 09:11:19,876 - easytorch-training - INFO - val:: [val_time: 52.33 (s), val_loss: 1.7556, val_MAPE: -1953.8215, val_RMSE: 4.2137]
+2022-02-05 09:13:02,289 - easytorch-training - INFO - test:: [test_time: -102.41 (s), test_loss: 1.8730, test_MAPE: -1143.6096, test_RMSE: 4.5507]
+2022-02-05 09:13:02,332 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_136.pt saved
+2022-02-05 09:13:02,332 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 09:13:02,332 - easytorch-training - INFO - epoch 137 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 09:15:41,906 - easytorch-training - INFO - train:: [train_time: 159.57 (s), lr: 1.00e-03, train_loss: 1.8439, train_MAPE: -180.1065, train_RMSE: 4.1796]
+2022-02-05 09:16:34,792 - easytorch-training - INFO - val:: [val_time: 52.88 (s), val_loss: 1.7576, val_MAPE: -1951.9320, val_RMSE: 4.2360]
+2022-02-05 09:18:17,654 - easytorch-training - INFO - test:: [test_time: -102.86 (s), test_loss: 1.8835, test_MAPE: -1088.8613, test_RMSE: 4.5861]
+2022-02-05 09:18:17,715 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_137.pt saved
+2022-02-05 09:18:17,716 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 09:18:17,716 - easytorch-training - INFO - epoch 138 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 09:20:57,990 - easytorch-training - INFO - train:: [train_time: 160.27 (s), lr: 1.00e-03, train_loss: 1.8404, train_MAPE: -164.2239, train_RMSE: 4.1707]
+2022-02-05 09:21:50,396 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7533, val_MAPE: -1910.0407, val_RMSE: 4.2408]
+2022-02-05 09:23:33,099 - easytorch-training - INFO - test:: [test_time: -102.70 (s), test_loss: 1.8621, test_MAPE: -1134.4646, test_RMSE: 4.5471]
+2022-02-05 09:23:33,134 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_138.pt saved
+2022-02-05 09:23:33,134 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 09:23:33,135 - easytorch-training - INFO - epoch 139 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 09:26:13,194 - easytorch-training - INFO - train:: [train_time: 160.06 (s), lr: 1.00e-03, train_loss: 1.8405, train_MAPE: -168.4845, train_RMSE: 4.1696]
+2022-02-05 09:27:05,701 - easytorch-training - INFO - val:: [val_time: 52.50 (s), val_loss: 1.7668, val_MAPE: -1961.5212, val_RMSE: 4.2600]
+2022-02-05 09:28:48,476 - easytorch-training - INFO - test:: [test_time: -102.77 (s), test_loss: 1.8727, test_MAPE: -1109.7086, test_RMSE: 4.5611]
+2022-02-05 09:28:48,538 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_139.pt saved
+2022-02-05 09:28:48,538 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 09:28:48,538 - easytorch-training - INFO - epoch 140 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 09:31:27,963 - easytorch-training - INFO - train:: [train_time: 159.42 (s), lr: 1.00e-03, train_loss: 1.8469, train_MAPE: -165.6831, train_RMSE: 4.1876]
+2022-02-05 09:32:20,064 - easytorch-training - INFO - val:: [val_time: 52.09 (s), val_loss: 1.7651, val_MAPE: -1919.8749, val_RMSE: 4.2616]
+2022-02-05 09:34:02,773 - easytorch-training - INFO - test:: [test_time: -102.70 (s), test_loss: 1.8775, test_MAPE: -1130.9541, test_RMSE: 4.5804]
+2022-02-05 09:34:02,833 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_140.pt saved
+2022-02-05 09:34:02,837 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 09:34:02,837 - easytorch-training - INFO - epoch 141 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 09:36:42,835 - easytorch-training - INFO - train:: [train_time: 160.00 (s), lr: 1.00e-03, train_loss: 1.8449, train_MAPE: -167.3863, train_RMSE: 4.1797]
+2022-02-05 09:37:35,209 - easytorch-training - INFO - val:: [val_time: 52.37 (s), val_loss: 1.7582, val_MAPE: -1909.3314, val_RMSE: 4.2402]
+2022-02-05 09:39:18,089 - easytorch-training - INFO - test:: [test_time: -102.88 (s), test_loss: 1.8805, test_MAPE: -1138.0647, test_RMSE: 4.5885]
+2022-02-05 09:39:18,149 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_141.pt saved
+2022-02-05 09:39:18,150 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 09:39:18,150 - easytorch-training - INFO - epoch 142 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 09:41:58,098 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 1.00e-03, train_loss: 1.8454, train_MAPE: -182.4353, train_RMSE: 4.1863]
+2022-02-05 09:42:50,385 - easytorch-training - INFO - val:: [val_time: 52.28 (s), val_loss: 1.7696, val_MAPE: -1884.1329, val_RMSE: 4.2717]
+2022-02-05 09:44:33,096 - easytorch-training - INFO - test:: [test_time: -102.71 (s), test_loss: 1.8816, test_MAPE: -1073.2879, test_RMSE: 4.5885]
+2022-02-05 09:44:33,156 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_142.pt saved
+2022-02-05 09:44:33,157 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 09:44:33,157 - easytorch-training - INFO - epoch 143 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 09:47:12,995 - easytorch-training - INFO - train:: [train_time: 159.84 (s), lr: 1.00e-03, train_loss: 1.8382, train_MAPE: -170.5712, train_RMSE: 4.1707]
+2022-02-05 09:48:05,714 - easytorch-training - INFO - val:: [val_time: 52.71 (s), val_loss: 1.7581, val_MAPE: -1992.9866, val_RMSE: 4.2339]
+2022-02-05 09:49:48,407 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8794, test_MAPE: -1124.3186, test_RMSE: 4.5781]
+2022-02-05 09:49:48,468 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_143.pt saved
+2022-02-05 09:49:48,468 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 09:49:48,468 - easytorch-training - INFO - epoch 144 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 09:52:28,010 - easytorch-training - INFO - train:: [train_time: 159.54 (s), lr: 1.00e-03, train_loss: 1.8402, train_MAPE: -183.8706, train_RMSE: 4.1733]
+2022-02-05 09:53:20,311 - easytorch-training - INFO - val:: [val_time: 52.30 (s), val_loss: 1.7766, val_MAPE: -1942.6509, val_RMSE: 4.2855]
+2022-02-05 09:55:03,201 - easytorch-training - INFO - test:: [test_time: -102.88 (s), test_loss: 1.8814, test_MAPE: -1094.5987, test_RMSE: 4.5809]
+2022-02-05 09:55:03,237 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_144.pt saved
+2022-02-05 09:55:03,237 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 09:55:03,237 - easytorch-training - INFO - epoch 145 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 09:57:42,758 - easytorch-training - INFO - train:: [train_time: 159.52 (s), lr: 1.00e-03, train_loss: 1.8386, train_MAPE: -170.3305, train_RMSE: 4.1659]
+2022-02-05 09:58:35,103 - easytorch-training - INFO - val:: [val_time: 52.34 (s), val_loss: 1.7617, val_MAPE: -2014.0345, val_RMSE: 4.2343]
+2022-02-05 10:00:17,756 - easytorch-training - INFO - test:: [test_time: -102.65 (s), test_loss: 1.8898, test_MAPE: -1093.6581, test_RMSE: 4.5953]
+2022-02-05 10:00:17,817 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_145.pt saved
+2022-02-05 10:00:17,817 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:22
+2022-02-05 10:00:17,817 - easytorch-training - INFO - epoch 146 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:02:57,529 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8378, train_MAPE: -179.6356, train_RMSE: 4.1648]
+2022-02-05 10:03:50,171 - easytorch-training - INFO - val:: [val_time: 52.64 (s), val_loss: 1.7540, val_MAPE: -1952.7738, val_RMSE: 4.2277]
+2022-02-05 10:05:32,652 - easytorch-training - INFO - test:: [test_time: -102.48 (s), test_loss: 1.8645, test_MAPE: -1041.9280, test_RMSE: 4.5296]
+2022-02-05 10:05:32,714 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_146.pt saved
+2022-02-05 10:05:32,714 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:22
+2022-02-05 10:05:32,715 - easytorch-training - INFO - epoch 147 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 10:08:12,304 - easytorch-training - INFO - train:: [train_time: 159.59 (s), lr: 1.00e-03, train_loss: 1.8360, train_MAPE: -170.2959, train_RMSE: 4.1617]
+2022-02-05 10:09:04,657 - easytorch-training - INFO - val:: [val_time: 52.35 (s), val_loss: 1.7567, val_MAPE: -1970.2089, val_RMSE: 4.2337]
+2022-02-05 10:10:47,470 - easytorch-training - INFO - test:: [test_time: -102.81 (s), test_loss: 1.8714, test_MAPE: -1119.7403, test_RMSE: 4.5548]
+2022-02-05 10:10:47,537 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_147.pt saved
+2022-02-05 10:10:47,537 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-05 10:10:47,537 - easytorch-training - INFO - epoch 148 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:13:27,251 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8354, train_MAPE: -177.9949, train_RMSE: 4.1577]
+2022-02-05 10:14:19,526 - easytorch-training - INFO - val:: [val_time: 52.27 (s), val_loss: 1.7598, val_MAPE: -1955.8102, val_RMSE: 4.2401]
+2022-02-05 10:16:04,677 - easytorch-training - INFO - test:: [test_time: -105.15 (s), test_loss: 1.8808, test_MAPE: -1103.5889, test_RMSE: 4.5800]
+2022-02-05 10:16:04,712 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_148.pt saved
+2022-02-05 10:16:04,712 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 10:16:04,713 - easytorch-training - INFO - epoch 149 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:18:44,604 - easytorch-training - INFO - train:: [train_time: 159.89 (s), lr: 1.00e-03, train_loss: 1.8371, train_MAPE: -179.0710, train_RMSE: 4.1609]
+2022-02-05 10:19:37,064 - easytorch-training - INFO - val:: [val_time: 52.45 (s), val_loss: 1.7665, val_MAPE: -2037.4677, val_RMSE: 4.2649]
+2022-02-05 10:21:19,521 - easytorch-training - INFO - test:: [test_time: -102.45 (s), test_loss: 1.8845, test_MAPE: -1151.3467, test_RMSE: 4.5945]
+2022-02-05 10:21:19,578 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_149.pt saved
+2022-02-05 10:21:19,578 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 10:21:19,578 - easytorch-training - INFO - epoch 150 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:23:59,542 - easytorch-training - INFO - train:: [train_time: 159.96 (s), lr: 1.00e-03, train_loss: 1.8344, train_MAPE: -173.8745, train_RMSE: 4.1576]
+2022-02-05 10:24:51,844 - easytorch-training - INFO - val:: [val_time: 52.29 (s), val_loss: 1.7581, val_MAPE: -1921.4129, val_RMSE: 4.2466]
+2022-02-05 10:26:34,585 - easytorch-training - INFO - test:: [test_time: -102.74 (s), test_loss: 1.8720, test_MAPE: -1136.5515, test_RMSE: 4.5656]
+2022-02-05 10:26:34,648 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_150.pt saved
+2022-02-05 10:26:34,652 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:22
+2022-02-05 10:26:34,652 - easytorch-training - INFO - epoch 151 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:29:14,361 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8378, train_MAPE: -174.0614, train_RMSE: 4.1608]
+2022-02-05 10:30:06,792 - easytorch-training - INFO - val:: [val_time: 52.43 (s), val_loss: 1.7645, val_MAPE: -1915.7148, val_RMSE: 4.2621]
+2022-02-05 10:31:51,138 - easytorch-training - INFO - test:: [test_time: -104.34 (s), test_loss: 1.8724, test_MAPE: -1144.8448, test_RMSE: 4.5651]
+2022-02-05 10:31:51,197 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_151.pt saved
+2022-02-05 10:31:51,198 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 10:31:51,198 - easytorch-training - INFO - epoch 152 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 10:34:31,337 - easytorch-training - INFO - train:: [train_time: 160.14 (s), lr: 1.00e-03, train_loss: 1.8331, train_MAPE: -185.8575, train_RMSE: 4.1578]
+2022-02-05 10:35:23,943 - easytorch-training - INFO - val:: [val_time: 52.60 (s), val_loss: 1.7743, val_MAPE: -1978.2783, val_RMSE: 4.2770]
+2022-02-05 10:37:06,406 - easytorch-training - INFO - test:: [test_time: -102.46 (s), test_loss: 1.8848, test_MAPE: -1105.6279, test_RMSE: 4.5832]
+2022-02-05 10:37:06,463 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_152.pt saved
+2022-02-05 10:37:06,464 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 10:37:06,464 - easytorch-training - INFO - epoch 153 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:39:46,239 - easytorch-training - INFO - train:: [train_time: 159.77 (s), lr: 1.00e-03, train_loss: 1.8417, train_MAPE: -167.8602, train_RMSE: 4.1740]
+2022-02-05 10:40:38,873 - easytorch-training - INFO - val:: [val_time: 52.63 (s), val_loss: 1.7630, val_MAPE: -2023.7903, val_RMSE: 4.2484]
+2022-02-05 10:42:22,243 - easytorch-training - INFO - test:: [test_time: -103.36 (s), test_loss: 1.8622, test_MAPE: -1118.2788, test_RMSE: 4.5262]
+2022-02-05 10:42:22,305 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_153.pt saved
+2022-02-05 10:42:22,305 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 10:42:22,305 - easytorch-training - INFO - epoch 154 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 10:45:02,573 - easytorch-training - INFO - train:: [train_time: 160.27 (s), lr: 1.00e-03, train_loss: 1.8371, train_MAPE: -181.5591, train_RMSE: 4.1643]
+2022-02-05 10:45:54,952 - easytorch-training - INFO - val:: [val_time: 52.37 (s), val_loss: 1.7833, val_MAPE: -2028.0296, val_RMSE: 4.3055]
+2022-02-05 10:47:37,721 - easytorch-training - INFO - test:: [test_time: -102.76 (s), test_loss: 1.8864, test_MAPE: -1123.4182, test_RMSE: 4.5861]
+2022-02-05 10:47:37,781 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_154.pt saved
+2022-02-05 10:47:37,781 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 10:47:37,781 - easytorch-training - INFO - epoch 155 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 10:50:17,503 - easytorch-training - INFO - train:: [train_time: 159.72 (s), lr: 1.00e-03, train_loss: 1.8397, train_MAPE: -173.1501, train_RMSE: 4.1690]
+2022-02-05 10:51:10,079 - easytorch-training - INFO - val:: [val_time: 52.57 (s), val_loss: 1.7563, val_MAPE: -2050.3400, val_RMSE: 4.2481]
+2022-02-05 10:52:52,877 - easytorch-training - INFO - test:: [test_time: -102.79 (s), test_loss: 1.8650, test_MAPE: -1061.4500, test_RMSE: 4.5466]
+2022-02-05 10:52:52,936 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_155.pt saved
+2022-02-05 10:52:52,937 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 10:52:52,937 - easytorch-training - INFO - epoch 156 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 10:55:32,235 - easytorch-training - INFO - train:: [train_time: 159.30 (s), lr: 1.00e-03, train_loss: 1.8348, train_MAPE: -194.2792, train_RMSE: 4.1555]
+2022-02-05 10:56:24,902 - easytorch-training - INFO - val:: [val_time: 52.66 (s), val_loss: 1.7553, val_MAPE: -1888.0598, val_RMSE: 4.2314]
+2022-02-05 10:58:07,746 - easytorch-training - INFO - test:: [test_time: -102.84 (s), test_loss: 1.8712, test_MAPE: -1138.6781, test_RMSE: 4.5526]
+2022-02-05 10:58:07,803 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_156.pt saved
+2022-02-05 10:58:07,804 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 10:58:07,804 - easytorch-training - INFO - epoch 157 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 11:00:47,448 - easytorch-training - INFO - train:: [train_time: 159.64 (s), lr: 1.00e-03, train_loss: 1.8410, train_MAPE: -189.4501, train_RMSE: 4.1757]
+2022-02-05 11:01:40,557 - easytorch-training - INFO - val:: [val_time: 53.10 (s), val_loss: 1.7559, val_MAPE: -1975.7273, val_RMSE: 4.2331]
+2022-02-05 11:03:23,923 - easytorch-training - INFO - test:: [test_time: -103.36 (s), test_loss: 1.8704, test_MAPE: -1160.3288, test_RMSE: 4.5554]
+2022-02-05 11:03:23,992 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_157.pt saved
+2022-02-05 11:03:23,992 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 11:03:23,992 - easytorch-training - INFO - epoch 158 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 11:06:03,924 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 1.00e-03, train_loss: 1.8317, train_MAPE: -167.3461, train_RMSE: 4.1537]
+2022-02-05 11:06:56,401 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7572, val_MAPE: -1887.6812, val_RMSE: 4.2462]
+2022-02-05 11:08:39,260 - easytorch-training - INFO - test:: [test_time: -102.85 (s), test_loss: 1.8687, test_MAPE: -1187.9382, test_RMSE: 4.5547]
+2022-02-05 11:08:39,316 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_158.pt saved
+2022-02-05 11:08:39,317 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 11:08:39,317 - easytorch-training - INFO - epoch 159 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 11:11:19,270 - easytorch-training - INFO - train:: [train_time: 159.95 (s), lr: 1.00e-03, train_loss: 1.8337, train_MAPE: -175.2659, train_RMSE: 4.1514]
+2022-02-05 11:12:11,628 - easytorch-training - INFO - val:: [val_time: 52.35 (s), val_loss: 1.7588, val_MAPE: -1895.2249, val_RMSE: 4.2447]
+2022-02-05 11:13:54,550 - easytorch-training - INFO - test:: [test_time: -102.92 (s), test_loss: 1.8817, test_MAPE: -1182.9446, test_RMSE: 4.5940]
+2022-02-05 11:13:54,591 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_159.pt saved
+2022-02-05 11:13:54,592 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 11:13:54,592 - easytorch-training - INFO - epoch 160 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 11:16:34,306 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8363, train_MAPE: -184.4158, train_RMSE: 4.1611]
+2022-02-05 11:17:27,583 - easytorch-training - INFO - val:: [val_time: 53.27 (s), val_loss: 1.7652, val_MAPE: -1905.9787, val_RMSE: 4.2674]
+2022-02-05 11:19:10,671 - easytorch-training - INFO - test:: [test_time: -103.08 (s), test_loss: 1.8717, test_MAPE: -1164.1310, test_RMSE: 4.5665]
+2022-02-05 11:19:10,732 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_160.pt saved
+2022-02-05 11:19:10,736 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 11:19:10,736 - easytorch-training - INFO - epoch 161 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.39it/s]
+2022-02-05 11:21:49,886 - easytorch-training - INFO - train:: [train_time: 159.15 (s), lr: 1.00e-03, train_loss: 1.8399, train_MAPE: -175.2252, train_RMSE: 4.1747]
+2022-02-05 11:22:42,103 - easytorch-training - INFO - val:: [val_time: 52.21 (s), val_loss: 1.7512, val_MAPE: -1898.0921, val_RMSE: 4.2212]
+2022-02-05 11:24:24,759 - easytorch-training - INFO - test:: [test_time: -102.64 (s), test_loss: 1.8743, test_MAPE: -1094.8950, test_RMSE: 4.5656]
+2022-02-05 11:24:24,826 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_161.pt saved
+2022-02-05 11:24:24,826 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 11:24:24,826 - easytorch-training - INFO - epoch 162 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 11:27:04,790 - easytorch-training - INFO - train:: [train_time: 159.96 (s), lr: 1.00e-03, train_loss: 1.8305, train_MAPE: -172.6687, train_RMSE: 4.1465]
+2022-02-05 11:27:57,241 - easytorch-training - INFO - val:: [val_time: 52.45 (s), val_loss: 1.7635, val_MAPE: -1936.4873, val_RMSE: 4.2786]
+2022-02-05 11:29:40,080 - easytorch-training - INFO - test:: [test_time: -102.83 (s), test_loss: 1.8672, test_MAPE: -1099.1073, test_RMSE: 4.5582]
+2022-02-05 11:29:40,123 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_162.pt saved
+2022-02-05 11:29:40,124 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 11:29:40,124 - easytorch-training - INFO - epoch 163 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 11:32:20,233 - easytorch-training - INFO - train:: [train_time: 160.11 (s), lr: 1.00e-03, train_loss: 1.8318, train_MAPE: -166.5140, train_RMSE: 4.1464]
+2022-02-05 11:33:12,533 - easytorch-training - INFO - val:: [val_time: 52.29 (s), val_loss: 1.7622, val_MAPE: -1881.8245, val_RMSE: 4.2713]
+2022-02-05 11:34:55,210 - easytorch-training - INFO - test:: [test_time: -102.67 (s), test_loss: 1.8679, test_MAPE: -1098.7971, test_RMSE: 4.5608]
+2022-02-05 11:34:55,271 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_163.pt saved
+2022-02-05 11:34:55,271 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 11:34:55,271 - easytorch-training - INFO - epoch 164 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 11:37:35,193 - easytorch-training - INFO - train:: [train_time: 159.92 (s), lr: 1.00e-03, train_loss: 1.8284, train_MAPE: -168.6731, train_RMSE: 4.1417]
+2022-02-05 11:38:27,561 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7556, val_MAPE: -1939.1135, val_RMSE: 4.2280]
+2022-02-05 11:40:10,375 - easytorch-training - INFO - test:: [test_time: -102.81 (s), test_loss: 1.8738, test_MAPE: -1136.3505, test_RMSE: 4.5659]
+2022-02-05 11:40:10,417 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_164.pt saved
+2022-02-05 11:40:10,417 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 11:40:10,417 - easytorch-training - INFO - epoch 165 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 11:42:50,700 - easytorch-training - INFO - train:: [train_time: 160.28 (s), lr: 1.00e-03, train_loss: 1.8318, train_MAPE: -200.0039, train_RMSE: 4.1502]
+2022-02-05 11:43:43,169 - easytorch-training - INFO - val:: [val_time: 52.46 (s), val_loss: 1.7628, val_MAPE: -1851.5454, val_RMSE: 4.2652]
+2022-02-05 11:45:25,853 - easytorch-training - INFO - test:: [test_time: -102.68 (s), test_loss: 1.8706, test_MAPE: -1158.2551, test_RMSE: 4.5607]
+2022-02-05 11:45:25,913 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_165.pt saved
+2022-02-05 11:45:25,913 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 11:45:25,913 - easytorch-training - INFO - epoch 166 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 11:48:05,503 - easytorch-training - INFO - train:: [train_time: 159.59 (s), lr: 1.00e-03, train_loss: 1.8346, train_MAPE: -183.4949, train_RMSE: 4.1552]
+2022-02-05 11:48:57,666 - easytorch-training - INFO - val:: [val_time: 52.16 (s), val_loss: 1.7639, val_MAPE: -1898.1593, val_RMSE: 4.2452]
+2022-02-05 11:50:40,035 - easytorch-training - INFO - test:: [test_time: -102.36 (s), test_loss: 1.8796, test_MAPE: -1089.5924, test_RMSE: 4.5714]
+2022-02-05 11:50:40,095 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_166.pt saved
+2022-02-05 11:50:40,095 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:22
+2022-02-05 11:50:40,095 - easytorch-training - INFO - epoch 167 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 11:53:19,714 - easytorch-training - INFO - train:: [train_time: 159.62 (s), lr: 1.00e-03, train_loss: 1.8373, train_MAPE: -188.4750, train_RMSE: 4.1631]
+2022-02-05 11:54:12,140 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7602, val_MAPE: -1946.6795, val_RMSE: 4.2357]
+2022-02-05 11:55:54,705 - easytorch-training - INFO - test:: [test_time: -102.56 (s), test_loss: 1.8738, test_MAPE: -1155.6080, test_RMSE: 4.5570]
+2022-02-05 11:55:54,769 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_167.pt saved
+2022-02-05 11:55:54,769 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-05 11:55:54,769 - easytorch-training - INFO - epoch 168 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 11:58:35,114 - easytorch-training - INFO - train:: [train_time: 160.34 (s), lr: 1.00e-03, train_loss: 1.8342, train_MAPE: -163.5701, train_RMSE: 4.1561]
+2022-02-05 11:59:27,577 - easytorch-training - INFO - val:: [val_time: 52.46 (s), val_loss: 1.7585, val_MAPE: -1913.3211, val_RMSE: 4.2397]
+2022-02-05 12:01:10,125 - easytorch-training - INFO - test:: [test_time: -102.54 (s), test_loss: 1.8648, test_MAPE: -1173.9306, test_RMSE: 4.5393]
+2022-02-05 12:01:10,185 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_168.pt saved
+2022-02-05 12:01:10,186 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-05 12:01:10,186 - easytorch-training - INFO - epoch 169 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 12:03:50,826 - easytorch-training - INFO - train:: [train_time: 160.64 (s), lr: 1.00e-03, train_loss: 1.8361, train_MAPE: -166.1591, train_RMSE: 4.1633]
+2022-02-05 12:04:43,076 - easytorch-training - INFO - val:: [val_time: 52.24 (s), val_loss: 1.7691, val_MAPE: -1956.3087, val_RMSE: 4.2587]
+2022-02-05 12:06:25,769 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8955, test_MAPE: -1110.2155, test_RMSE: 4.6162]
+2022-02-05 12:06:25,829 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_169.pt saved
+2022-02-05 12:06:25,830 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:21
+2022-02-05 12:06:25,830 - easytorch-training - INFO - epoch 170 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 12:09:06,425 - easytorch-training - INFO - train:: [train_time: 160.59 (s), lr: 1.00e-03, train_loss: 1.8292, train_MAPE: -180.8706, train_RMSE: 4.1466]
+2022-02-05 12:09:59,271 - easytorch-training - INFO - val:: [val_time: 52.84 (s), val_loss: 1.7650, val_MAPE: -1929.4807, val_RMSE: 4.2652]
+2022-02-05 12:11:42,097 - easytorch-training - INFO - test:: [test_time: -102.82 (s), test_loss: 1.8791, test_MAPE: -1188.8008, test_RMSE: 4.5791]
+2022-02-05 12:11:42,145 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_170.pt saved
+2022-02-05 12:11:42,149 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 12:11:42,149 - easytorch-training - INFO - epoch 171 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 12:14:21,958 - easytorch-training - INFO - train:: [train_time: 159.81 (s), lr: 1.00e-03, train_loss: 1.8305, train_MAPE: -197.5672, train_RMSE: 4.1553]
+2022-02-05 12:15:14,312 - easytorch-training - INFO - val:: [val_time: 52.35 (s), val_loss: 1.7635, val_MAPE: -1870.2224, val_RMSE: 4.2482]
+2022-02-05 12:16:56,999 - easytorch-training - INFO - test:: [test_time: -102.68 (s), test_loss: 1.8824, test_MAPE: -1061.5035, test_RMSE: 4.5859]
+2022-02-05 12:16:57,033 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_171.pt saved
+2022-02-05 12:16:57,033 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:22
+2022-02-05 12:16:57,033 - easytorch-training - INFO - epoch 172 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 12:19:36,513 - easytorch-training - INFO - train:: [train_time: 159.48 (s), lr: 1.00e-03, train_loss: 1.8349, train_MAPE: -194.3741, train_RMSE: 4.1557]
+2022-02-05 12:20:28,946 - easytorch-training - INFO - val:: [val_time: 52.43 (s), val_loss: 1.7527, val_MAPE: -1948.4928, val_RMSE: 4.2302]
+2022-02-05 12:22:13,342 - easytorch-training - INFO - test:: [test_time: -104.39 (s), test_loss: 1.8638, test_MAPE: -1120.1983, test_RMSE: 4.5379]
+2022-02-05 12:22:13,405 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_172.pt saved
+2022-02-05 12:22:13,405 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 12:22:13,405 - easytorch-training - INFO - epoch 173 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 12:24:53,625 - easytorch-training - INFO - train:: [train_time: 160.22 (s), lr: 1.00e-03, train_loss: 1.8339, train_MAPE: -160.2091, train_RMSE: 4.1565]
+2022-02-05 12:25:46,107 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7683, val_MAPE: -1897.8111, val_RMSE: 4.2702]
+2022-02-05 12:27:28,943 - easytorch-training - INFO - test:: [test_time: -102.83 (s), test_loss: 1.8751, test_MAPE: -1093.2983, test_RMSE: 4.5577]
+2022-02-05 12:27:29,001 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_173.pt saved
+2022-02-05 12:27:29,001 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 12:27:29,001 - easytorch-training - INFO - epoch 174 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 12:30:08,701 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8323, train_MAPE: -177.1166, train_RMSE: 4.1514]
+2022-02-05 12:31:01,199 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.7510, val_MAPE: -1937.7263, val_RMSE: 4.2392]
+2022-02-05 12:32:44,285 - easytorch-training - INFO - test:: [test_time: -103.08 (s), test_loss: 1.8660, test_MAPE: -1155.7183, test_RMSE: 4.5489]
+2022-02-05 12:32:44,322 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_174.pt saved
+2022-02-05 12:32:44,323 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 12:32:44,323 - easytorch-training - INFO - epoch 175 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 12:35:24,025 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8261, train_MAPE: -183.0576, train_RMSE: 4.1363]
+2022-02-05 12:36:17,515 - easytorch-training - INFO - val:: [val_time: 53.49 (s), val_loss: 1.7608, val_MAPE: -1859.1785, val_RMSE: 4.2535]
+2022-02-05 12:38:00,205 - easytorch-training - INFO - test:: [test_time: -102.68 (s), test_loss: 1.8741, test_MAPE: -1125.9037, test_RMSE: 4.5737]
+2022-02-05 12:38:00,257 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_175.pt saved
+2022-02-05 12:38:00,258 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 12:38:00,258 - easytorch-training - INFO - epoch 176 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 12:40:40,430 - easytorch-training - INFO - train:: [train_time: 160.17 (s), lr: 1.00e-03, train_loss: 1.8244, train_MAPE: -168.5291, train_RMSE: 4.1308]
+2022-02-05 12:41:34,165 - easytorch-training - INFO - val:: [val_time: 53.73 (s), val_loss: 1.7795, val_MAPE: -1849.7755, val_RMSE: 4.2892]
+2022-02-05 12:43:17,111 - easytorch-training - INFO - test:: [test_time: -102.94 (s), test_loss: 1.8913, test_MAPE: -1119.3575, test_RMSE: 4.6076]
+2022-02-05 12:43:17,173 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_176.pt saved
+2022-02-05 12:43:17,174 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 12:43:17,174 - easytorch-training - INFO - epoch 177 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 12:45:56,885 - easytorch-training - INFO - train:: [train_time: 159.71 (s), lr: 1.00e-03, train_loss: 1.8248, train_MAPE: -176.0380, train_RMSE: 4.1353]
+2022-02-05 12:46:49,379 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.7574, val_MAPE: -1956.6916, val_RMSE: 4.2391]
+2022-02-05 12:48:32,126 - easytorch-training - INFO - test:: [test_time: -102.74 (s), test_loss: 1.8738, test_MAPE: -1161.8304, test_RMSE: 4.5617]
+2022-02-05 12:48:32,185 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_177.pt saved
+2022-02-05 12:48:32,186 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 12:48:32,186 - easytorch-training - INFO - epoch 178 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 12:51:12,572 - easytorch-training - INFO - train:: [train_time: 160.39 (s), lr: 1.00e-03, train_loss: 1.8326, train_MAPE: -177.6002, train_RMSE: 4.1534]
+2022-02-05 12:52:04,991 - easytorch-training - INFO - val:: [val_time: 52.41 (s), val_loss: 1.7592, val_MAPE: -1875.2476, val_RMSE: 4.2402]
+2022-02-05 12:53:48,072 - easytorch-training - INFO - test:: [test_time: -103.07 (s), test_loss: 1.8649, test_MAPE: -1142.8752, test_RMSE: 4.5375]
+2022-02-05 12:53:48,132 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_178.pt saved
+2022-02-05 12:53:48,133 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 12:53:48,133 - easytorch-training - INFO - epoch 179 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 12:56:28,127 - easytorch-training - INFO - train:: [train_time: 159.99 (s), lr: 1.00e-03, train_loss: 1.8328, train_MAPE: -176.8845, train_RMSE: 4.1504]
+2022-02-05 12:57:20,524 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7681, val_MAPE: -1900.2401, val_RMSE: 4.2600]
+2022-02-05 12:59:03,366 - easytorch-training - INFO - test:: [test_time: -102.84 (s), test_loss: 1.8754, test_MAPE: -1144.2104, test_RMSE: 4.5714]
+2022-02-05 12:59:03,428 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_179.pt saved
+2022-02-05 12:59:03,429 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 12:59:03,429 - easytorch-training - INFO - epoch 180 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 13:01:43,747 - easytorch-training - INFO - train:: [train_time: 160.32 (s), lr: 1.00e-03, train_loss: 1.8251, train_MAPE: -168.9681, train_RMSE: 4.1343]
+2022-02-05 13:02:36,243 - easytorch-training - INFO - val:: [val_time: 52.49 (s), val_loss: 1.7460, val_MAPE: -1994.8660, val_RMSE: 4.2072]
+2022-02-05 13:04:18,684 - easytorch-training - INFO - test:: [test_time: -102.44 (s), test_loss: 1.8621, test_MAPE: -1117.3522, test_RMSE: 4.5231]
+2022-02-05 13:04:18,730 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_180.pt saved
+2022-02-05 13:04:18,734 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:04:18,734 - easytorch-training - INFO - epoch 181 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 13:06:58,831 - easytorch-training - INFO - train:: [train_time: 160.10 (s), lr: 1.00e-03, train_loss: 1.8231, train_MAPE: -172.4691, train_RMSE: 4.1312]
+2022-02-05 13:07:51,241 - easytorch-training - INFO - val:: [val_time: 52.40 (s), val_loss: 1.7670, val_MAPE: -1947.7092, val_RMSE: 4.2614]
+2022-02-05 13:09:33,750 - easytorch-training - INFO - test:: [test_time: -102.50 (s), test_loss: 1.8749, test_MAPE: -1115.6458, test_RMSE: 4.5656]
+2022-02-05 13:09:33,807 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_181.pt saved
+2022-02-05 13:09:33,807 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 13:09:33,807 - easytorch-training - INFO - epoch 182 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 13:12:14,439 - easytorch-training - INFO - train:: [train_time: 160.63 (s), lr: 1.00e-03, train_loss: 1.8349, train_MAPE: -184.5835, train_RMSE: 4.1522]
+2022-02-05 13:13:06,909 - easytorch-training - INFO - val:: [val_time: 52.47 (s), val_loss: 1.7607, val_MAPE: -2054.8409, val_RMSE: 4.2400]
+2022-02-05 13:14:49,615 - easytorch-training - INFO - test:: [test_time: -102.70 (s), test_loss: 1.8820, test_MAPE: -1172.6023, test_RMSE: 4.5803]
+2022-02-05 13:14:49,651 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_182.pt saved
+2022-02-05 13:14:49,651 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:14:49,651 - easytorch-training - INFO - epoch 183 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 13:17:29,640 - easytorch-training - INFO - train:: [train_time: 159.99 (s), lr: 1.00e-03, train_loss: 1.8292, train_MAPE: -176.1674, train_RMSE: 4.1425]
+2022-02-05 13:18:22,454 - easytorch-training - INFO - val:: [val_time: 52.81 (s), val_loss: 1.7528, val_MAPE: -1966.6324, val_RMSE: 4.2324]
+2022-02-05 13:20:05,122 - easytorch-training - INFO - test:: [test_time: -102.66 (s), test_loss: 1.8717, test_MAPE: -1078.3090, test_RMSE: 4.5637]
+2022-02-05 13:20:05,183 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_183.pt saved
+2022-02-05 13:20:05,184 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:20:05,184 - easytorch-training - INFO - epoch 184 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 13:22:45,080 - easytorch-training - INFO - train:: [train_time: 159.90 (s), lr: 1.00e-03, train_loss: 1.8257, train_MAPE: -185.4945, train_RMSE: 4.1320]
+2022-02-05 13:23:37,505 - easytorch-training - INFO - val:: [val_time: 52.42 (s), val_loss: 1.7651, val_MAPE: -1952.6826, val_RMSE: 4.2562]
+2022-02-05 13:25:20,200 - easytorch-training - INFO - test:: [test_time: -102.69 (s), test_loss: 1.8763, test_MAPE: -1102.1161, test_RMSE: 4.5689]
+2022-02-05 13:25:20,255 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_184.pt saved
+2022-02-05 13:25:20,255 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:25:20,255 - easytorch-training - INFO - epoch 185 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 13:28:00,155 - easytorch-training - INFO - train:: [train_time: 159.90 (s), lr: 1.00e-03, train_loss: 1.8230, train_MAPE: -171.5181, train_RMSE: 4.1290]
+2022-02-05 13:28:52,763 - easytorch-training - INFO - val:: [val_time: 52.60 (s), val_loss: 1.7601, val_MAPE: -1908.8404, val_RMSE: 4.2551]
+2022-02-05 13:30:37,115 - easytorch-training - INFO - test:: [test_time: -104.35 (s), test_loss: 1.8776, test_MAPE: -1053.8035, test_RMSE: 4.5865]
+2022-02-05 13:30:37,151 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_185.pt saved
+2022-02-05 13:30:37,151 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 13:30:37,151 - easytorch-training - INFO - epoch 186 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 13:33:17,347 - easytorch-training - INFO - train:: [train_time: 160.20 (s), lr: 1.00e-03, train_loss: 1.8264, train_MAPE: -181.4640, train_RMSE: 4.1361]
+2022-02-05 13:34:09,708 - easytorch-training - INFO - val:: [val_time: 52.36 (s), val_loss: 1.7615, val_MAPE: -1935.3641, val_RMSE: 4.2490]
+2022-02-05 13:35:52,523 - easytorch-training - INFO - test:: [test_time: -102.81 (s), test_loss: 1.8623, test_MAPE: -1107.2483, test_RMSE: 4.5231]
+2022-02-05 13:35:52,565 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_186.pt saved
+2022-02-05 13:35:52,565 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 13:35:52,565 - easytorch-training - INFO - epoch 187 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 13:38:32,181 - easytorch-training - INFO - train:: [train_time: 159.62 (s), lr: 1.00e-03, train_loss: 1.8291, train_MAPE: -171.6030, train_RMSE: 4.1414]
+2022-02-05 13:39:24,671 - easytorch-training - INFO - val:: [val_time: 52.48 (s), val_loss: 1.7632, val_MAPE: -1917.8328, val_RMSE: 4.2614]
+2022-02-05 13:41:07,171 - easytorch-training - INFO - test:: [test_time: -102.50 (s), test_loss: 1.8834, test_MAPE: -1162.1012, test_RMSE: 4.6039]
+2022-02-05 13:41:07,236 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_187.pt saved
+2022-02-05 13:41:07,237 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:27
+2022-02-05 13:41:07,237 - easytorch-training - INFO - epoch 188 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 13:43:46,780 - easytorch-training - INFO - train:: [train_time: 159.54 (s), lr: 1.00e-03, train_loss: 1.8262, train_MAPE: -183.7087, train_RMSE: 4.1356]
+2022-02-05 13:44:39,219 - easytorch-training - INFO - val:: [val_time: 52.43 (s), val_loss: 1.7681, val_MAPE: -2020.3851, val_RMSE: 4.2695]
+2022-02-05 13:46:21,505 - easytorch-training - INFO - test:: [test_time: -102.28 (s), test_loss: 1.8876, test_MAPE: -1073.2332, test_RMSE: 4.6106]
+2022-02-05 13:46:21,545 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_188.pt saved
+2022-02-05 13:46:21,545 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:46:21,545 - easytorch-training - INFO - epoch 189 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 13:49:02,139 - easytorch-training - INFO - train:: [train_time: 160.59 (s), lr: 1.00e-03, train_loss: 1.8300, train_MAPE: -180.6870, train_RMSE: 4.1461]
+2022-02-05 13:49:54,394 - easytorch-training - INFO - val:: [val_time: 52.25 (s), val_loss: 1.7564, val_MAPE: -1928.0809, val_RMSE: 4.2495]
+2022-02-05 13:51:37,387 - easytorch-training - INFO - test:: [test_time: -102.99 (s), test_loss: 1.8665, test_MAPE: -1106.9112, test_RMSE: 4.5505]
+2022-02-05 13:51:37,424 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_189.pt saved
+2022-02-05 13:51:37,424 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:26
+2022-02-05 13:51:37,424 - easytorch-training - INFO - epoch 190 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 13:54:17,125 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8249, train_MAPE: -171.0461, train_RMSE: 4.1359]
+2022-02-05 13:55:09,343 - easytorch-training - INFO - val:: [val_time: 52.21 (s), val_loss: 1.7566, val_MAPE: -1932.5615, val_RMSE: 4.2402]
+2022-02-05 13:56:51,851 - easytorch-training - INFO - test:: [test_time: -102.50 (s), test_loss: 1.8709, test_MAPE: -1091.0902, test_RMSE: 4.5602]
+2022-02-05 13:56:51,914 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_190.pt saved
+2022-02-05 13:56:51,918 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 13:56:51,918 - easytorch-training - INFO - epoch 191 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 13:59:32,266 - easytorch-training - INFO - train:: [train_time: 160.35 (s), lr: 1.00e-03, train_loss: 1.8248, train_MAPE: -192.0705, train_RMSE: 4.1355]
+2022-02-05 14:00:24,483 - easytorch-training - INFO - val:: [val_time: 52.21 (s), val_loss: 1.7489, val_MAPE: -1912.2423, val_RMSE: 4.2230]
+2022-02-05 14:02:07,018 - easytorch-training - INFO - test:: [test_time: -102.53 (s), test_loss: 1.8616, test_MAPE: -1043.5285, test_RMSE: 4.5287]
+2022-02-05 14:02:07,086 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_191.pt saved
+2022-02-05 14:02:07,086 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:25
+2022-02-05 14:02:07,086 - easytorch-training - INFO - epoch 192 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 14:04:47,169 - easytorch-training - INFO - train:: [train_time: 160.08 (s), lr: 1.00e-03, train_loss: 1.8288, train_MAPE: -176.3058, train_RMSE: 4.1439]
+2022-02-05 14:05:39,433 - easytorch-training - INFO - val:: [val_time: 52.26 (s), val_loss: 1.7518, val_MAPE: -1918.9098, val_RMSE: 4.2170]
+2022-02-05 14:07:21,804 - easytorch-training - INFO - test:: [test_time: -102.37 (s), test_loss: 1.8781, test_MAPE: -1091.9761, test_RMSE: 4.5740]
+2022-02-05 14:07:21,864 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_192.pt saved
+2022-02-05 14:07:21,864 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 14:07:21,864 - easytorch-training - INFO - epoch 193 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 14:10:01,830 - easytorch-training - INFO - train:: [train_time: 159.97 (s), lr: 1.00e-03, train_loss: 1.8263, train_MAPE: -185.0034, train_RMSE: 4.1390]
+2022-02-05 14:10:53,987 - easytorch-training - INFO - val:: [val_time: 52.15 (s), val_loss: 1.7618, val_MAPE: -1848.9384, val_RMSE: 4.2618]
+2022-02-05 14:12:36,753 - easytorch-training - INFO - test:: [test_time: -102.76 (s), test_loss: 1.8811, test_MAPE: -1130.8287, test_RMSE: 4.6059]
+2022-02-05 14:12:36,802 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_193.pt saved
+2022-02-05 14:12:36,802 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 14:12:36,802 - easytorch-training - INFO - epoch 194 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 14:15:16,604 - easytorch-training - INFO - train:: [train_time: 159.80 (s), lr: 1.00e-03, train_loss: 1.8257, train_MAPE: -180.1110, train_RMSE: 4.1369]
+2022-02-05 14:16:09,001 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7641, val_MAPE: -1812.7954, val_RMSE: 4.2652]
+2022-02-05 14:17:51,936 - easytorch-training - INFO - test:: [test_time: -102.93 (s), test_loss: 1.8744, test_MAPE: -1176.8865, test_RMSE: 4.5769]
+2022-02-05 14:17:51,988 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_194.pt saved
+2022-02-05 14:17:51,989 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 14:17:51,989 - easytorch-training - INFO - epoch 195 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 14:20:31,690 - easytorch-training - INFO - train:: [train_time: 159.70 (s), lr: 1.00e-03, train_loss: 1.8303, train_MAPE: -163.0540, train_RMSE: 4.1454]
+2022-02-05 14:21:23,910 - easytorch-training - INFO - val:: [val_time: 52.21 (s), val_loss: 1.7481, val_MAPE: -1966.2415, val_RMSE: 4.2153]
+2022-02-05 14:23:06,194 - easytorch-training - INFO - test:: [test_time: -102.28 (s), test_loss: 1.8650, test_MAPE: -1111.5190, test_RMSE: 4.5398]
+2022-02-05 14:23:06,240 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_195.pt saved
+2022-02-05 14:23:06,240 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 14:23:06,241 - easytorch-training - INFO - epoch 196 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 14:25:46,678 - easytorch-training - INFO - train:: [train_time: 160.44 (s), lr: 1.00e-03, train_loss: 1.8289, train_MAPE: -181.6757, train_RMSE: 4.1457]
+2022-02-05 14:26:39,378 - easytorch-training - INFO - val:: [val_time: 52.70 (s), val_loss: 1.7527, val_MAPE: -1912.5298, val_RMSE: 4.2327]
+2022-02-05 14:28:21,975 - easytorch-training - INFO - test:: [test_time: -102.59 (s), test_loss: 1.8692, test_MAPE: -1171.7158, test_RMSE: 4.5542]
+2022-02-05 14:28:22,041 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_196.pt saved
+2022-02-05 14:28:22,042 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 14:28:22,042 - easytorch-training - INFO - epoch 197 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.36it/s]
+2022-02-05 14:31:02,411 - easytorch-training - INFO - train:: [train_time: 160.37 (s), lr: 1.00e-03, train_loss: 1.8293, train_MAPE: -164.3304, train_RMSE: 4.1434]
+2022-02-05 14:31:54,674 - easytorch-training - INFO - val:: [val_time: 52.26 (s), val_loss: 1.7604, val_MAPE: -1955.8278, val_RMSE: 4.2486]
+2022-02-05 14:33:37,307 - easytorch-training - INFO - test:: [test_time: -102.63 (s), test_loss: 1.8815, test_MAPE: -1161.4772, test_RMSE: 4.5883]
+2022-02-05 14:33:37,365 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_197.pt saved
+2022-02-05 14:33:37,366 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 14:33:37,366 - easytorch-training - INFO - epoch 198 / 200
+100%|██████████| 539/539 [02:40<00:00,  3.37it/s]
+2022-02-05 14:36:17,534 - easytorch-training - INFO - train:: [train_time: 160.17 (s), lr: 1.00e-03, train_loss: 1.8261, train_MAPE: -169.6342, train_RMSE: 4.1320]
+2022-02-05 14:37:09,931 - easytorch-training - INFO - val:: [val_time: 52.39 (s), val_loss: 1.7603, val_MAPE: -1964.3463, val_RMSE: 4.2410]
+2022-02-05 14:38:53,089 - easytorch-training - INFO - test:: [test_time: -103.15 (s), test_loss: 1.8811, test_MAPE: -1144.7764, test_RMSE: 4.5804]
+2022-02-05 14:38:53,147 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_198.pt saved
+2022-02-05 14:38:53,147 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:23
+2022-02-05 14:38:53,147 - easytorch-training - INFO - epoch 199 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.37it/s]
+2022-02-05 14:41:33,076 - easytorch-training - INFO - train:: [train_time: 159.93 (s), lr: 1.00e-03, train_loss: 1.8272, train_MAPE: -167.8416, train_RMSE: 4.1391]
+2022-02-05 14:42:25,687 - easytorch-training - INFO - val:: [val_time: 52.61 (s), val_loss: 1.7593, val_MAPE: -1955.4025, val_RMSE: 4.2543]
+2022-02-05 14:44:08,875 - easytorch-training - INFO - test:: [test_time: -103.18 (s), test_loss: 1.8680, test_MAPE: -1106.9087, test_RMSE: 4.5635]
+2022-02-05 14:44:08,935 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_199.pt saved
+2022-02-05 14:44:08,936 - easytorch-training - INFO - The estimated training finish time is 2022-02-05 14:49:24
+2022-02-05 14:44:08,936 - easytorch-training - INFO - epoch 200 / 200
+100%|██████████| 539/539 [02:39<00:00,  3.38it/s]
+2022-02-05 14:46:48,447 - easytorch-training - INFO - train:: [train_time: 159.51 (s), lr: 1.00e-03, train_loss: 1.8238, train_MAPE: -183.0913, train_RMSE: 4.1286]
+2022-02-05 14:47:40,465 - easytorch-training - INFO - val:: [val_time: 52.01 (s), val_loss: 1.7571, val_MAPE: -1894.1719, val_RMSE: 4.2358]
+2022-02-05 14:49:22,803 - easytorch-training - INFO - test:: [test_time: -102.33 (s), test_loss: 1.8779, test_MAPE: -1137.9401, test_RMSE: 4.5703]
+2022-02-05 14:49:22,841 - easytorch-training - INFO - ckpt checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_200.pt saved
+2022-02-05 14:49:22,844 - easytorch-training - INFO - The training finished at 2022-02-05 14:49:22                                                                                       /8.1s
