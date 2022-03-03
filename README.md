@@ -1,5 +1,6 @@
 # Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting
 Code for our paper Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting.
+
 **All the training logs of the pre-training stage and forecasting can be found in `training_logs/`.**
 
 ## 1. Data Preparation
