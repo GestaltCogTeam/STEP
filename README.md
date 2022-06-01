@@ -104,7 +104,7 @@ cp checkpoints/TSFormer_200/fac3814778135a6d46063e3cab20257c/TSFormer_147.pt TSF
 ```bash
 cp checkpoints/TSFormer_200/3de38a467aef981dd6f24127b6fb5f50/TSFormer_030.pt TSFormer_CKPT/TSFormer_metr.pt
 ```
-Then train the downstream STGNN (Graph WaveNet) like in section 2.
+Then train the downstream STGNN (Graph WaveNet) like in section 4.
 
 ## 6. Performance
 <!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
