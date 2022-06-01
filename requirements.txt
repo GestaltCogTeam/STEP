@@ -1,42 +1,34 @@
 absl-py==1.0.0
 cachetools==5.0.0
 certifi==2021.10.8
-charset-normalizer==2.0.11
+charset-normalizer==2.0.12
 easydict==1.9
-google-auth==2.6.0
+google-auth==2.6.6
 google-auth-oauthlib==0.4.6
-grpcio==1.43.0
+grpcio==1.46.1
 idna==3.3
-importlib-metadata==4.10.1
-joblib==1.1.0
-Markdown==3.3.6
-mkl-fft==1.3.1
-mkl-random @ file:///tmp/build/80754af9/mkl_random_1626186066731/work
-mkl-service==2.4.0
-numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1634095651905/work
+importlib-metadata==4.11.3
+Markdown==3.3.7
+numpy==1.22.3
 oauthlib==3.2.0
-olefile @ file:///Users/ktietz/demo/mc3/conda-bld/olefile_1629805411829/work
-Pillow==8.4.0
-protobuf==3.19.4
+Pillow==9.1.0
+protobuf==3.20.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 requests==2.27.1
 requests-oauthlib==1.3.1
 rsa==4.8
-scikit-learn==1.0.2
 scipy==1.8.0
-setproctitle==1.2.2
-six @ file:///tmp/build/80754af9/six_1623709665295/work
-tensorboard==2.8.0
+setproctitle==1.2.3
+six==1.16.0
+tensorboard==2.9.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-threadpoolctl==3.1.0
-timm==0.5.4
-torch==1.10.2
-torchaudio==0.10.2
-torchvision==0.11.3
-tqdm==4.62.3
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
-urllib3==1.26.8
-Werkzeug==2.0.3
-zipp==3.7.0
+torch==1.10.0+cu113
+torchaudio==0.10.0+cu113
+torchvision==0.11.1+cu113
+tqdm==4.64.0
+typing_extensions==4.2.0
+urllib3==1.26.9
+Werkzeug==2.1.2
+zipp==3.8.0
