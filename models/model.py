@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from models.MAE_TS.model import MAE_TS
+from models.TSFormer.model import TSFormer
 from models.GWNet.model import gwnet
 from utils.log import load_pkl
 from utils.Similarity_e import batch_cosine_similarity, batch_dot_similarity
@@ -39,7 +39,7 @@ def gumbel_softmax(logits, temperature, hard=False, eps=1e-10):
         y = y_soft
     return y
 
-class STGNN(nn.Module):
+class STEP(nn.Module):
     def __init__(self, cfg, **model_args):
         super().__init__()
         tsformer_args = model_args['TSFORMER']
@@ -48,7 +48,7 @@ class STGNN(nn.Module):
         self.dataset_name = cfg.DATASET_NAME
         self.Backend = gwnet(**backend_args.GWNET)
 
-        self.TSFormer = MAE_TS(mode='inference', **tsformer_args)
+        self.TSFormer = TSFormer(mode='inference', **tsformer_args)
         self.load_pretrained_model()
         if self.dataset_name == 'METR-LA':
             self.dim_fc = int(383552)

@@ -11,7 +11,7 @@ from dataloader.dataset import MTSDataset
 
 from easytorch import Runner
 
-from models.model import STGNN
+from models.model import STEP
 from utils.load_data import re_max_min_normalization, standard_re_transform
 from utils.log import clock, load_pkl
 from utils.log import TrainLogger
@@ -42,7 +42,6 @@ class FullModelRunner(Runner):
         self.cl_len = self.output_seq_len
         self.if_cl = True
 
-
     def init_training(self, cfg):
         """Initialize training.
 
@@ -56,8 +55,6 @@ class FullModelRunner(Runner):
         self.register_epoch_meter("train_RMSE", 'train', '{:.4f}')
 
         super().init_training(cfg)
-
-
 
     def init_validation(self, cfg: dict):
         """Initialize validation.
@@ -103,11 +100,11 @@ class FullModelRunner(Runner):
             model (nn.Module)
         """
         return {
-            'FullModel': STGNN
+            'FullModel': STEP
         }[cfg['MODEL']['NAME']](cfg, **cfg.MODEL.PARAM)
 
     def build_train_dataset(self, cfg: dict):
-        """Build MNIST train dataset
+        """Build train dataset
 
         Args:
             cfg (dict): config
@@ -134,7 +131,7 @@ class FullModelRunner(Runner):
 
     @staticmethod
     def build_val_dataset(cfg: dict):
-        """Build MNIST val dataset
+        """Build val dataset
 
         Args:
             cfg (dict): config
@@ -151,7 +148,7 @@ class FullModelRunner(Runner):
 
     @staticmethod
     def build_test_dataset(cfg: dict):
-        """Build MNIST val dataset
+        """Build val dataset
 
         Args:
             cfg (dict): config
@@ -165,13 +162,6 @@ class FullModelRunner(Runner):
         dataset = MTSDataset(raw_file_path, index_file_path, seq_len, pretrain=False)
         print("test len: {0}".format(len(dataset)))
         return dataset
-
-    # def setup_graph(self, data):
-    #     y, short_x = data
-    #     Y   = self.to_running_device(y)
-    #     S_X = self.to_running_device(short_x)
-    #     H = None
-    #     output  = self.model(S_X, His=H, label=Y, batch_seen=10)
 
     def train_iters(self, epoch, iter_index, data):
         """Training details.
@@ -350,6 +340,12 @@ class FullModelRunner(Runner):
                 amape.append(metrics[1])    # mape
                 armse.append(metrics[2])    # rmse
             self.logger.info(log)
+
+        # *** TODO: not test yet ***
+        import numpy as np
+        log = 'On average over 12 horizons, Test MAE: {:.4f}, Test MAPE: {:.4f}, Test RMSE: {:.4f}'
+        self.logger.info(log.format(np.mean(amae),np.mean(amape),np.mean(armse)))
+        # **************************
 
         test_end_time = time.time()
         self.update_epoch_meter('test_time', test_start_time - test_end_time)

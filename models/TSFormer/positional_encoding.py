@@ -1,7 +1,5 @@
-import math
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 class LearnableTemporalPositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout=0.1, max_len: int = 1000):
@@ -22,6 +20,7 @@ class LearnableTemporalPositionalEncoding(nn.Module):
         X  = X + pe
         X  = self.dropout(X)
         return X
+
 class PositionalEncoding(nn.Module):
     def __init__(self, hidden_dim, dropout=0.1):
         super().__init__()

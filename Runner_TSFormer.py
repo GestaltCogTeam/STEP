@@ -5,7 +5,7 @@ from dataloader.dataset import MTSDataset
 
 from easytorch import Runner
 
-from models.MAE_TS.model import MAE_TS
+from models.TSFormer.model import TSFormer
 from utils.load_data import re_max_min_normalization, standard_re_transform
 from utils.log import TrainLogger, clock, load_pkl
 
@@ -87,7 +87,7 @@ class TSFormerRunner(Runner):
         """
         
         return {
-            'TSFormer': MAE_TS
+            'TSFormer': TSFormer
         }[cfg['MODEL']['NAME']](**cfg['MODEL'].get('PARAM', {}))
 
     @staticmethod

@@ -1,7 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-import math
 
 class Patch(nn.Module):
     def __init__(self, patch_size, input_channel, output_channel, spectral=True):
@@ -31,19 +29,9 @@ class Patch(nn.Module):
             spec_feat = torch.cat([real, imag], dim=-1).squeeze(2)
             output = self.emb_layer(spec_feat).transpose(-1, -2)
         else:
-            input = input.unsqueeze(-1)     # B, N, C, L, 1
-            input = input.reshape(B*N, C, L, 1)                    # B*N,  C, L, 1
-            output = self.input_embedding(input)                # B*N,  d, L/P, 1
+            input = input.unsqueeze(-1)             # B, N, C, L, 1
+            input = input.reshape(B*N, C, L, 1)                                     # B*N,  C, L, 1
+            output = self.input_embedding(input)                                    # B*N,  d, L/P, 1
             output = output.squeeze(-1).view(B, N, self.output_channel, -1)
             assert output.shape[-1] == L / self.P
         return output
-
-if __name__ == "__main__":
-    B, L, N, C      = 16, 576, 207, 3
-    patch_size      = 12
-    output_channel  = 64
-    device      = torch.device("cuda:0")
-    # device      = torch.device("cpu")
-    toy_data = torch.randn(B, N, C, L).to(device)
-    mae_ts = Patch(patch_size, C, output_channel).to(device)
-    mae_ts(toy_data)

@@ -1,14 +1,10 @@
 import torch
 import torch.nn as nn
-import torch.optim as optim
 
-from models.MAE_TS.Transformer_layers_canonical import TransformerLayers
-# from models.MAE_TS.Transformer_layers_ViT import TransformerLayers
-# from models.MAE_TS.transformer_layer_bn import TransformerLayers
-from models.MAE_TS.mask import MaskGenerator
-from models.MAE_TS.patch import Patch
-from models.MAE_TS.positional_encoding import PositionalEncoding
-from utils.log import clock
+from models.TSFormer.Transformer_layers import TransformerLayers
+from models.TSFormer.mask import MaskGenerator
+from models.TSFormer.patch import Patch
+from models.TSFormer.positional_encoding import PositionalEncoding
 from timm.models.layers import trunc_normal_ as __call_trunc_normal_
 
 def trunc_normal_(tensor, mean=0., std=1.):
@@ -23,7 +19,7 @@ def unshuffle(shuffled_tokens):
         unshuffle_index.append(dic[i])
     return unshuffle_index
 
-class MAE_TS(nn.Module):
+class TSFormer(nn.Module):
     def __init__(self, patch_size, in_channel, out_channel, dropout, mask_size, mask_ratio, L=6, distribution='uniform', lm=-1, selected_feature=0, mode='Pretrain', spectral=True):
         super().__init__()
         self.patch_size = patch_size
