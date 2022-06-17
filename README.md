@@ -15,7 +15,7 @@ All the training logs of the pre-training stage and the forecasting stage can be
 ## 1. Table of Contents
 
 ```text
-config          -->     Training configs and model configs for each model
+config          -->     Training configs and model configs for each dataset
 dataloader      -->     MTS dataset
 easytorch       -->     EasyTorch
 model           -->     Model architecture
