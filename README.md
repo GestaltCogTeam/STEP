@@ -2,7 +2,7 @@
 [![EasyTorch](https://img.shields.io/badge/Developing%20with-EasyTorch-2077ff.svg)](https://github.com/cnstark/easytorch)
 [![LICENSE](https://img.shields.io/github/license/zezhishao/BasicTS.svg)](https://github.com/zezhishao/BasicTS/blob/master/LICENSE)
 
-Code for our SIGKDD'22 paper: "Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting".
+Code for our SIGKDD'22 paper: "[Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting](https://arxiv.org/abs/2206.09113)".
 
 The code is developed with [EasyTorch](https://github.com/cnstark/easytorch), an easy-to-use and powerful open source neural network training framework.
 
@@ -56,7 +56,7 @@ Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04`.
 
 The processed data is placed in `datasets/$DATASET_NAME`.
 
-## 4. Run based on a Pretrained TSFormer
+## 4. Training based on a Pretrained TSFormer
 ```bash
 python train_METR_FullModel.py --gpu='0,1'
 ```
@@ -106,7 +106,7 @@ cp checkpoints/TSFormer_200/3de38a467aef981dd6f24127b6fb5f50/TSFormer_030.pt TSF
 ```
 Then train the downstream STGNN (Graph WaveNet) like in section 4.
 
-## 6. Performance
+## 6. Performance and Visualization
 <!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
 <img src="figure/MainResults.png" alt="TheTable" style="zoom:49.4%;" />
 
