@@ -20,15 +20,15 @@ def unshuffle(shuffled_tokens):
     return unshuffle_index
 
 class TSFormer(nn.Module):
-    def __init__(self, patch_size, in_channel, out_channel, dropout, mask_size, mask_ratio, L=6, distribution='uniform', lm=-1, selected_feature=0, mode='Pretrain', spectral=True):
+    def __init__(self, patch_size, in_channel, out_channel, dropout, mask_size, mask_ratio, L=6, mode='Pretrain', spectral=True):
         super().__init__()
         self.patch_size = patch_size
-        self.seleted_feature = selected_feature
+        self.seleted_feature = 0
         self.mode = mode
         self.spectral = spectral
         self.patch = Patch(patch_size, in_channel, out_channel, spectral=spectral)
         self.pe = PositionalEncoding(out_channel, dropout=dropout)
-        self.mask  = MaskGenerator(mask_size, mask_ratio, distribution=distribution, lm=lm)
+        self.mask  = MaskGenerator(mask_size, mask_ratio)
         self.encoder = TransformerLayers(out_channel, L)
         self.decoder = TransformerLayers(out_channel, 1)
         self.encoder_2_decoder = nn.Linear(out_channel, out_channel)
@@ -84,8 +84,7 @@ class TSFormer(nn.Module):
         label_masked_tokens  = label_masked_tokens.view(B, N, -1).transpose(1, 2)
 
         # prepare plot
-        ## note that the output_full and label_full are not aligned. The out_full in shuffled
-        ### therefore, unshuffle for plot
+        ## note that the output_full and label_full are not aligned. The out_full is shuffled.
         unshuffled_index = unshuffle(unmasked_token_index + masked_token_index)
         out_full_unshuffled = out_full[:, :, unshuffled_index, :]
         plot_args = {}
@@ -104,15 +103,10 @@ class TSFormer(nn.Module):
         # positional embedding
         patches = self.pe(patches)
         
-        # mask tokens
-        # unmasked_token_index, masked_token_index = self.mask()
-        # encoder_input = patches[:, :, unmasked_token_index, :]
-
         encoder_input = patches          # no mask when running the backend.
 
         # encoder
         H = self.encoder(encoder_input)         # B, N, L/P*(1-r), d
-        # TODO add fc here
         return H
 
     def forward(self, input_data):

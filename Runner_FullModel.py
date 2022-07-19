@@ -2,19 +2,17 @@ import time
 import math
 from torch import nn
 import torch
-import torchvision
 from easytorch.utils.dist import master_only
 from sklearn.metrics import mean_absolute_error
 
-from losses.losses_torch import masked_mae, masked_rmse, masked_mape, metric
-from dataloader.dataset import MTSDataset
-
 from easytorch import Runner
 
-from models.model import STEP
-from utils.load_data import re_max_min_normalization, standard_re_transform
-from utils.log import clock, load_pkl
+from models.STEP import STEP
+from utils.log import load_pkl
 from utils.log import TrainLogger
+from dataloader.dataset import MTSDataset
+from utils.load_data import re_max_min_normalization, standard_re_transform
+from losses.losses_torch import masked_mae, masked_rmse, masked_mape, metric
 
 class FullModelRunner(Runner):
     def __init__(self, cfg: dict, use_gpu: bool = True):
@@ -100,7 +98,7 @@ class FullModelRunner(Runner):
             model (nn.Module)
         """
         return {
-            'FullModel': STEP
+            'STEP': STEP
         }[cfg['MODEL']['NAME']](cfg, **cfg.MODEL.PARAM)
 
     def build_train_dataset(self, cfg: dict):
@@ -181,7 +179,7 @@ class FullModelRunner(Runner):
         S_X = self.to_running_device(short_x)
         L_X = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X, label=Y, batch_seen=iter_num, epoch=epoch)
+        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
         output  = output.transpose(1,2)
 
         # # reg
@@ -248,7 +246,7 @@ class FullModelRunner(Runner):
         S_X = self.to_running_device(short_x)
         L_X = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X, label=Y)
+        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
         output  = output.transpose(1,2)
 
         # scale data and calculate loss
@@ -363,7 +361,7 @@ class FullModelRunner(Runner):
         S_X = self.to_running_device(short_x)
         L_X = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X, label=Y)
+        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
         output  = output.transpose(1,2)
         return output, Y
     

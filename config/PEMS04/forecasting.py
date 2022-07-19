@@ -7,17 +7,16 @@ from easydict import EasyDict
 from Runner_FullModel import FullModelRunner
 from utils.load_data import *
 
-DATASET_NAME = "PEMS-BAY"
-
+DATASET_NAME = "PEMS04"
 GRAPH_NAME   = {"METR-LA": "adj_mx_la.pkl", "PEMS04": "adj_mx_04.pkl", "PEMS-BAY": "adj_mx_bay.pkl"}
 NUM_NODES   = {"METR-LA": 207, "PEMS04":307, "PEMS-BAY":325}
 adj_mx, adj_ori = load_adj("datasets/sensor_graph/" + GRAPH_NAME[DATASET_NAME], "doubletransition")
 
 CFG = EasyDict()
-BATCH_SIZE  = 32
+BATCH_SIZE  = 8
 # General Parameters
 EPOCHES     = 100
-NUM_WORKERS = 1
+NUM_WORKERS = 2
 PIN_MEMORY  = True
 PREFETCH    = True
 GPU_NUM     = 2
@@ -25,7 +24,7 @@ SEED        = 0
 
 # Model Parameters of TSFormer
 PATCH_SIZE  = 12        # also the sequence length
-WINDOW_SIZE = 288 * 7   # windows size of long history information
+WINDOW_SIZE = 288 * 7 * 2   # windows size of long history information
 HIDDEN_DIM  = 96        # hidden dim of history dim
 MASK_RATIO  = 0.75
 L_TSFORMER  = 4
@@ -54,10 +53,10 @@ CFG.MODEL.PARAM.TSFORMER = {
     "dropout":0.1,
     "mask_size":WINDOW_SIZE/PATCH_SIZE,
     "mask_ratio":MASK_RATIO,
-    "lm":LM,
     "L":L_TSFORMER,
-    "spectral":False
+    "spectral":False,
 }
+
 CFG.MODEL.PARAM.BACKEND = EasyDict()
 CFG.MODEL.PARAM.BACKEND.GWNET = {
     "num_nodes" : NUM_NODES[DATASET_NAME], 
@@ -80,9 +79,8 @@ CFG.MODEL.PARAM.BACKEND.GWNET = {
 # Train
 CFG.TRAIN = EasyDict()
 CFG.TRAIN.SETUP_GRAPH = True
-CFG.TRAIN.WARMUP_EPOCHS = 30
-CFG.TRAIN.CL_EPOCHS     = 3
-CFG.TRAIN.CLIP          = 3
+CFG.TRAIN.WARMUP_EPOCHS = 100
+CFG.TRAIN.CL_EPOCHS     = 6
 # CFG.TRAIN.CKPT_SAVE_STRATEGY = "SaveEveryEpoch"       # delete pt to save space
 CFG.TRAIN.NUM_EPOCHS = EPOCHES
 CFG.TRAIN.CKPT_SAVE_DIR = os.path.join(
@@ -104,7 +102,7 @@ CFG.TRAIN.DATA.PIN_MEMORY = PIN_MEMORY
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
 CFG.TRAIN.OPTIM.PARAM= {
-    "lr":0.001,
+    "lr":0.002,
     "weight_decay":1.0e-5,
     "eps":1.0e-8,
 }

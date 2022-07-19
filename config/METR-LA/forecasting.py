@@ -9,8 +9,8 @@ from utils.load_data import *
 
 DATASET_NAME = "METR-LA"
 
-GRAPH_NAME   = {"METR-LA": "adj_mx_la.pkl", "PEMS04": "adj_mx_04.pkl"}
-NUM_NODES   = {"METR-LA": 207, "PEMS04":307}
+GRAPH_NAME   = {"METR-LA": "adj_mx_la.pkl", "PEMS04": "adj_mx_04.pkl", "PEMS-BAY": "adj_mx_bay.pkl"}
+NUM_NODES   = {"METR-LA": 207, "PEMS04":307, "PEMS-BAY":325}
 adj_mx, adj_ori = load_adj("datasets/sensor_graph/" + GRAPH_NAME[DATASET_NAME], "doubletransition")
 
 CFG = EasyDict()
@@ -45,7 +45,7 @@ CFG.CUDNN_ENABLED = True
 
 # Model
 CFG.MODEL = EasyDict()
-CFG.MODEL.NAME = "FullModel"
+CFG.MODEL.NAME = "STEP"
 CFG.MODEL.PARAM = EasyDict()
 CFG.MODEL.PARAM.TSFORMER = {
     "patch_size":PATCH_SIZE,
@@ -54,7 +54,6 @@ CFG.MODEL.PARAM.TSFORMER = {
     "dropout":0.1,
     "mask_size":WINDOW_SIZE/PATCH_SIZE,
     "mask_ratio":MASK_RATIO,
-    "lm":LM,
     "L":L_TSFORMER,
     "spectral":False
 }

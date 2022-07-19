@@ -63,19 +63,16 @@ class TrainLogger():
             print("Backup current files to {0}".format(path+cur_time))
             # pwd = os.getcwd() + "/"
             # copy model files
-            shutil.copytree('models',  path + cur_time + "/models")      # copy models
-            shutil.copytree('config',  path + cur_time + "/config")      # copy models
-            shutil.copytree('dataloader',  path + cur_time + "/dataloader")      # copy models
+            shutil.copytree('models',  path + cur_time + "/models")
+            shutil.copytree('config',  path + cur_time + "/config")
+            shutil.copytree('dataloader',  path + cur_time + "/dataloader")
             try:
-                shutil.copyfile('demo_metr.sh',  path + cur_time + "/demo_metr.sh")      # copy models
-                shutil.copyfile('demo_pems04.sh',  path + cur_time + "/demo_pems04.sh")      # copy models
+                shutil.copyfile('demo_metr.sh',  path + cur_time + "/demo_metr.sh")
+                shutil.copyfile('demo_pems04.sh',  path + cur_time + "/demo_pems04.sh")
             except:
                 pass
-            shutil.copyfile('Runner_FullModel.py',  path + cur_time + "/Runner_FullModel.py")      # copy models
-            shutil.copyfile('Runner_TSFormer.py',  path + cur_time + "/Runner_TSFormer.py")      # copy models
-            shutil.copyfile('train_METR_FullModel.py',  path + cur_time + "/train_METR_FullModel.py")      # copy models
-            shutil.copyfile('train_METR_TSFormer.py',  path + cur_time + "/train_METR_TSFormer.py")      # copy models
-            shutil.copyfile('train_PEMS04_FullModel.py',  path + cur_time + "/train_PEMS04_FullModel.py")      # copy models
-            shutil.copyfile('train_PEMS04_TSFormer.py',  path + cur_time + "/train_PEMS04_TSFormer.py")      # copy models
+            shutil.copyfile('Runner_FullModel.py',  path + cur_time + "/Runner_FullModel.py")
+            shutil.copyfile('Runner_TSFormer.py',  path + cur_time + "/Runner_TSFormer.py")
+            shutil.copyfile('main.py',  path + cur_time + "/main.py")
         except FileExistsError:
             pass
