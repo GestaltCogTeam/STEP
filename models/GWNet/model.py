@@ -52,6 +52,8 @@ class gcn(nn.Module):
 class gwnet(nn.Module):
     def __init__(self, num_nodes, supports, dropout=0.3, gcn_bool=True, addaptadj=True, aptinit=None, in_dim=2,out_dim=12,residual_channels=32,dilation_channels=32,skip_channels=256,end_channels=512,kernel_size=2,blocks=4,layers=2, **kwargs):
         super(gwnet, self).__init__()
+        """kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph. 
+        Details can be found in the feed forward function."""
         self.dropout = dropout
         self.blocks = blocks
         self.layers = layers
@@ -145,7 +147,6 @@ class gwnet(nn.Module):
 
     def _calculate_random_walk_matrix(self, adj_mx):
         B, N, N = adj_mx.shape
-        # tf.Print(adj_mx, [adj_mx], message="This is adj: ")
 
         adj_mx = adj_mx + torch.eye(int(adj_mx.shape[1])).unsqueeze(0).expand(B, N, N).to(adj_mx.device)
         d = torch.sum(adj_mx, 2)
@@ -155,7 +156,17 @@ class gwnet(nn.Module):
         random_walk_mx = torch.bmm(d_mat_inv, adj_mx)
         return random_walk_mx
 
-    def forward(self, input, long_input=None, labels=None, His=None, batch_seen=None, adj=None):
+    def forward(self, input, His, adj):
+        """feed forward of Graph WaveNet.
+
+        Args:
+            input (torch.Tensor): input history MTS with shape [B, P, N, C].
+            His (torch.Tensor): the output of TSFormer of the last patch (segment) with shape [B, N, d].
+            adj (torch.Tensor): the learned discrete dependency graph with shape [B, N, N].
+
+        Returns:
+            torch.Tensor: prediction with shape [B, N, P]
+        """
         # reshape input: [B, P, N, C] -> [B, C, N, P]
         input = input.transpose(1, 3)
         # feed forward
@@ -172,11 +183,12 @@ class gwnet(nn.Module):
 
         #
         if adj is not None:
+            # ====== if use learned adjacency matrix, then reset the self.supports ===== #
             self.supports = [] + [self._calculate_random_walk_matrix(adj)]
             self.supports = self.supports + [self._calculate_random_walk_matrix(adj.transpose(-1, -2))]
         else:
             pass
-        # calculate the current adaptive adj matrix once per iteration
+        # calculate the current adaptive adj matrix
         new_supports = None
         if self.gcn_bool and self.addaptadj and self.supports is not None:
             adp = F.softmax(F.relu(torch.mm(self.nodevec1, self.nodevec2)), dim=1)

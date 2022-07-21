@@ -60,7 +60,7 @@ CFG.MODEL.PARAM.TSFORMER = {
 CFG.MODEL.PARAM.BACKEND = EasyDict()
 CFG.MODEL.PARAM.BACKEND.GWNET = {
     "num_nodes" : NUM_NODES[DATASET_NAME], 
-    "supports"  :[torch.tensor(i) for i in adj_mx],
+    "supports"  :[torch.tensor(i) for i in adj_mx],         # the supports are not used
     "dropout"   : 0.3, 
     "gcn_bool"  : True, 
     "addaptadj" : True, 

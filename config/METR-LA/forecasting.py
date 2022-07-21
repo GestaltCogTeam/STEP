@@ -20,7 +20,7 @@ EPOCHES     = 100
 NUM_WORKERS = 8
 PIN_MEMORY  = True
 PREFETCH    = True
-GPU_NUM     = 2
+GPU_NUM     = 1
 SEED        = 0
 
 # Model Parameters of TSFormer
@@ -60,7 +60,7 @@ CFG.MODEL.PARAM.TSFORMER = {
 CFG.MODEL.PARAM.BACKEND = EasyDict()
 CFG.MODEL.PARAM.BACKEND.GWNET = {
     "num_nodes" : NUM_NODES[DATASET_NAME], 
-    "supports"  :[torch.tensor(i) for i in adj_mx],
+    "supports"  :[torch.tensor(i) for i in adj_mx],         # the supports are not used
     "dropout"   : 0.3, 
     "gcn_bool"  : True, 
     "addaptadj" : True, 

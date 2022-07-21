@@ -18,10 +18,12 @@ def gumbel_softmax_sample(logits, temperature, eps=1e-10):
 
 def gumbel_softmax(logits, temperature, hard=False, eps=1e-10):
     """Sample from the Gumbel-Softmax distribution and optionally discretize.
+
     Args:
         logits: [batch_size, n_class] unnormalized log-probs
         temperature: non-negative scalar
         hard: if True, take argmax, but differentiate w.r.t. soft sample y
+
     Returns:
         [batch_size, n_class] sample from the Gumbel-Softmax distribution.
         If hard=True, then the returned sample will be one-hot, otherwise it will
@@ -104,11 +106,14 @@ class DiscreteGraphLearning(nn.Module):
         """learning discrete graph structure based on TSFormer.
 
         Args:
-            L_X (torch.Tensor): long-term historical data
-            TSFormer (nn.Module): pre-trained TSFormer
+            L_X (torch.Tensor): very long-term historical MTS with shape [B, L * P, N, C].
+            TSFormer (nn.Module): pre-trained TSFormer.
 
         Returns:
-            _type_: _description_
+            torch.Tensor: Bernoulli parameter (unnormalized) of each edge of the learned dependency graph. Shape: [B, N * N, 2].
+            torch.Tensor: the output of TSFormer with shape [B, N, L, d].
+            torch.Tensor: the kNN graph with shape [B, N, N], which is used to guide the training of the dependency graph.
+            torch.Tensor: the sampled graph with shape [B, N, N].
         """
         device = L_X.device
         B, _, N, _ = L_X.shape
@@ -118,24 +123,26 @@ class DiscreteGraphLearning(nn.Module):
         x = x.view(N, -1)
         x = F.relu(self.fc(x))
         x = self.bn3(x)
-        x = x.unsqueeze(0).expand(B, N, -1)
+        x = x.unsqueeze(0).expand(B, N, -1)                     # Gi in Eq. (2)
 
         # generate dynamic feature based on TSFormer
-        H = TSFormer(L_X[..., [0]].permute(0, 2, 3, 1))        # B, N, L/P, D
-        his_ave = F.relu(self.fc_mean(H.reshape(B, N, -1)))
+        H = TSFormer(L_X[..., [0]].permute(0, 2, 3, 1))
+        his_ave = F.relu(self.fc_mean(H.reshape(B, N, -1)))     # relu(FC(Hi)) in Eq. (2)
 
         # time series feature
-        x = x + his_ave
+        x = x + his_ave                                         # Zi in Eq. (2)
 
         # learning discrete graph structure
         receivers = torch.matmul(self.rel_rec.to(x.device), x)
         senders = torch.matmul(self.rel_send.to(x.device), x)
         x = torch.cat([senders, receivers], dim=-1)
         x = torch.relu(self.fc_out(x))
-        x = self.fc_cat(x)      # Bernoulli probability
-        adj = gumbel_softmax(x, temperature=0.5, hard=True)     # differentiable sampling
+        x = self.fc_cat(x)                                      # Bernoulli parameter (unnormalized) Theta_{ij} in Eq. (2)
+
+        # sampling
+        adj = gumbel_softmax(x, temperature=0.5, hard=True)     # differentiable sampling via Gumbel-Softmax in Eq. (4)
         adj = adj[..., 0].clone().reshape(B, N, -1)
-        mask = torch.eye(N, N).unsqueeze(0).bool().to(adj.device)
+        mask = torch.eye(N, N).unsqueeze(0).bool().to(adj.device)   # remove self-loop, which is re-added in the 
         adj.masked_fill_(mask, 0)
 
         # prior graph based on TSFormer

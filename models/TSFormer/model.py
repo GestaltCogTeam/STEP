@@ -40,6 +40,16 @@ class TSFormer(nn.Module):
             self.output_layer = nn.Linear(out_channel, patch_size)
 
     def _forward_pretrain(self, input):
+        """feed forward of the TSFormer in the pre-training stage.
+
+        Args:
+            input (torch.Tensor): very long-term historical time series with shape B, N, 1, L * P.
+
+        Returns:
+            torch.Tensor: the reconstruction of the masked tokens. Shape [B, L * P * r, N]
+            torch.Tensor: the groundtruth of the masked tokens. Shape [B, L * P * r, N]
+            dict: data for plotting.
+        """
         B, N, C, L = input.shape
         # get patches and exec input embedding
         patches = self.patch(input)             # B, N, d, L/P
@@ -85,7 +95,7 @@ class TSFormer(nn.Module):
 
         # prepare plot
         ## note that the output_full and label_full are not aligned. The out_full is shuffled.
-        unshuffled_index = unshuffle(unmasked_token_index + masked_token_index)
+        unshuffled_index = unshuffle(unmasked_token_index + masked_token_index)     # therefore, we need to unshuffle the out_full for better plotting.
         out_full_unshuffled = out_full[:, :, unshuffled_index, :]
         plot_args = {}
         plot_args['out_full_unshuffled']    = out_full_unshuffled
@@ -96,23 +106,41 @@ class TSFormer(nn.Module):
         return out_masked_tokens, label_masked_tokens, plot_args
 
     def _forward_backend(self, input):
-        B, N, C, L = input.shape
+        """the feed forward process in the forecasting stage.
+
+        Args:
+            input (torch.Tensor): very long-term historical time series with shape B, N, 1, L * P.
+
+        Returns:
+            torch.Tensor: the output of TSFormer of the encoder with shape [B, N, L, d].
+        """
+        B, N, C, LP = input.shape
         # get patches and exec input embedding
-        patches = self.patch(input)             # B, N, d, L/P
-        patches = patches.transpose(-1, -2)     # B, N, L/P, d
+        patches = self.patch(input)             # B, N, d, L
+        patches = patches.transpose(-1, -2)     # B, N, L, d
         # positional embedding
         patches = self.pe(patches)
         
         encoder_input = patches          # no mask when running the backend.
 
         # encoder
-        H = self.encoder(encoder_input)         # B, N, L/P*(1-r), d
+        H = self.encoder(encoder_input)         # B, N, L, d
         return H
 
     def forward(self, input_data):
-        """
+        """feed forward of the TSFormer.
+        TSFormer has two modes: the pre-training mode and the forecasting model, which are used in the pre-training stage and the forecasting stage, respectively.
+
         Args:
-            input_data: B, N, C, L.
+            input_data (torch.Tensor): very long-term historical time series with shape B, N, 1, L * P.
+        
+        Returns:
+            pre-training:
+                torch.Tensor: the reconstruction of the masked tokens. Shape [B, L * P * r, N]
+                torch.Tensor: the groundtruth of the masked tokens. Shape [B, L * P * r, N]
+                dict: data for plotting.
+            forecasting: 
+                torch.Tensor: the output of TSFormer of the encoder with shape [B, N, L, d].
         """
         if self.mode == 'Pretrain':
             return self._forward_pretrain(input_data)

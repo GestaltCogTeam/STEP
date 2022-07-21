@@ -36,16 +36,16 @@ class STEP(nn.Module):
             param.requires_grad = False
 
     def forward(self, S_X, L_X=None):
-        """
-        Feedforward
+        """feedforward of STEP. Details can be found in Section 3.2 of the paper.
 
         Args:
-            S_X: [B, P, N, C]
-            L_X: [B, L, N, C]
-            His: [B, N, D]
-        
+            S_X (torch.Tensor): short-term historical MTS with shape [B, P, N, C], which is the commonly used input of existing STGNNs.
+            L_X (torch.Tensor, optional): very long-term historical MTS with shape [B, L * P, N, C], which is used in the TSFormer.
+
         Returns:
-            Y_hat: [B, N, P]
+            torch.Tensor: prediction with shape [B, N, P].
+            torch.Tensor: the Bernulli distribution parameters with shape [B, N, N].
+            torch.Tensor: the kNN graph with shape [B, N, N], which is used to guide the training of the dependency graph.
         """
         B, L, N, C = S_X.shape
         
