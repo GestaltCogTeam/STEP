@@ -128,3 +128,23 @@ Then train the downstream STGNN (Graph WaveNet) like in section 4.
 - [D2STGNN: Decoupled Dynamic Spatial-Temporal Graph Neural Network for Traffic Forecasting. VLDB'22.](https://github.com/zezhishao/D2STGNN)
 
 - [BasicTS: An Open Source Standard Time Series Forecasting Benchmark.](https://github.com/zezhishao/BasicTS)
+
+## 8. Citing
+
+If you find this repository useful for your work, please consider citing it as follows:
+
+```bibtex
+@inproceedings{DBLP:conf/kdd/ShaoZWX22,
+  author    = {Zezhi Shao and
+               Zhao Zhang and
+               Fei Wang and
+               Yongjun Xu},
+  title     = {Pre-training Enhanced Spatial-temporal Graph Neural Network for Multivariate
+               Time Series Forecasting},
+  booktitle = {{KDD} '22: The 28th {ACM} {SIGKDD} Conference on Knowledge Discovery
+               and Data Mining, Washington, DC, USA, August 14 - 18, 2022},
+  pages     = {1567--1577},
+  publisher = {{ACM}},
+  year      = {2022}
+}
+```
