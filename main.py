@@ -9,12 +9,12 @@ setproctitle.setproctitle("STEP")
 def parse_args():
     parser = ArgumentParser(description='Welcome to EasyTorch!')
     # pre-training
-    # parser.add_argument('-c', '--cfg', default='config/METR-LA/pretraining.py', help='training config')
+    parser.add_argument('-c', '--cfg', default='config/METR-LA/pretraining.py', help='training config')
     # parser.add_argument('-c', '--cfg', default='config/PEMS-BAY/pretraining.py', help='training config')
     # parser.add_argument('-c', '--cfg', default='config/PEMS04/pretraining.py', help='training config')
 
     # forecasting
-    parser.add_argument('-c', '--cfg', default='config/METR-LA/forecasting.py', help='training config')
+    # parser.add_argument('-c', '--cfg', default='config/METR-LA/forecasting.py', help='training config')
     # parser.add_argument('-c', '--cfg', default='config/PEMS-BAY/forecasting.py', help='training config')
     # parser.add_argument('-c', '--cfg', default='config/PEMS04/forecasting.py', help='training config')
 

@@ -40,8 +40,7 @@ CFG.MODEL.PARAM = {
     "dropout":0.1,
     "mask_size":WINDOW_SIZE/PATCH_SIZE,
     "mask_ratio":MASK_RATIO,
-    "L":L,
-    "spectral":False
+    "L":L
 }
 
 # Train

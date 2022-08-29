@@ -20,13 +20,12 @@ def unshuffle(shuffled_tokens):
     return unshuffle_index
 
 class TSFormer(nn.Module):
-    def __init__(self, patch_size, in_channel, out_channel, dropout, mask_size, mask_ratio, L=6, mode='Pretrain', spectral=True):
+    def __init__(self, patch_size, in_channel, out_channel, dropout, mask_size, mask_ratio, L=6, mode='Pretrain'):
         super().__init__()
         self.patch_size = patch_size
         self.seleted_feature = 0
         self.mode = mode
-        self.spectral = spectral
-        self.patch = Patch(patch_size, in_channel, out_channel, spectral=spectral)
+        self.patch = Patch(patch_size, in_channel, out_channel)
         self.pe = PositionalEncoding(out_channel, dropout=dropout)
         self.mask  = MaskGenerator(mask_size, mask_ratio)
         self.encoder = TransformerLayers(out_channel, L)
@@ -34,10 +33,7 @@ class TSFormer(nn.Module):
         self.encoder_2_decoder = nn.Linear(out_channel, out_channel)
         self.mask_token = nn.Parameter(torch.zeros(1, 1, 1, out_channel))
         trunc_normal_(self.mask_token, std=.02)
-        if self.spectral:
-            self.output_layer = nn.Linear(out_channel, int(patch_size/2+1)*2)
-        else:
-            self.output_layer = nn.Linear(out_channel, patch_size)
+        self.output_layer = nn.Linear(out_channel, patch_size)
 
     def _forward_pretrain(self, input):
         """feed forward of the TSFormer in the pre-training stage.
@@ -74,15 +70,7 @@ class TSFormer(nn.Module):
         H      = self.decoder(H_full)
 
         # output layer
-        if self.spectral:
-            # output = H
-            spec_feat_H_ = self.output_layer(H)
-            real = spec_feat_H_[..., :int(self.patch_size/2+1)]
-            imag = spec_feat_H_[..., int(self.patch_size/2+1):]
-            spec_feat_H = torch.complex(real, imag)
-            out_full = torch.fft.irfft(spec_feat_H)
-        else:
-            out_full = self.output_layer(H)
+        out_full = self.output_layer(H)
 
         # prepare loss
         B, N, _, _ = out_full.shape 
