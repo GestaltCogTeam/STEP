@@ -53,8 +53,7 @@ CFG.MODEL.PARAM.TSFORMER = {
     "dropout":0.1,
     "mask_size":WINDOW_SIZE/PATCH_SIZE,
     "mask_ratio":MASK_RATIO,
-    "L":L_TSFORMER,
-    "spectral":False,
+    "L":L_TSFORMER
 }
 
 CFG.MODEL.PARAM.BACKEND = EasyDict()
