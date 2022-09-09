@@ -13,10 +13,10 @@ class MTSDataset(Dataset):
         super().__init__()
         self.pretrain = pretrain
         self.seq_len = seq_len
-        # 读取完整数据
-        self.data = torch.from_numpy(load_pkl(raw_file_path)).float()               # L, N, C
+        # read full data
+        self.data = torch.from_numpy(load_pkl(raw_file_path)).float()
         self.mask = torch.zeros(self.seq_len, self.data.shape[1], self.data.shape[2])
-        # 读取index
+        # read index
         index = load_pkl(index_file_path)       # [idx-12, idx, idx+12]
         if throw:
             self.index = self.pre_process(index)
@@ -35,11 +35,7 @@ class MTSDataset(Dataset):
         return index[i:]
 
     def data_reshaper(self, data):
-        r"""
-        Description:
-        -----------
-        Reshape data to any models.
-        """
+        """Reshape data to any models."""
         if not self.pretrain:
             pass
         else:

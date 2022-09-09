@@ -1,23 +1,24 @@
 import time
 import math
-from torch import nn
+
 import torch
-from easytorch.utils.dist import master_only
+from torch import nn
 from sklearn.metrics import mean_absolute_error
 
 from easytorch import Runner
+from easytorch.utils.dist import master_only
 
-from models.STEP import STEP
+from models.step import STEP
+from dataloader.dataset import MTSDataset
 from utils.log import load_pkl
 from utils.log import TrainLogger
-from dataloader.dataset import MTSDataset
 from utils.load_data import re_max_min_normalization, standard_re_transform
 from losses.losses_torch import masked_mae, masked_rmse, masked_mape, metric
+
 
 class FullModelRunner(Runner):
     def __init__(self, cfg: dict, use_gpu: bool = True):
         super().__init__(cfg, use_gpu=use_gpu)
-        logger  = TrainLogger()
         self.clip = 3
         self._lambda = 1
         dataset_name = cfg['DATASET_NAME']
@@ -33,7 +34,6 @@ class FullModelRunner(Runner):
             self.scaler         = standard_re_transform
             self.scaler_args    = {'mean': mean, 'std':std}
         self.loss = masked_mae
-        # self.loss = masked_mae_loss
 
         self.dataset_name = cfg['DATASET_NAME']
         self.output_seq_len = 12
@@ -176,10 +176,10 @@ class FullModelRunner(Runner):
 
         y, short_x, long_x = data
         Y   = self.to_running_device(y)
-        S_X = self.to_running_device(short_x)
-        L_X = self.to_running_device(long_x)
+        short_term_history = self.to_running_device(short_x)
+        long_term_history = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
+        output, theta, priori_adj  = self.model(short_term_history, long_term_history=long_term_history)
         output  = output.transpose(1,2)
 
         # # reg
@@ -190,7 +190,7 @@ class FullModelRunner(Runner):
         loss_g = BCE_loss(theta, tru)
         
         # curriculum learning
-        if  iter_num < self.warmup_steps:   # warmupping
+        if  iter_num < self.warmup_steps:   # warm upping
             self.cl_len = self.output_seq_len
         elif iter_num == self.warmup_steps:
             # init curriculum learning
@@ -243,10 +243,10 @@ class FullModelRunner(Runner):
         """
         y, short_x, long_x = data
         Y   = self.to_running_device(y)
-        S_X = self.to_running_device(short_x)
-        L_X = self.to_running_device(long_x)
+        short_term_history = self.to_running_device(short_x)
+        long_term_history = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
+        output, _, _  = self.model(short_term_history, long_term_history=long_term_history)
         output  = output.transpose(1,2)
 
         # scale data and calculate loss
@@ -358,10 +358,10 @@ class FullModelRunner(Runner):
     def test_iters(self, iter_index: int, data: torch.Tensor or tuple):
         y, short_x, long_x = data
         Y   = self.to_running_device(y)
-        S_X = self.to_running_device(short_x)
-        L_X = self.to_running_device(long_x)
+        short_term_history = self.to_running_device(short_x)
+        long_term_history = self.to_running_device(long_x)
 
-        output, theta, priori_adj  = self.model(S_X, L_X=L_X)
+        output, _, _  = self.model(short_term_history, long_term_history=long_term_history)
         output  = output.transpose(1,2)
         return output, Y
     

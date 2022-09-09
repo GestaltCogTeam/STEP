@@ -1,8 +1,6 @@
 import torch
-import torch.nn as nn
+from torch import nn
 import torch.nn.functional as F
-from torch.autograd import Variable
-import sys
 
 
 class nconv(nn.Module):
@@ -49,11 +47,19 @@ class gcn(nn.Module):
         h = F.dropout(h, self.dropout, training=self.training)
         return h
 
-class gwnet(nn.Module):
+class GraphWaveNet(nn.Module):
+    """
+        Paper: Graph WaveNet for Deep Spatial-Temporal Graph Modeling.
+        Link: https://arxiv.org/abs/1906.00121
+        Ref Official Code: https://github.com/nnzhan/Graph-WaveNet/blob/master/model.py
+    """
+
     def __init__(self, num_nodes, supports, dropout=0.3, gcn_bool=True, addaptadj=True, aptinit=None, in_dim=2,out_dim=12,residual_channels=32,dilation_channels=32,skip_channels=256,end_channels=512,kernel_size=2,blocks=4,layers=2, **kwargs):
-        super(gwnet, self).__init__()
-        """kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph. 
-        Details can be found in the feed forward function."""
+        """
+            kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph. 
+            Details can be found in the feed forward function.
+        """
+        super(GraphWaveNet, self).__init__()
         self.dropout = dropout
         self.blocks = blocks
         self.layers = layers
@@ -66,13 +72,8 @@ class gwnet(nn.Module):
         self.skip_convs = nn.ModuleList()
         self.bn = nn.ModuleList()
         self.gconv = nn.ModuleList()
-        self.fc_his = nn.Sequential(nn.Linear(96, 512),
-                                    nn.ReLU(),
-                                    nn.Linear(512, 256),
-                                    nn.ReLU())
-        self.start_conv = nn.Conv2d(in_channels=in_dim,
-                                    out_channels=residual_channels,
-                                    kernel_size=(1,1))
+        self.fc_his = nn.Sequential(nn.Linear(96, 512), nn.ReLU(), nn.Linear(512, 256), nn.ReLU())
+        self.start_conv = nn.Conv2d(in_channels=in_dim, out_channels=residual_channels, kernel_size=(1,1))
         self.supports = supports
 
         receptive_field = 1
@@ -103,45 +104,24 @@ class gwnet(nn.Module):
             new_dilation = 1
             for i in range(layers):
                 # dilated convolutions
-                self.filter_convs.append(nn.Conv2d(
-                                                    in_channels=residual_channels,
-                                                    out_channels=dilation_channels,
-                                                    kernel_size=(1,kernel_size),dilation=new_dilation))
+                self.filter_convs.append(nn.Conv2d(in_channels=residual_channels, out_channels=dilation_channels, kernel_size=(1,kernel_size),dilation=new_dilation))
 
-                self.gate_convs.append(nn.Conv1d(
-                                                    in_channels=residual_channels,
-                                                    out_channels=dilation_channels,
-                                                    kernel_size=(1, kernel_size), dilation=new_dilation))
+                self.gate_convs.append(nn.Conv1d(in_channels=residual_channels, out_channels=dilation_channels, kernel_size=(1, kernel_size), dilation=new_dilation))
 
                 # 1x1 convolution for residual connection
-                self.residual_convs.append(nn.Conv1d(
-                                                    in_channels=dilation_channels,
-                                                    out_channels=residual_channels,
-                                                    kernel_size=(1, 1)))
+                self.residual_convs.append(nn.Conv1d(in_channels=dilation_channels, out_channels=residual_channels, kernel_size=(1, 1)))
 
                 # 1x1 convolution for skip connection
-                self.skip_convs.append(nn.Conv1d(
-                                                    in_channels=dilation_channels,
-                                                    out_channels=skip_channels,
-                                                    kernel_size=(1, 1)))
+                self.skip_convs.append(nn.Conv1d(in_channels=dilation_channels, out_channels=skip_channels, kernel_size=(1, 1)))
                 self.bn.append(nn.BatchNorm2d(residual_channels))
-                new_dilation *=2
+                new_dilation *= 2
                 receptive_field += additional_scope
                 additional_scope *= 2
                 if self.gcn_bool:
                     self.gconv.append(gcn(dilation_channels,residual_channels,dropout,support_len=self.supports_len))
 
-        self.end_conv_1 = nn.Conv2d(
-                                    in_channels=skip_channels,
-                                    out_channels=end_channels,
-                                    kernel_size=(1,1),
-                                    bias=True)
-
-        self.end_conv_2 = nn.Conv2d(
-                                    in_channels=end_channels,
-                                    out_channels=out_dim,
-                                    kernel_size=(1,1),
-                                    bias=True)
+        self.end_conv_1 = nn.Conv2d(in_channels=skip_channels, out_channels=end_channels, kernel_size=(1,1), bias=True)
+        self.end_conv_2 = nn.Conv2d(in_channels=end_channels, out_channels=out_dim, kernel_size=(1,1), bias=True)
 
         self.receptive_field = receptive_field
 
@@ -156,18 +136,19 @@ class gwnet(nn.Module):
         random_walk_mx = torch.bmm(d_mat_inv, adj_mx)
         return random_walk_mx
 
-    def forward(self, input, His, adj):
+    def forward(self, input, hidden_states, sampled_adj):
         """feed forward of Graph WaveNet.
 
         Args:
-            input (torch.Tensor): input history MTS with shape [B, P, N, C].
+            input (torch.Tensor): input history MTS with shape [B, L, N, C].
             His (torch.Tensor): the output of TSFormer of the last patch (segment) with shape [B, N, d].
             adj (torch.Tensor): the learned discrete dependency graph with shape [B, N, N].
 
         Returns:
-            torch.Tensor: prediction with shape [B, N, P]
+            torch.Tensor: prediction with shape [B, N, L]
         """
-        # reshape input: [B, P, N, C] -> [B, C, N, P]
+
+        # reshape input: [B, L, N, C] -> [B, C, N, L]
         input = input.transpose(1, 3)
         # feed forward
         input = nn.functional.pad(input,(1,0,0,0))
@@ -182,10 +163,10 @@ class gwnet(nn.Module):
         skip = 0
 
         #
-        if adj is not None:
+        if sampled_adj is not None:
             # ====== if use learned adjacency matrix, then reset the self.supports ===== #
-            self.supports = [] + [self._calculate_random_walk_matrix(adj)]
-            self.supports = self.supports + [self._calculate_random_walk_matrix(adj.transpose(-1, -2))]
+            self.supports = [] + [self._calculate_random_walk_matrix(sampled_adj)]
+            self.supports = self.supports + [self._calculate_random_walk_matrix(sampled_adj.transpose(-1, -2))]
         else:
             pass
         # calculate the current adaptive adj matrix
@@ -241,9 +222,9 @@ class gwnet(nn.Module):
 
             x = self.bn[i](x)
 
-        His = self.fc_his(His)        # B, N, D
-        His = His.transpose(1, 2).unsqueeze(-1)
-        skip = skip + His
+        hidden_states = self.fc_his(hidden_states)        # B, N, D
+        hidden_states = hidden_states.transpose(1, 2).unsqueeze(-1)
+        skip = skip + hidden_states
         x = F.relu(skip)
         x = F.relu(self.end_conv_1(x))
         x = self.end_conv_2(x)

@@ -1,6 +1,6 @@
 import math
 import torch
-import torch.nn as nn
+from torch import nn
 import torch.nn.functional as F
 
 def batch_cosine_similarity(x, y):
@@ -16,7 +16,6 @@ def batch_cosine_similarity(x, y):
     return adj
 
 def batch_dot_similarity(x, y):
-    # TODO add QKV parameter here
     QKT = torch.bmm(x, y.transpose(-1, -2)) / math.sqrt(x.shape[2])
     W = torch.softmax(QKT, dim=-1)
     return W

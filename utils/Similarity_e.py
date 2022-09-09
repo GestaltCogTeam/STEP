@@ -1,6 +1,6 @@
 import math
 import torch
-import torch.nn as nn
+from torch import nn
 import torch.nn.functional as F
 
 def batch_cosine_similarity(x, y):

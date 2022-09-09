@@ -1,8 +1,10 @@
 import random
-import torch.nn as nn
-import numpy as np
+
+from torch import nn
+
 
 class MaskGenerator(nn.Module):
+    """Mask generator."""
     def __init__(self, mask_size, mask_ratio):
         super().__init__()
         self.mask_size = mask_size

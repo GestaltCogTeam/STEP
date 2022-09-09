@@ -1,18 +1,17 @@
 from torch import nn
 
-from losses.losses_torch import masked_mae, masked_rmse, masked_mape
-from dataloader.dataset import MTSDataset
-
 from easytorch import Runner
 
-from models.TSFormer.model import TSFormer
+from dataloader.dataset import MTSDataset
+from models.tsformer.model import TSFormer
+from utils.log import TrainLogger, load_pkl
 from utils.load_data import re_max_min_normalization, standard_re_transform
-from utils.log import TrainLogger, clock, load_pkl
+from losses.losses_torch import masked_mae, masked_rmse, masked_mape
+
 
 class TSFormerRunner(Runner):
     def __init__(self, cfg: dict, use_gpu: bool = True):
         super().__init__(cfg, use_gpu=use_gpu)
-        logger  = TrainLogger()
         self.clip = 5
         dataset_name = cfg['DATASET_NAME']
         # scaler
