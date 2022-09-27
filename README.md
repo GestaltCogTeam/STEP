@@ -1,135 +1,132 @@
-# Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting
+# <div align="center"> Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting </div>
 
+<div align="center">
+
+[![BasicTS](https://img.shields.io/badge/Developing%20with-BasicTS-blue)](https://github.com/zezhishao/BasicTS)
 [![EasyTorch](https://img.shields.io/badge/Developing%20with-EasyTorch-2077ff.svg)](https://github.com/cnstark/easytorch)
 [![LICENSE](https://img.shields.io/github/license/zezhishao/BasicTS.svg)](https://github.com/zezhishao/BasicTS/blob/master/LICENSE)
 
 Code for our SIGKDD'22 paper: "[Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting](https://arxiv.org/abs/2206.09113)".
 
-The code is developed with [EasyTorch](https://github.com/cnstark/easytorch), an easy-to-use and powerful open source neural network training framework.
+The code is developed with [BasicTS](https://github.com/zezhishao/BasicTS), a PyTorch-based benchmark and toolbox for time series forecasting.
+
+</div>
+
 
 <img src="figure/STEP.png" alt="TheTable" style="zoom:42%;" />
 
-All the training logs of the pre-training stage and the forecasting stage can be found in `train_logs/`.
-
 > Multivariate Time Series (MTS) forecasting plays a vital role in a wide range of applications. Recently, Spatial-Temporal Graph Neural Networks (STGNNs) have become increasingly popular MTS forecasting methods. STGNNs jointly model the spatial and temporal patterns of MTS through graph neural networks and sequential models, significantly improving the prediction accuracy. But limited by model complexity, most STGNNs only consider short-term historical MTS data, such as data over the past one hour. However, the patterns of time series and the dependencies between them (i.e., the temporal and spatial patterns) need to be analyzed based on long-term historical MTS data. To address this issue, we propose a novel framework, in which STGNN is Enhanced by a scalable time series Pre-training model (STEP). Specifically, we design a pre-training model to efficiently learn temporal patterns from very long-term history time series (e.g., the past two weeks) and generate segment-level representations. These representations provide contextual information for short-term time series input to STGNNs and facilitate modeling dependencies between time series. Experiments on three public real-world datasets demonstrate that our framework is capable of significantly enhancing downstream STGNNs, and our pre-training model aptly captures temporal patterns.
 
-## 1. Table of Contents
+## 📚 Table of Contents
 
 ```text
-config          -->     Training configs and model configs for each dataset
-dataloader      -->     MTS dataset
-easytorch       -->     EasyTorch
-model           -->     Model architecture
-checkpoints     -->     Saving the checkpoints according to md5 of the configuration file
-datasets        -->     Raw datasets and preprocessed data
-train_logs      -->     Our train logs.
-TSFormer_CKPT   -->     Our checkpoints.
+basicts   --> The BasicTS, which provides standard pipelines for training MTS forecasting models. Don't worry if you don't know it, because it doesn't prevent you from understanding STEP's code.
+
+datasets  --> Raw datasets and preprocessed data
+
+figures   --> Some figures used in README.
+
+scripts   --> Data preprocessing scripts.
+
+step      --> The implementation of STEP, including the architecture, dataloader, loss, and runner for STEP.
+
+tsformer_ckpt --> Pre-trained TSFormer for METR-LA, PEMS-BAY, and PEMS04 dataset.
 ```
 
-## 2. Requirements
+## 💿 Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 3. Data Preparation
+## 📦 Data Preparation
 
-### 3.1 Download Data
+### **Download Raw Data**
 
-Download data from link [Google Drive](https://drive.google.com/drive/folders/1F7fEdXpnEQ75sxQval52jN4r3ZKoufGV?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1IWVhsvKpxHEb2CFLCR7P3A?pwd=w1wJ) to the code root directory.
+You can download all the raw datasets at [Google Drive](https://drive.google.com/file/d/1PY7IZ3SchpyXfNIXs71A2GEV29W5QCv2/view?usp=sharing) or [Baidu Yun](https://pan.baidu.com/s/1CXLxeHxHIMWLy3IKGFUq8g?pwd=blf8), and unzip them to `datasets/raw_data/`.
 
-Then, unzip data by:
+### **Pre-process Data**
+
+You can pre-process all data via:
 
 ```bash
-unzip TSFormer_CKPT.zip
-mkdir datasets
-unzip raw_data.zip -d datasets
-unzip sensor_graph.zip -d datasets 
-rm *.zip
+cd /path/to/your/project
+bash scripts/data_preparation/all.sh
 ```
-`TSFormer_CKPT/` contains the pre-trained model for each dataset.
 
-You can also find all the training logs of the pre-training stage and forecasting stage in `training_logs/`.
+Then the `dataset` directory will look like this:
 
-### 3.2 Preprocess Data
+```text
+datasets
+   ├─METR-LA
+   ├─METR-BAY
+   ├─PEMS04
+   ├─raw_data
+   |    ├─PEMS04
+   |    ├─PEMS-BAY
+   |    ├─METR-LA
+   ├─README.md
+```
+
+## 🎯 Train STEP based on a Pre-trained TSFormer
 
 ```bash
-python datasets/raw_data/$DATASET_NAME/generate_data.py
+python step/run.py --cfg='step/step_$DATASET.py' --gpus='0, 1'
+# python step/run.py --cfg='step/step_METR-LA.py' --gpus='0'
+# python step/run.py --cfg='step/step_PEMS-BAY.py' --gpus='0, 1'
+# python step/run.py --cfg='step/step_PEMS04.py' --gpus='0, 1'
+```
+
+Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above. 
+Configuration file `step/STEP_$DATASET.py` describes the forecasting configurations.
+Edit `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
+Note that different GPU number leads to different real batch sizes, affecting the learning rate setting and the forecasting accuracy.
+
+Our training logs are shown in `train_logs/Backend_metr.log`, `train_logs/Backend_pems04.log`, and `train_logs/Backend_pemsbay.log`.
+
+## ⚒ Train STEP from Scratch
+
+### **Pre-training Stage**
+
+```bash
+python step/run.py --cfg='step/TSFormer_$DATASET.py' --gpus '0'
+# python step/run.py --cfg='step/TSFormer_METR-LA.py' --gpus='0'
+# python step/run.py --cfg='step/TSFormer_PEMS-BAY.py' --gpus='0, 1'
+# python step/run.py --cfg='step/TSFormer_PEMS04.py' --gpus='0'
+```
+
+Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above.
+Configuration file `step/TSFormer_$DATASET.py` describes the pre-training configurations.
+Edit the `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
+All the training logs, including the config file, training log, and checkpoints, will be saved in `checkpoints/MODEL_EPOCH/MD5_of_config_file`.
+For example, `checkpoints/TSFormer_100/5afe80b3e7a3dc055158bcfe99afbd7f`.
+
+### **Forecasting Stage**
+
+After pre-training TSFormer, move your pre-trained best checkpoint to `tsformer_ckpt/`.
+For example:
+
+```bash
+cp checkpoints/TSFormer_100/5afe80b3e7a3dc055158bcfe99afbd7f/TSFormer_best_val_MAE.pt tsformer_ckpt/TSFormer_$DATASET_NAME.pt
 ```
 
 Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04`.
 
-The processed data is placed in `datasets/$DATASET_NAME`.
-
-## 4. Train STEP based on a Pre-trained TSFormer
-
-```bash
-python main.py --cfg='config/$DATASET/forecasting.py' --gpu='0, 1'
-# python main.py --cfg='config/METR-LA/forecasting.py' --gpu='0, 1'
-# python main.py --cfg='config/PEMS-BAY/forecasting.py' --gpu='0, 1'
-# python main.py --cfg='config/PEMS04/forecasting.py' --gpu='0, 1'
-```
-
-Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above.
-
-Configuration file
-`config/$DATASET_NAME/forecasting.py` describes the forecasting configurations.
-
-We use 2 GPU for forecasting stage as default, edit `GPU_NUM` property in the configuration file and `--gpu` in the command line to run on your own hardware.
-
-Note that different GPU numbers lead to different real batch sizes, affecting the learning rate setting and the forecasting accuracy.
-
-Our training logs are shown in `train_logs/Backend_metr.log`, `train_logs/Backend_pems04.log`, and `train_logs/Backend_pemsbay.log`.
-
-## 5. Train STEP from Scratch
-
-### 5.1 Pre-training Stage
-
-```bash
-python main.py --cfg='config/$DATASET/pretraining.py' --gpu='0'
-# python main.py --cfg='config/METR-LA/pretraining.py' --gpu='0'
-# python main.py --cfg='config/PEMS-BAY/pretraining.py' --gpu='0, 1, 2, 3, 4, 5, 6, 7'
-# python main.py --cfg='config/PEMS04/pretraining.py' --gpu='0, 1'
-```
-
-Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above.
-
-Configuration file `config/$DATASET_NAME/pretraining.py` describes the pre-training configurations.
-
-Edit the `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
-
-### 5.2 Forecasting Stage
-
-Move your pre-trained model checkpoints to `TSFormer_CKPT/`.
-For example:
-
-```bash
-cp checkpoints/TSFormer_200/9b4b52e25a30aabd21dc1c9429063196/TSFormer_180.pt TSFormer_CKPT/TSFormer_PEMS-BAY.pt
-```
-
-```bash
-cp checkpoints/TSFormer_200/fac3814778135a6d46063e3cab20257c/TSFormer_147.pt TSFormer_CKPT/TSFormer_PEMS04.pt
-```
-
-```bash
-cp checkpoints/TSFormer_200/3de38a467aef981dd6f24127b6fb5f50/TSFormer_030.pt TSFormer_CKPT/TSFormer_METR-LA.pt
-```
-
 Then train the downstream STGNN (Graph WaveNet) like in section 4.
 
-## 6. Performance and Visualization
+## 📈 Performance and Visualization
 <!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
 <img src="figure/MainResults.png" alt="TheTable" style="zoom:49.4%;" />
 
 <img src="figure/Inspecting.jpg" alt="Visualization" style="zoom:25%;" />
 
-## 7. More Related Works
+## 🔗 More Related Works
 
 - [D2STGNN: Decoupled Dynamic Spatial-Temporal Graph Neural Network for Traffic Forecasting. VLDB'22.](https://github.com/zezhishao/D2STGNN)
 
 - [BasicTS: An Open Source Standard Time Series Forecasting Benchmark.](https://github.com/zezhishao/BasicTS)
 
-## 8. Citing
+## Citing
 
 If you find this repository useful for your work, please consider citing it as follows:
 
