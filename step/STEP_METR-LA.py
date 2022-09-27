@@ -42,7 +42,7 @@ CFG.MODEL.ARCH = STEP
 adj_mx, _ = load_adj("datasets/" + CFG.DATASET_NAME + "/adj_mx.pkl", "doubletransition")
 CFG.MODEL.PARAM = {
     "dataset_name": CFG.DATASET_NAME,
-    "pre_trained_tsformer_path": "checkpoints/TSFormer_100/9d41dcdd120ddfa470db3dd4eaf682a5/TSFormer_best_val_MAE.pt",
+    "pre_trained_tsformer_path": "tsformer_ckpt/TSFormer_METR-LA.pt",
     "tsformer_args": {
                     "patch_size":12,
                     "in_channel":1,
@@ -89,7 +89,7 @@ CFG.TRAIN.LOSS = step_loss
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
 CFG.TRAIN.OPTIM.PARAM= {
-    "lr":0.005,
+    "lr":0.0035,
     "weight_decay":1.0e-5,
     "eps":1.0e-8,
 }
