@@ -35,6 +35,15 @@ tsformer_ckpt --> Pre-trained TSFormer for METR-LA, PEMS-BAY, and PEMS04 dataset
 
 ## 💿 Requirements
 
+The code is built based on Python 3.9, PyTorch 1.10.0, and [EasyTorch](https://github.com/cnstark/easytorch).
+You can install PyTorch following the instruction in [PyTorch](https://pytorch.org/get-started/locally/). For example:
+
+```bash
+pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+After ensuring that PyTorch is installed correctly, you can install other dependencies via:
+
 ```bash
 pip install -r requirements.txt
 ```

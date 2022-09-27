@@ -53,7 +53,7 @@ CFG.MODEL.TARGET_FEATURES = [0]
 CFG.TRAIN = EasyDict()
 CFG.TRAIN.LOSS = masked_mae
 CFG.TRAIN.OPTIM = EasyDict()
-CFG.TRAIN.OPTIM.TYPE = "Adam"
+CFG.TRAIN.OPTIM.TYPE = "AdamW"
 CFG.TRAIN.OPTIM.PARAM= {
     "lr":0.0005,
     "weight_decay":0,
