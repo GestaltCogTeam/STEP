@@ -91,7 +91,7 @@ Configuration file `step/STEP_$DATASET.py` describes the forecasting configurati
 Edit `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
 Note that different GPU number leads to different real batch sizes, affecting the learning rate setting and the forecasting accuracy.
 
-Our training logs are shown in `train_logs/Backend_metr.log`, `train_logs/Backend_pems04.log`, and `train_logs/Backend_pemsbay.log`.
+Our training logs are shown in `train_logs/STEP_METR-LA.log`, `train_logs/STEP_PEMS04.log`, and `train_logs/STEP_PEMS-BAY.log`.
 
 ## ⚒ Train STEP from Scratch
 
@@ -110,6 +110,8 @@ Edit the `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the
 All the training logs, including the config file, training log, and checkpoints, will be saved in `checkpoints/MODEL_EPOCH/MD5_of_config_file`.
 For example, `checkpoints/TSFormer_100/5afe80b3e7a3dc055158bcfe99afbd7f`.
 
+Our training logs are shown in `train_logs/TSFormer_METR-LA.log`, `train_logs/TSFormer_PEMS04.log`, and `train_logs/TSFormer_PEMS-BAY.log`, and the pre-trained TSFormers for each datasets are placed in `tsformer_ckpt` folder.
+
 ### **Forecasting Stage**
 
 After pre-training TSFormer, move your pre-trained best checkpoint to `tsformer_ckpt/`.
@@ -124,7 +126,7 @@ Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04`.
 Then train the downstream STGNN (Graph WaveNet) like in section 4.
 
 ## 📈 Performance and Visualization
-<!-- <img src="figures/Table3.png" alt="Table3" style="zoom:60.22%;" /><img src="figures/Table4.png" alt="Table4" style="zoom:51%;" /> -->
+
 <img src="figure/MainResults.png" alt="TheTable" style="zoom:49.4%;" />
 
 <img src="figure/Inspecting.jpg" alt="Visualization" style="zoom:25%;" />
