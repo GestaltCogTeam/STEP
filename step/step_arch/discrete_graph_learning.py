@@ -142,7 +142,7 @@ class DiscreteGraphLearning(nn.Module):
         dynamic_feat = F.relu(self.fc_mean(hidden_states.reshape(batch_size, num_nodes, -1)))     # relu(FC(Hi)) in Eq. (2)
 
         # time series feature
-        node_feat = global_feat
+        node_feat = global_feat + dynamic_feat
 
         # learning discrete graph structure
         receivers = torch.matmul(self.rel_rec.to(node_feat.device), node_feat)
