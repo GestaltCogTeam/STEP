@@ -80,10 +80,10 @@ datasets
 ## 🎯 Train STEP based on a Pre-trained TSFormer
 
 ```bash
-python step/run.py --cfg='step/step_$DATASET.py' --gpus='0, 1'
-# python step/run.py --cfg='step/step_METR-LA.py' --gpus='0'
-# python step/run.py --cfg='step/step_PEMS-BAY.py' --gpus='0, 1'
-# python step/run.py --cfg='step/step_PEMS04.py' --gpus='0, 1'
+python step/run.py --cfg='step/STEP_$DATASET.py' --gpus='0, 1'
+# python step/run.py --cfg='step/STEP_METR-LA.py' --gpus='0'
+# python step/run.py --cfg='step/STEP_PEMS-BAY.py' --gpus='0, 1'
+# python step/run.py --cfg='step/STEP_PEMS04.py' --gpus='0, 1'
 ```
 
 Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above. 
