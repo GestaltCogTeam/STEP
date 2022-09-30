@@ -10,7 +10,7 @@ def batch_cosine_similarity(x, y):
     l2_m = torch.matmul(l2_x.unsqueeze(dim=2), l2_y.unsqueeze(dim=2).transpose(1, 2))
     # 计算分子
     l2_z = torch.matmul(x, y.transpose(1, 2))
-    # cos similarity affinity matrix 
+    # cos similarity affinity matrix
     cos_affnity = l2_z / l2_m
     adj = cos_affnity
     return adj

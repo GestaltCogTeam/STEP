@@ -50,7 +50,7 @@ class DiscreteGraphLearning(nn.Module):
 
     def __init__(self, dataset_name, k, input_seq_len, output_seq_len):
         super().__init__()
-        
+
         self.k = k          # the "k" of knn graph
         self.num_nodes = {"METR-LA": 207, "PEMS04": 307, "PEMS-BAY": 325}[dataset_name]
         self.train_length = {"METR-LA": 23990, "PEMS04": 13599, "PEMS-BAY": 36482}[dataset_name]
