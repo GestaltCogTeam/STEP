@@ -121,7 +121,7 @@ class TSFormer(nn.Module):
 
         # add mask tokens
         hidden_states_masked = self.positional_encoding(
-            self.mask_token.expand(batch_size, num_nodes, len(masked_token_index), hidden_states_unmasked.shape[-1]), 
+            self.mask_token.expand(batch_size, num_nodes, len(masked_token_index), hidden_states_unmasked.shape[-1]),
             index=masked_token_index
             )
         hidden_states_full = torch.cat([hidden_states_unmasked, hidden_states_masked], dim=-2)   # B, N, P, d

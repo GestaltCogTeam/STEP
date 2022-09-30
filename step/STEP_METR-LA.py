@@ -57,12 +57,12 @@ CFG.MODEL.PARAM = {
                     "mode":"forecasting"
     },
     "backend_args": {
-                    "num_nodes" : 207, 
+                    "num_nodes" : 207,
                     "supports"  :[torch.tensor(i) for i in adj_mx],         # the supports are not used
-                    "dropout"   : 0.3, 
-                    "gcn_bool"  : True, 
-                    "addaptadj" : True, 
-                    "aptinit"   : None, 
+                    "dropout"   : 0.3,
+                    "gcn_bool"  : True,
+                    "addaptadj" : True,
+                    "aptinit"   : None,
                     "in_dim"    : 2,
                     "out_dim"   : 12,
                     "residual_channels" : 32,

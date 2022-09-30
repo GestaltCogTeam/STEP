@@ -11,9 +11,9 @@ class PatchEmbedding(nn.Module):
         self.input_channel = in_channel
         self.output_channel = embed_dim
         self.input_embedding = nn.Conv2d(
-                                        in_channel, 
-                                        embed_dim, 
-                                        kernel_size=(self.len_patch, 1), 
+                                        in_channel,
+                                        embed_dim,
+                                        kernel_size=(self.len_patch, 1),
                                         stride=(self.len_patch, 1))
         self.norm_layer = norm_layer if norm_layer is not None else nn.Identity()
 

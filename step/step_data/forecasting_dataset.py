@@ -9,7 +9,7 @@ class ForecastingDataset(Dataset):
     """Time series forecasting dataset."""
 
     def __init__(self, data_file_path: str, index_file_path: str, mode: str, seq_len:int) -> None:
-        """Init the dataset in the forecasting stage. 
+        """Init the dataset in the forecasting stage.
 
         Args:
             data_file_path (str): data file path.

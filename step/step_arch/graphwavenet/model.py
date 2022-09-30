@@ -56,7 +56,7 @@ class GraphWaveNet(nn.Module):
 
     def __init__(self, num_nodes, supports, dropout=0.3, gcn_bool=True, addaptadj=True, aptinit=None, in_dim=2,out_dim=12,residual_channels=32,dilation_channels=32,skip_channels=256,end_channels=512,kernel_size=2,blocks=4,layers=2, **kwargs):
         """
-            kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph. 
+            kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph.
             Details can be found in the feed forward function.
         """
         super(GraphWaveNet, self).__init__()
@@ -228,7 +228,7 @@ class GraphWaveNet(nn.Module):
         x = F.relu(skip)
         x = F.relu(self.end_conv_1(x))
         x = self.end_conv_2(x)
-        
+
         # reshape output: [B, P, N, 1] -> [B, N, P]
         x = x.squeeze(-1).transpose(1, 2)
         return x

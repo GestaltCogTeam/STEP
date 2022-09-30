@@ -14,9 +14,6 @@ class STEP(nn.Module):
         self.dataset_name = dataset_name
         self.pre_trained_tsformer_path = pre_trained_tsformer_path
 
-        # tsformer and backend model args
-        tsformer_args = tsformer_args
-        backend_args = backend_args
         # iniitalize the tsformer and backend models
         self.tsformer = TSFormer(**tsformer_args)
         self.backend = GraphWaveNet(**backend_args)
