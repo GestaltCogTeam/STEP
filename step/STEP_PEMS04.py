@@ -1,12 +1,14 @@
 import os
 import sys
-
+from functools import partial
 
 # TODO: remove it when basicts can be installed by pip
 sys.path.append(os.path.abspath(__file__ + "/../../.."))
 import torch
+import numpy as np
 from easydict import EasyDict
 from basicts.utils.serialization import load_adj
+from basicts.metrics import masked_mae, masked_rmse, masked_mape
 
 from .step_arch import STEP
 from .step_runner import STEPRunner
@@ -17,15 +19,15 @@ from .step_data import ForecastingDataset
 CFG = EasyDict()
 
 # ================= general ================= #
-CFG.DESCRIPTION = "STEP(METR-LA) configuration"
+CFG.DESCRIPTION = "STEP(PEMS04) configuration"
 CFG.RUNNER = STEPRunner
 CFG.DATASET_CLS = ForecastingDataset
-CFG.DATASET_NAME = "METR-LA"
-CFG.DATASET_TYPE = "Traffic speed"
+CFG.DATASET_NAME = "PEMS04"
+CFG.DATASET_TYPE = "Traffic flow"
 CFG.DATASET_INPUT_LEN = 12
 CFG.DATASET_OUTPUT_LEN = 12
 CFG.DATASET_ARGS = {
-    "seq_len": 288 * 7
+    "seq_len": 288 * 7 * 2
     }
 CFG.GPU_NUM = 2
 
@@ -42,7 +44,7 @@ CFG.MODEL.ARCH = STEP
 adj_mx, _ = load_adj("datasets/" + CFG.DATASET_NAME + "/adj_mx.pkl", "doubletransition")
 CFG.MODEL.PARAM = {
     "dataset_name": CFG.DATASET_NAME,
-    "pre_trained_tsformer_path": "tsformer_ckpt/TSFormer_METR-LA.pt",
+    "pre_trained_tsformer_path": "tsformer_ckpt/TSFormer_PEMS04.pt",
     "tsformer_args": {
                     "patch_size":12,
                     "in_channel":1,
@@ -50,14 +52,14 @@ CFG.MODEL.PARAM = {
                     "num_heads":4,
                     "mlp_ratio":4,
                     "dropout":0.1,
-                    "num_token":288 * 7 / 12,
+                    "num_token":288 * 7 * 2 / 12,
                     "mask_ratio":0.75,
                     "encoder_depth":4,
                     "decoder_depth":1,
                     "mode":"forecasting"
     },
     "backend_args": {
-                    "num_nodes" : 207,
+                    "num_nodes" : 307,
                     "supports"  :[torch.tensor(i) for i in adj_mx],         # the supports are not used
                     "dropout"   : 0.3,
                     "gcn_bool"  : True,
@@ -86,7 +88,10 @@ CFG.MODEL.DDP_FIND_UNUSED_PARAMETERS = True
 
 # ================= optim ================= #
 CFG.TRAIN = EasyDict()
-CFG.TRAIN.LOSS = step_loss
+## We follow the loss implementation in ASTGNN [1], from which the PEMS04 dataset is released.
+## [1] Learning Dynamics and Heterogeneity of Spatial-Temporal Graph Data for Traffic Forecasting
+CFG.TRAIN.LOSS = partial(step_loss, null_val=np.nan)  # Keep the same as the baseline.
+CFG.METRICS = {"MAE": partial(masked_mae, null_val=np.nan), "RMSE": masked_rmse, "MAPE": masked_mape}
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
 CFG.TRAIN.OPTIM.PARAM= {
@@ -116,16 +121,11 @@ CFG.TRAIN.NULL_VAL = 0.0
 # read data
 CFG.TRAIN.DATA.DIR = "datasets/" + CFG.DATASET_NAME
 # dataloader args, optional
-CFG.TRAIN.DATA.BATCH_SIZE = 32
+CFG.TRAIN.DATA.BATCH_SIZE = 16
 CFG.TRAIN.DATA.PREFETCH = False
 CFG.TRAIN.DATA.SHUFFLE = True
 CFG.TRAIN.DATA.NUM_WORKERS = 2
 CFG.TRAIN.DATA.PIN_MEMORY = True
-# curriculum learning
-CFG.TRAIN.CL = EasyDict()
-CFG.TRAIN.CL.WARM_EPOCHS = 0
-CFG.TRAIN.CL.CL_EPOCHS = 6
-CFG.TRAIN.CL.PREDICTION_LENGTH = 12
 
 # ================= validate ================= #
 CFG.VAL = EasyDict()
@@ -135,7 +135,7 @@ CFG.VAL.DATA = EasyDict()
 # read data
 CFG.VAL.DATA.DIR = "datasets/" + CFG.DATASET_NAME
 # dataloader args, optional
-CFG.VAL.DATA.BATCH_SIZE = 32
+CFG.VAL.DATA.BATCH_SIZE = 8
 CFG.VAL.DATA.PREFETCH = False
 CFG.VAL.DATA.SHUFFLE = False
 CFG.VAL.DATA.NUM_WORKERS = 2
@@ -150,7 +150,7 @@ CFG.TEST.DATA = EasyDict()
 # read data
 CFG.TEST.DATA.DIR = "datasets/" + CFG.DATASET_NAME
 # dataloader args, optional
-CFG.TEST.DATA.BATCH_SIZE = 32
+CFG.TEST.DATA.BATCH_SIZE = 8
 CFG.TEST.DATA.PREFETCH = False
 CFG.TEST.DATA.SHUFFLE = False
 CFG.TEST.DATA.NUM_WORKERS = 2

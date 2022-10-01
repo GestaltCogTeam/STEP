@@ -71,8 +71,6 @@ class DiscreteGraphLearning(nn.Module):
         # FC for transforming the features from TSFormer
         ## for the dimension, see https://github.com/zezhishao/STEP/issues/1#issuecomment-1191640023
         self.dim_fc_mean = {"METR-LA": 16128, "PEMS04": 16128 * 2, "PEMS-BAY": 16128}[dataset_name]
-        self.fc_out = nn.Linear((self.embedding_dim) * 2, self.embedding_dim)
-        self.fc_cat = nn.Linear(self.embedding_dim, 2)
         self.fc_mean = nn.Linear(self.dim_fc_mean, 100)
 
         # discrete graph learning
@@ -139,10 +137,12 @@ class DiscreteGraphLearning(nn.Module):
 
         # generate dynamic feature based on TSFormer
         hidden_states = tsformer(long_term_history[..., [0]])
-        dynamic_feat = F.relu(self.fc_mean(hidden_states.reshape(batch_size, num_nodes, -1)))     # relu(FC(Hi)) in Eq. (2)
+        # The dynamic feature has now been removed,
+        # as we found that it could lead to instability in the learning of the underlying graph structure.
+        # dynamic_feat = F.relu(self.fc_mean(hidden_states.reshape(batch_size, num_nodes, -1)))     # relu(FC(Hi)) in Eq. (2)
 
         # time series feature
-        node_feat = global_feat + dynamic_feat
+        node_feat = global_feat
 
         # learning discrete graph structure
         receivers = torch.matmul(self.rel_rec.to(node_feat.device), node_feat)
