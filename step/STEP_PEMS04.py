@@ -1,14 +1,12 @@
 import os
 import sys
-from functools import partial
+
 
 # TODO: remove it when basicts can be installed by pip
 sys.path.append(os.path.abspath(__file__ + "/../../.."))
 import torch
-import numpy as np
 from easydict import EasyDict
 from basicts.utils.serialization import load_adj
-from basicts.metrics import masked_mae, masked_rmse, masked_mape
 
 from .step_arch import STEP
 from .step_runner import STEPRunner
@@ -88,14 +86,11 @@ CFG.MODEL.DDP_FIND_UNUSED_PARAMETERS = True
 
 # ================= optim ================= #
 CFG.TRAIN = EasyDict()
-## We follow the loss implementation in ASTGNN [1], from which the PEMS04 dataset is released.
-## [1] Learning Dynamics and Heterogeneity of Spatial-Temporal Graph Data for Traffic Forecasting
-CFG.TRAIN.LOSS = partial(step_loss, null_val=np.nan)  # Keep the same as the baseline.
-CFG.METRICS = {"MAE": partial(masked_mae, null_val=np.nan), "RMSE": masked_rmse, "MAPE": masked_mape}
+CFG.TRAIN.LOSS = step_loss
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
 CFG.TRAIN.OPTIM.PARAM= {
-    "lr":0.005,
+    "lr":0.002,
     "weight_decay":1.0e-5,
     "eps":1.0e-8,
 }
@@ -121,7 +116,7 @@ CFG.TRAIN.NULL_VAL = 0.0
 # read data
 CFG.TRAIN.DATA.DIR = "datasets/" + CFG.DATASET_NAME
 # dataloader args, optional
-CFG.TRAIN.DATA.BATCH_SIZE = 16
+CFG.TRAIN.DATA.BATCH_SIZE = 8
 CFG.TRAIN.DATA.PREFETCH = False
 CFG.TRAIN.DATA.SHUFFLE = True
 CFG.TRAIN.DATA.NUM_WORKERS = 2
