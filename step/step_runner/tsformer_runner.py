@@ -1,4 +1,3 @@
-import time
 import torch
 
 from easytorch.utils.dist import master_only

@@ -27,7 +27,7 @@ CFG.DATASET_OUTPUT_LEN = 12
 CFG.DATASET_ARGS = {
     "seq_len": 288 * 7
     }
-CFG.GPU_NUM = 1
+CFG.GPU_NUM = 2
 
 # ================= environment ================= #
 CFG.ENV = EasyDict()
@@ -82,6 +82,7 @@ CFG.MODEL.PARAM = {
 }
 CFG.MODEL.FROWARD_FEATURES = [0, 1, 2]
 CFG.MODEL.TARGET_FEATURES = [0]
+CFG.MODEL.DDP_FIND_UNUSED_PARAMETERS = True
 
 # ================= optim ================= #
 CFG.TRAIN = EasyDict()
@@ -89,7 +90,7 @@ CFG.TRAIN.LOSS = step_loss
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
 CFG.TRAIN.OPTIM.PARAM= {
-    "lr":0.0035,
+    "lr":0.005,
     "weight_decay":1.0e-5,
     "eps":1.0e-8,
 }

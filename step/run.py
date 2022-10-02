@@ -12,7 +12,8 @@ def parse_args():
     # parser.add_argument("-c", "--cfg", default="step/TSFormer_METR-LA.py", help="training config")
     # parser.add_argument("-c", "--cfg", default="step/STEP_METR-LA.py", help="training config")
 
-    parser.add_argument("-c", "--cfg", default="step/TSFormer_PEMS04.py", help="training config")
+    # parser.add_argument("-c", "--cfg", default="step/TSFormer_PEMS04.py", help="training config")
+    parser.add_argument("-c", "--cfg", default="step/STEP_PEMS04.py", help="training config")
     parser.add_argument("--gpus", default="0", help="visible gpus")
     return parser.parse_args()
 

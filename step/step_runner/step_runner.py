@@ -1,11 +1,13 @@
 import torch
 
 from basicts.runners import BaseTimeSeriesForecastingRunner
+from basicts.metrics import masked_mae, masked_rmse, masked_mape
 
 
 class STEPRunner(BaseTimeSeriesForecastingRunner):
     def __init__(self, cfg: dict):
         super().__init__(cfg)
+        self.metrics = cfg.get("METRICS", {"MAE": masked_mae, "RMSE": masked_rmse, "MAPE": masked_mape})
         self.forward_features = cfg["MODEL"].get("FROWARD_FEATURES", None)
         self.target_features = cfg["MODEL"].get("TARGET_FEATURES", None)
 
