@@ -31,6 +31,9 @@ scripts   --> Data preprocessing scripts.
 step      --> The implementation of STEP, including the architecture, dataloader, loss, and runner for STEP.
 
 tsformer_ckpt --> Pre-trained TSFormer for METR-LA, PEMS-BAY, and PEMS04 dataset.
+
+training_logs --> Training logs of STEP and TSFormer.
+
 ```
 
 ## 💿 Requirements
@@ -81,7 +84,7 @@ datasets
 
 ```bash
 python step/run.py --cfg='step/STEP_$DATASET.py' --gpus='0, 1'
-# python step/run.py --cfg='step/STEP_METR-LA.py' --gpus='0'
+# python step/run.py --cfg='step/STEP_METR-LA.py' --gpus='0, 1'
 # python step/run.py --cfg='step/STEP_PEMS-BAY.py' --gpus='0, 1'
 # python step/run.py --cfg='step/STEP_PEMS04.py' --gpus='0, 1'
 ```
@@ -91,7 +94,7 @@ Configuration file `step/STEP_$DATASET.py` describes the forecasting configurati
 Edit `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
 Note that different GPU number leads to different real batch sizes, affecting the learning rate setting and the forecasting accuracy.
 
-Our training logs are shown in `train_logs/STEP_METR-LA.log`, `train_logs/STEP_PEMS04.log`, and `train_logs/STEP_PEMS-BAY.log`.
+Our training logs are shown in [training_logs/STEP_METR-LA.log](./training_logs/STEP_METR-LA.log), [training_logs/STEP_METR-LA.log](./training_logs/STEP_METR-LA.log) and [training_logs/STEP_PEMS-BAY.log](./training_logs/STEP_PEMS-BAY.log).
 
 ## ⚒ Train STEP from Scratch
 
@@ -107,10 +110,11 @@ python step/run.py --cfg='step/TSFormer_$DATASET.py' --gpus '0'
 Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above.
 Configuration file `step/TSFormer_$DATASET.py` describes the pre-training configurations.
 Edit the `BATCH_SIZE` and `GPU_NUM` in the configuration file and `--gpu` in the command line to run on your own hardware.
+
 All the training logs, including the config file, training log, and checkpoints, will be saved in `checkpoints/MODEL_EPOCH/MD5_of_config_file`.
 For example, `checkpoints/TSFormer_100/5afe80b3e7a3dc055158bcfe99afbd7f`.
 
-Our training logs are shown in `train_logs/TSFormer_METR-LA.log`, `train_logs/TSFormer_PEMS04.log`, and `train_logs/TSFormer_PEMS-BAY.log`, and the pre-trained TSFormers for each datasets are placed in `tsformer_ckpt` folder.
+Our training logs are shown in [training_logs/TSFormer_METR-LA.log](./training_logs/TSFormer_METR-LA.log), [training_logs/TSFormer_PEMS04.log](./training_logs/TSFormer_PEMS04.log), and [training_logs/TSFormer_PEMS04.log](./training_logs/TSFormer_PEMS-BAY.log), and the our pre-trained TSFormers for each datasets are placed in `tsformer_ckpt` folder.
 
 ### **Forecasting Stage**
 
@@ -136,6 +140,16 @@ Then train the downstream STGNN (Graph WaveNet) like in section 4.
 - [D2STGNN: Decoupled Dynamic Spatial-Temporal Graph Neural Network for Traffic Forecasting. VLDB'22.](https://github.com/zezhishao/D2STGNN)
 
 - [BasicTS: An Open Source Standard Time Series Forecasting Benchmark.](https://github.com/zezhishao/BasicTS)
+
+## QA:
+
+Q1: Why is the performance in the training log slightly different from the performance in the paper?
+
+A1: 
+STEP's code is now refactored based on [BasicTS](https://github.com/zezhishao/BasicTS), to provide fair comparisons with all baselines.
+BasicTS unifies the training pipeline and evaluation metrics, which is slightly different from the original implementation of STEP.
+Therefore, there may be small differences (better or worse) between training logs and papers that do not affect the conclusions of the paper.
+Moreover, you can refer to BasicTS to find the true performance of many baseline models.
 
 ## Citing
 
