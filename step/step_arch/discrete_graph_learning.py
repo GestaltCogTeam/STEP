@@ -58,7 +58,7 @@ class DiscreteGraphLearning(nn.Module):
 
         # CNN for global feature extraction
         ## for the dimension, see https://github.com/zezhishao/STEP/issues/1#issuecomment-1191640023
-        self.dim_fc = {"METR-LA": 383552, "PEMS04": 217296, "PEMS-BAY": 217296}[dataset_name]
+        self.dim_fc = {"METR-LA": 383552, "PEMS04": 217296, "PEMS-BAY": 583424}[dataset_name]
         self.embedding_dim = 100
         ## network structure
         self.conv1 = torch.nn.Conv1d(1, 8, 10, stride=1)  # .to(device)
