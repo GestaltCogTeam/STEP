@@ -104,7 +104,7 @@ Our training logs are shown in [training_logs/STEP_METR-LA.log](./training_logs/
 python step/run.py --cfg='step/TSFormer_$DATASET.py' --gpus '0'
 # python step/run.py --cfg='step/TSFormer_METR-LA.py' --gpus='0'
 # python step/run.py --cfg='step/TSFormer_PEMS-BAY.py' --gpus='0, 1'
-# python step/run.py --cfg='step/TSFormer_PEMS04.py' --gpus='0'
+# python step/run.py --cfg='step/TSFormer_PEMS04.py' --gpus='0, 1'
 ```
 
 Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04` as shown in the code above.
