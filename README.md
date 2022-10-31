@@ -80,7 +80,7 @@ datasets
    ├─README.md
 ```
 
-## 🎯 Train STEP based on a Pre-trained TSFormer
+## <span id="jump"> 🎯 Train STEP based on a Pre-trained TSFormer </span>
 
 ```bash
 python step/run.py --cfg='step/STEP_$DATASET.py' --gpus='0, 1'
@@ -127,7 +127,7 @@ cp checkpoints/TSFormer_100/5afe80b3e7a3dc055158bcfe99afbd7f/TSFormer_best_val_M
 
 Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04`.
 
-Then train the downstream STGNN (Graph WaveNet) like in section 4.
+Then train the downstream STGNN (Graph WaveNet) like in section ["🎯 Train STEP based on a Pre-trained TSFormer"](#jump).
 
 ## 📈 Performance and Visualization
 
