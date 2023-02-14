@@ -22,7 +22,7 @@ class STEP(nn.Module):
         self.load_pre_trained_model()
 
         # discrete graph learning
-        self.dynamic_graph_learning = DiscreteGraphLearning(**dgl_args)
+        self.discrete_graph_learning = DiscreteGraphLearning(**dgl_args)
 
     def load_pre_trained_model(self):
         """Load pre-trained model"""
@@ -58,7 +58,7 @@ class STEP(nn.Module):
         batch_size, _, num_nodes, _ = short_term_history.shape
 
         # discrete graph learning & feed forward of TSFormer
-        bernoulli_unnorm, hidden_states, adj_knn, sampled_adj = self.dynamic_graph_learning(long_term_history, self.tsformer)
+        bernoulli_unnorm, hidden_states, adj_knn, sampled_adj = self.discrete_graph_learning(long_term_history, self.tsformer)
 
         # enhancing downstream STGNNs
         hidden_states = hidden_states[:, :, -1, :]
