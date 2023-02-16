@@ -8,7 +8,7 @@ class STEPRunner(BaseTimeSeriesForecastingRunner):
     def __init__(self, cfg: dict):
         super().__init__(cfg)
         self.metrics = cfg.get("METRICS", {"MAE": masked_mae, "RMSE": masked_rmse, "MAPE": masked_mape})
-        self.forward_features = cfg["MODEL"].get("FROWARD_FEATURES", None)
+        self.forward_features = cfg["MODEL"].get("FORWARD_FEATURES", None)
         self.target_features = cfg["MODEL"].get("TARGET_FEATURES", None)
 
     def select_input_features(self, data: torch.Tensor) -> torch.Tensor:
