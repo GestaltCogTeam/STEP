@@ -30,10 +30,10 @@ class BaseTimeSeriesForecastingRunner(BaseRunner):
         # different datasets have different null_values, e.g., 0.0 or np.nan.
         self.null_val = cfg["TRAIN"].get("NULL_VAL", np.nan)    # consist with metric functions
         self.dataset_type = cfg["DATASET_TYPE"]
+        self.evaluate_on_gpu = cfg["TEST"].get("USE_GPU", True)     # evaluate on gpu or cpu (gpu is faster but may cause OOM)
 
         # read scaler for re-normalization
-        self.scaler = load_pkl("datasets/" + self.dataset_name + "/scaler_in{0}_out{1}.pkl".format(
-                                                cfg["DATASET_INPUT_LEN"], cfg["DATASET_OUTPUT_LEN"]))
+        self.scaler = load_pkl("{0}/scaler_in{1}_out{2}.pkl".format(cfg["TRAIN"]["DATA"]["DIR"], cfg["DATASET_INPUT_LEN"], cfg["DATASET_OUTPUT_LEN"]))
         # define loss
         self.loss = cfg["TRAIN"]["LOSS"]
         # define metric
@@ -44,6 +44,7 @@ class BaseTimeSeriesForecastingRunner(BaseRunner):
             self.warm_up_epochs = cfg.TRAIN.CL.get("WARM_EPOCHS", 0)
             self.cl_epochs = cfg.TRAIN.CL.get("CL_EPOCHS")
             self.prediction_length = cfg.TRAIN.CL.get("PREDICTION_LENGTH")
+            self.cl_step_size = cfg.TRAIN.CL.get("STEP_SIZE", 1)
         # evaluation horizon
         self.evaluation_horizons = [_ - 1 for _ in cfg["TEST"].get("EVALUATION_HORIZONS", range(1, 13))]
         assert min(self.evaluation_horizons) >= 0, "The horizon should start counting from 0."
@@ -184,7 +185,7 @@ class BaseTimeSeriesForecastingRunner(BaseRunner):
             # still warm up
             cl_length = self.prediction_length
         else:
-            _ = (epoch - self.warm_up_epochs) // self.cl_epochs + 1
+            _ = ((epoch - self.warm_up_epochs) // self.cl_epochs + 1) * self.cl_step_size
             cl_length = min(_, self.prediction_length)
         return cl_length
 
@@ -301,20 +302,20 @@ class BaseTimeSeriesForecastingRunner(BaseRunner):
             pred = prediction[:, i, :, :]
             real = real_value[:, i, :, :]
             # metrics
-            metric_results = {}
+            metric_repr = ""
             for metric_name, metric_func in self.metrics.items():
                 metric_item = self.metric_forward(metric_func, [pred, real])
-                metric_results[metric_name] = metric_item.item()
-            log = "Evaluate best model on test data for horizon " + \
-                "{:d}, Test MAE: {:.4f}, Test RMSE: {:.4f}, Test MAPE: {:.4f}"
-            log = log.format(
-                i+1, metric_results["MAE"], metric_results["RMSE"], metric_results["MAPE"])
+                metric_repr += ", Test {0}: {1:.4f}".format(metric_name, metric_item.item())
+            log = "Evaluate best model on test data for horizon {:d}" + metric_repr
+            log = log.format(i+1)
             self.logger.info(log)
         # test performance overall
         for metric_name, metric_func in self.metrics.items():
-            metric_item = self.metric_forward(metric_func, [prediction, real_value])
+            if self.evaluate_on_gpu:
+                metric_item = self.metric_forward(metric_func, [prediction, real_value])
+            else:
+                metric_item = self.metric_forward(metric_func, [prediction.detach().cpu(), real_value.detach().cpu()])
             self.update_epoch_meter("test_"+metric_name, metric_item.item())
-            metric_results[metric_name] = metric_item.item()
 
     @master_only
     def on_validating_end(self, train_epoch: Optional[int]):

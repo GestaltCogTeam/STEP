@@ -3,7 +3,7 @@ import torch
 from ..base_tsf_runner import BaseTimeSeriesForecastingRunner
 
 
-class GTSRunner(BaseTimeSeriesForecastingRunner):
+class MegaCRNRunner(BaseTimeSeriesForecastingRunner):
     def __init__(self, cfg: dict):
         super().__init__(cfg)
         self.forward_features = cfg["MODEL"].get("FORWARD_FEATURES", None)
@@ -64,17 +64,12 @@ class GTSRunner(BaseTimeSeriesForecastingRunner):
         batch_size, length, num_nodes, _ = future_data.shape
 
         history_data = self.select_input_features(history_data)
-        if train:
-            # teacher forcing only use the first dimension.
-            future_data_4_dec = future_data[..., [0]]
-        else:
-            future_data_4_dec = None
 
         # feed forward
-        prediction_data, pred_adj, prior_adj = self.model(history_data=history_data, future_data=future_data_4_dec, batch_seen=iter_num, epoch=epoch)
+        prediction_data, h_att, query, pos, neg = self.model(history_data=history_data, batch_seen=iter_num, epoch=epoch)
         assert list(prediction_data.shape)[:3] == [batch_size, length, num_nodes], \
             "error shape of the output, edit the forward function to reshape it to [B, L, N, C]"
         # post process
         prediction = self.select_target_features(prediction_data)
         real_value = self.select_target_features(future_data)
-        return prediction, real_value, pred_adj, prior_adj
+        return prediction, real_value, query, pos, neg

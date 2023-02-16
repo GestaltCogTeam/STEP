@@ -36,6 +36,11 @@ class BaseRunner(Runner):
         self.val_data_loader = None
         self.test_data_loader = None
 
+        # fit higher easy-torch version
+        if not hasattr(self,"to_running_device"):
+            from easytorch.device import to_device
+            self.to_running_device = to_device
+
         # set proctitle
         proctitle_name = "{0}({1})".format(cfg["MODEL"].get(
             "NAME", " "), cfg.get("DATASET_NAME", " "))
