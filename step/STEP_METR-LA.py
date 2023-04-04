@@ -39,7 +39,7 @@ CFG.ENV.CUDNN.ENABLED = True
 CFG.MODEL = EasyDict()
 CFG.MODEL.NAME = "STEP"
 CFG.MODEL.ARCH = STEP
-adj_mx, _ = load_adj("datasets/" + CFG.DATASET_NAME + "/adj_mx.pkl", "doubletransition")
+
 CFG.MODEL.PARAM = {
     "dataset_name": CFG.DATASET_NAME,
     "pre_trained_tsformer_path": "tsformer_ckpt/TSFormer_METR-LA.pt",
@@ -58,7 +58,7 @@ CFG.MODEL.PARAM = {
     },
     "backend_args": {
                     "num_nodes" : 207,
-                    "supports"  :[torch.tensor(i) for i in adj_mx],         # the supports are not used
+                    "support_len" : 2,
                     "dropout"   : 0.3,
                     "gcn_bool"  : True,
                     "addaptadj" : True,

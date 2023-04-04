@@ -54,7 +54,7 @@ class GraphWaveNet(nn.Module):
         Ref Official Code: https://github.com/nnzhan/Graph-WaveNet/blob/master/model.py
     """
 
-    def __init__(self, num_nodes, supports, dropout=0.3, gcn_bool=True, addaptadj=True, aptinit=None, in_dim=2,out_dim=12,residual_channels=32,dilation_channels=32,skip_channels=256,end_channels=512,kernel_size=2,blocks=4,layers=2, **kwargs):
+    def __init__(self, num_nodes, support_len, dropout=0.3, gcn_bool=True, addaptadj=True, aptinit=None, in_dim=2,out_dim=12,residual_channels=32,dilation_channels=32,skip_channels=256,end_channels=512,kernel_size=2,blocks=4,layers=2, **kwargs):
         """
             kindly note that although there is a 'supports' parameter, we will not use the prior graph if there is a learned dependency graph.
             Details can be found in the feed forward function.
@@ -74,24 +74,17 @@ class GraphWaveNet(nn.Module):
         self.gconv = nn.ModuleList()
         self.fc_his = nn.Sequential(nn.Linear(96, 512), nn.ReLU(), nn.Linear(512, 256), nn.ReLU())
         self.start_conv = nn.Conv2d(in_channels=in_dim, out_channels=residual_channels, kernel_size=(1,1))
-        self.supports = supports
 
         receptive_field = 1
 
-        self.supports_len = 0
-        if supports is not None:
-            self.supports_len += len(supports)
+        self.supports_len = support_len
 
         if gcn_bool and addaptadj:
             if aptinit is None:
-                if supports is None:
-                    self.supports = []
                 self.nodevec1 = nn.Parameter(torch.randn(num_nodes, 10), requires_grad=True)
                 self.nodevec2 = nn.Parameter(torch.randn(10, num_nodes), requires_grad=True)
                 self.supports_len +=1
             else:
-                if supports is None:
-                    self.supports = []
                 m, p, n = torch.svd(aptinit)
                 initemb1 = torch.mm(m[:, :10], torch.diag(p[:10] ** 0.5))
                 initemb2 = torch.mm(torch.diag(p[:10] ** 0.5), n[:, :10].t())
@@ -163,12 +156,9 @@ class GraphWaveNet(nn.Module):
         skip = 0
 
         #
-        if sampled_adj is not None:
-            # ====== if use learned adjacency matrix, then reset the self.supports ===== #
-            self.supports = [] + [self._calculate_random_walk_matrix(sampled_adj)]
-            self.supports = self.supports + [self._calculate_random_walk_matrix(sampled_adj.transpose(-1, -2))]
-        else:
-            pass
+        # ====== if use learned adjacency matrix, then reset the self.supports ===== #
+        self.supports = [self._calculate_random_walk_matrix(sampled_adj), self._calculate_random_walk_matrix(sampled_adj.transpose(-1, -2))]
+
         # calculate the current adaptive adj matrix
         new_supports = None
         if self.gcn_bool and self.addaptadj and self.supports is not None:
