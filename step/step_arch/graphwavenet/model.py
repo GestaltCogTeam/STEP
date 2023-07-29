@@ -215,6 +215,7 @@ class GraphWaveNet(nn.Module):
         hidden_states = self.fc_his(hidden_states)        # B, N, D
         hidden_states = hidden_states.transpose(1, 2).unsqueeze(-1)
         skip = skip + hidden_states
+        
         x = F.relu(skip)
         x = F.relu(self.end_conv_1(x))
         x = self.end_conv_2(x)

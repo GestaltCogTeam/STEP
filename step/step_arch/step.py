@@ -3,6 +3,7 @@ from torch import nn
 
 from .tsformer import TSFormer
 from .graphwavenet import GraphWaveNet
+from .dcrnn import DCRNN
 from .discrete_graph_learning import DiscreteGraphLearning
 
 
@@ -16,7 +17,8 @@ class STEP(nn.Module):
 
         # iniitalize the tsformer and backend models
         self.tsformer = TSFormer(**tsformer_args)
-        self.backend = GraphWaveNet(**backend_args)
+        # self.backend = GraphWaveNet(**backend_args)
+        self.backend = DCRNN(**backend_args)
 
         # load pre-trained tsformer
         self.load_pre_trained_model()
@@ -62,7 +64,7 @@ class STEP(nn.Module):
 
         # enhancing downstream STGNNs
         hidden_states = hidden_states[:, :, -1, :]
-        y_hat = self.backend(short_term_history, hidden_states=hidden_states, sampled_adj=sampled_adj).transpose(1, 2)
+        y_hat = self.backend(short_term_history, future_data=future_data, batch_seen=batch_seen, hidden_states=hidden_states, sampled_adj=sampled_adj).transpose(1, 2)
 
         # graph structure loss coefficient
         if epoch is not None:

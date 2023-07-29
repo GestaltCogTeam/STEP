@@ -10,6 +10,13 @@ class STEPRunner(BaseTimeSeriesForecastingRunner):
         self.metrics = cfg.get("METRICS", {"MAE": masked_mae, "RMSE": masked_rmse, "MAPE": masked_mape})
         self.forward_features = cfg["MODEL"].get("FORWARD_FEATURES", None)
         self.target_features = cfg["MODEL"].get("TARGET_FEATURES", None)
+    
+    def setup_graph(self, data):
+        """The dcrnn official codes act like tensorflow, which create parameters in the first feedforward process."""
+        try:
+            self.train_iters(1, 0, data)
+        except AttributeError:
+            pass
 
     def select_input_features(self, data: torch.Tensor) -> torch.Tensor:
         """Select input features and reshape data to fit the target model.
@@ -63,7 +70,7 @@ class STEPRunner(BaseTimeSeriesForecastingRunner):
         long_history_data = self.select_input_features(long_history_data)
 
         # feed forward
-        prediction, pred_adj, prior_adj, gsl_coefficient = self.model(history_data=history_data, long_history_data=long_history_data, future_data=None, batch_seen=iter_num, epoch=epoch)
+        prediction, pred_adj, prior_adj, gsl_coefficient = self.model(history_data=history_data, long_history_data=long_history_data, future_data=future_data, batch_seen=iter_num, epoch=epoch)
 
         batch_size, length, num_nodes, _ = future_data.shape
         assert list(prediction.shape)[:3] == [batch_size, length, num_nodes], \

@@ -17,7 +17,7 @@ from .step_data import ForecastingDataset
 CFG = EasyDict()
 
 # ================= general ================= #
-CFG.DESCRIPTION = "STEP(METR-LA) configuration"
+CFG.DESCRIPTION = "STEP(METR-LA) configuration DCRNN "
 CFG.RUNNER = STEPRunner
 CFG.DATASET_CLS = ForecastingDataset
 CFG.DATASET_NAME = "METR-LA"
@@ -39,7 +39,6 @@ CFG.ENV.CUDNN.ENABLED = True
 CFG.MODEL = EasyDict()
 CFG.MODEL.NAME = "STEP"
 CFG.MODEL.ARCH = STEP
-
 CFG.MODEL.PARAM = {
     "dataset_name": CFG.DATASET_NAME,
     "pre_trained_tsformer_path": "tsformer_ckpt/TSFormer_METR-LA.pt",
@@ -57,21 +56,16 @@ CFG.MODEL.PARAM = {
                     "mode":"forecasting"
     },
     "backend_args": {
-                    "num_nodes" : 207,
-                    "support_len" : 2,
-                    "dropout"   : 0.3,
-                    "gcn_bool"  : True,
-                    "addaptadj" : True,
-                    "aptinit"   : None,
-                    "in_dim"    : 2,
-                    "out_dim"   : 12,
-                    "residual_channels" : 32,
-                    "dilation_channels" : 32,
-                    "skip_channels"     : 256,
-                    "end_channels"      : 512,
-                    "kernel_size"       : 2,
-                    "blocks"            : 4,
-                    "layers"            : 2
+                "cl_decay_steps": 2000,
+                "horizon": 12,
+                "input_dim": 2,
+                "max_diffusion_step": 2,
+                "num_nodes": 207,
+                "num_rnn_layers": 2,
+                "output_dim": 1,
+                "rnn_units": 64,
+                "seq_len": 12,
+                "use_curriculum_learning": True
     },
     "dgl_args": {
                 "dataset_name": CFG.DATASET_NAME,
@@ -83,22 +77,21 @@ CFG.MODEL.PARAM = {
 CFG.MODEL.FORWARD_FEATURES = [0, 1, 2]
 CFG.MODEL.TARGET_FEATURES = [0]
 CFG.MODEL.DDP_FIND_UNUSED_PARAMETERS = True
-
 # ================= optim ================= #
 CFG.TRAIN = EasyDict()
+CFG.TRAIN.SETUP_GRAPH = True
 CFG.TRAIN.LOSS = step_loss
 CFG.TRAIN.OPTIM = EasyDict()
 CFG.TRAIN.OPTIM.TYPE = "Adam"
-CFG.TRAIN.OPTIM.PARAM= {
-    "lr":0.005,
-    "weight_decay":1.0e-5,
-    "eps":1.0e-8,
+CFG.TRAIN.OPTIM.PARAM = {
+    "lr": 0.01,
+    "eps": 1e-3
 }
 CFG.TRAIN.LR_SCHEDULER = EasyDict()
 CFG.TRAIN.LR_SCHEDULER.TYPE = "MultiStepLR"
-CFG.TRAIN.LR_SCHEDULER.PARAM= {
-    "milestones":[1, 18, 36, 54, 72],
-    "gamma":0.5
+CFG.TRAIN.LR_SCHEDULER.PARAM = {
+    "milestones": [20, 30, 40, 50],
+    "gamma": 0.1
 }
 
 # ================= train ================= #
@@ -121,11 +114,6 @@ CFG.TRAIN.DATA.PREFETCH = False
 CFG.TRAIN.DATA.SHUFFLE = True
 CFG.TRAIN.DATA.NUM_WORKERS = 2
 CFG.TRAIN.DATA.PIN_MEMORY = True
-# curriculum learning
-CFG.TRAIN.CL = EasyDict()
-CFG.TRAIN.CL.WARM_EPOCHS = 0
-CFG.TRAIN.CL.CL_EPOCHS = 6
-CFG.TRAIN.CL.PREDICTION_LENGTH = 12
 
 # ================= validate ================= #
 CFG.VAL = EasyDict()
